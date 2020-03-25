@@ -14,6 +14,7 @@ type UrlBuilder = (data: PublishPreset) => string;
 
 const NETWORKS: { [name: string]: UrlBuilder } = {
   facebook: (d) => `https://www.facebook.com/sharer/sharer.php?u=${d.url}`,
+  pinterest: (d) => `https://pinterest.com/pin/create/button/?url=${d.url}&description=${d.title}${d.extra.media ? `&media=${d.extra.media}` : ''}`,
   telegram: (d) => `https://telegram.me/share/url?url=${d.url}${d.extra.text ? `&text=${d.extra.text}` : ''}`,
   twitter: (d) => `https://twitter.com/intent/tweet?url=${d.url}&text=${d.title}${d.extra.via ? `&via=${d.extra.via}` : ''}`,
   whatsapp: (d) => `whatsapp://send?text=${d.title}%0D%0A${d.url}${d.extra.text ? `%0D%0A%0D%0A${d.extra.text}` : ''}`,
