@@ -1,4 +1,4 @@
-import { typescript } from './plugins';
+import { postcss, typescript } from './plugins';
 
 const input = './src/index.ts';
 const name = 'shareon';
@@ -14,5 +14,6 @@ export default {
   },
   plugins: [
     typescript(),
+    postcss(`${outputDir}${name}.css`, false),
   ],
 };
