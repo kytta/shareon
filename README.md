@@ -12,13 +12,15 @@ Lightweight, stylish and ethical share buttons.
 - **Stylish.** Uses official vector logos and colors.
 - **Ethical.** No tracking code is being embedded.
 
-```html
-<!-- Define the container element -->
-<div class="sharevia">
-    <!-- Choose desired networks -->
-    <div class="twitter"></div>
+<img src="docs/screen01.png" alt="Example">
 
-    <!-- Add optional text -->
-    <div class="facebook">Share</div>
+```html
+<div class="shareon">
+    <a class="facebook"></a>
+    <a class="messenger" data-url="https://my-cool-website.com"></a>
+    <a class="pinterest" data-media="https://picsum.photos/500">Pin</a>
+    <a class="telegram" data-text="Check this out!"></a>
+    <a class="twitter" data-via="MyNickname"></a>
+    <a class="whatsapp">Send</a>
 </div>
 ```
