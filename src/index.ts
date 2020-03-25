@@ -13,6 +13,7 @@ interface PublishPreset {
 type UrlBuilder = (data: PublishPreset) => string;
 
 const NETWORKS: { [name: string]: UrlBuilder } = {
+  telegram: (d) => `https://telegram.me/share/url?url=${encodeURIComponent(d.url)}${(d.extra && d.extra.text) ? `&text=${encodeURIComponent(d.extra.text)}` : ''}`,
 };
 
 function initShareonChild(child: HTMLElement, preset: PublishPreset) {
