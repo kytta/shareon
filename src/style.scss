@@ -1,0 +1,69 @@
+$button-size:   36px;
+$icon-size:     20px;
+
+$padding-ver:   0.3*$icon-size;
+$padding-hor:   $icon-size / 2;
+$padding-icon:  ($button-size - $icon-size) / 2;
+
+$height:        $button-size - 2*$padding-ver;
+$width:         $button-size - 2*$padding-hor;
+
+.shareon {
+    & > * {
+        display: inline-block;
+        position: relative;
+
+        height: $height;
+        min-width: $width;
+
+        padding: $padding-ver $padding-hor;
+
+        background-color: #ccc;
+        border-radius: $icon-size / 6;
+        border: none;
+        box-sizing: content-box;
+        color: white;
+        line-height: 1.5;
+        transition: opacity 300ms ease;
+        vertical-align: middle;
+
+        &:hover {
+            cursor: pointer;
+            opacity: .7;
+        }
+
+        &:not(:empty) {
+            font-size: 0.8 * $icon-size;
+            text-decoration: none;
+
+            &::before {
+                position: relative;
+
+                height: 100%;
+                width: $icon-size+$padding-icon;
+
+                top: 0;
+                left: 0;
+
+                background-position: 0 50%;
+            }
+        }
+
+        &::before {
+            display: inline-block;
+            position: absolute;
+
+            height: $icon-size;
+            width: $icon-size;
+
+            top: $padding-icon;
+            left: $padding-icon;
+
+            background-repeat: no-repeat;
+            background-size: $icon-size $icon-size;
+            content: '';
+            vertical-align: bottom;
+        }
+
+    }
+}
