@@ -23,10 +23,8 @@
     "README.md"
   ],
   "main": "./dist/shareon.cjs",
-  "module": "./dist/shareon.mjs",
   "exports": {
-    "require": "./dist/shareon.cjs",
-    "import": "./dist/shareon.mjs"
+    "require": "./dist/shareon.cjs"
   },
   "unpkg": "./dist/shareon.min.js",
   "scripts": {
@@ -67,8 +65,7 @@
     {
       "limit": "1 KB",
       "path": [
-        "./dist/shareon.cjs",
-        "./dist/shareon.mjs"
+        "./dist/shareon.cjs"
       ]
     },
     {

@@ -10,11 +10,6 @@ export default {
   output: [
     {
       name,
-      format: 'esm',
-      file: `${outputDir}${name}.mjs`,
-    },
-    {
-      name,
       format: 'cjs',
       file: `${outputDir}${name}.cjs`,
     },
