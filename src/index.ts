@@ -14,6 +14,7 @@ type UrlBuilder = (data: PublishPreset) => string;
 
 const NETWORKS: { [name: string]: UrlBuilder } = {
   telegram: (d) => `https://telegram.me/share/url?url=${encodeURIComponent(d.url)}${(d.extra && d.extra.text) ? `&text=${encodeURIComponent(d.extra.text)}` : ''}`,
+  twitter: (d) => `https://twitter.com/intent/tweet?url=${encodeURIComponent(d.url)}&text=${encodeURIComponent(d.title)}${(d.extra && d.extra.via) ? `&via=${encodeURIComponent(d.extra.via)}` : ''}`,
 };
 
 function initShareonChild(child: HTMLElement, preset: PublishPreset) {
