@@ -17,7 +17,13 @@
     "sharing",
     "social networks"
   ],
-  "main": "./dist/shareon.js",
+  "main": "./dist/shareon.cjs",
+  "module": "./dist/shareon.mjs",
+  "exports": {
+    "require": "./dist/shareon.cjs",
+    "import": "./dist/shareon.mjs"
+  },
+  "unpkg": "./dist/shareon.min.js",
   "scripts": {
     "build": "rollup -c ./rollup/rollup.config.prod.js",
     "dev": "rollup -w -c ./rollup/rollup.config.dev.js",
