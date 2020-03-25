@@ -3,18 +3,18 @@ import './style.scss';
 interface PublishPreset {
   url: string,
   title: string,
-  extra?: {
-    media?: null|string,
-    text?: null|string,
-    via?: null|string,
+  extra: {
+    media: string,
+    text: string,
+    via: string,
   }
 }
 
 type UrlBuilder = (data: PublishPreset) => string;
 
 const NETWORKS: { [name: string]: UrlBuilder } = {
-  telegram: (d) => `https://telegram.me/share/url?url=${encodeURIComponent(d.url)}${(d.extra && d.extra.text) ? `&text=${encodeURIComponent(d.extra.text)}` : ''}`,
-  twitter: (d) => `https://twitter.com/intent/tweet?url=${encodeURIComponent(d.url)}&text=${encodeURIComponent(d.title)}${(d.extra && d.extra.via) ? `&via=${encodeURIComponent(d.extra.via)}` : ''}`,
+  telegram: (d) => `https://telegram.me/share/url?url=${d.url}${d.extra.text ? `&text=${d.extra.text}` : ''}`,
+  twitter: (d) => `https://twitter.com/intent/tweet?url=${d.url}&text=${d.title}${d.extra.via ? `&via=${d.extra.via}` : ''}`,
 };
 
 function initShareonChild(child: HTMLElement, preset: PublishPreset) {
@@ -44,12 +44,12 @@ window.onload = () => {
       const child = container.children[j] as HTMLElement;
 
       const preset: PublishPreset = {
-        url: child.dataset.url || container.dataset.url || window.location.href,
-        title: child.dataset.title || container.dataset.title || document.title || '',
+        url: encodeURIComponent(child.dataset.url || container.dataset.url || window.location.href),
+        title: encodeURIComponent(child.dataset.title || container.dataset.title || document.title || ''),
         extra: {
-          media: child.dataset.media || container.dataset.media || null,
-          text: child.dataset.text || container.dataset.text || null,
-          via: child.dataset.via || container.dataset.via || null,
+          media: encodeURIComponent(child.dataset.media || container.dataset.media || ''),
+          text: encodeURIComponent(child.dataset.text || container.dataset.text || ''),
+          via: encodeURIComponent(child.dataset.via || container.dataset.via || ''),
         },
       };
 
