@@ -23,7 +23,7 @@ export default {
   plugins: [
     typescript(),
     strip(),
-    postcss(`${outputDir}${name}.css`, true),
+    postcss(`${outputDir}${name}.min.css`, true),
     banner()
   ],
 };
