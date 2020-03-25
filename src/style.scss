@@ -66,6 +66,14 @@ $width:         $button-size - 2*$padding-hor;
         }
 
 
+        &.facebook {
+            background-color: #1877F2;
+
+            &::before {
+                background-image: url("data:image/svg+xml,%3Csvg fill='%23fff' viewBox='0 2 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16.671 15.469L17.203 12h-3.328V9.749c0-.949.465-1.874 1.956-1.874h1.513V4.922s-1.374-.235-2.686-.235c-2.741 0-4.533 1.662-4.533 4.669V12H7.078v3.469h3.047V24h3.75v-8.531h2.796z'/%3E%3C/svg%3E");
+            }
+        }
+
         &.telegram {
             background-color: #27A7E5;
 
