@@ -4,9 +4,9 @@
 
 Lightweight, stylish and ethical share buttons.
 
-- **Small.** Dependency-free.
-- **Stylish.** Uses official vector logos and colors.
-- **Ethical.** No tracking code is being embedded.
+- **Small.** Dependency-free. CSS+JS bundle is only 3.15 KB minified and gzipped.
+- **Stylish.** Uses official vector logos and colors with no visual mess.
+- **Ethical.** No tracking code is being embedded. JS is used for quick setup only.
 
 <img src="https://raw.githubusercontent.com/NickKaramoff/shareon/develop/docs/screen01@2x.png" height="114" alt="shareon example">
 
@@ -35,6 +35,9 @@ require('shareon');
 ```
 
 ## Usage
+
+> shareon was heavily inspired by [Likely](https://ilyabirman.net/projects/likely/),
+  and has a backwards-compatible API (excluding themes and sizes).
 
 Create a container with class `shareon` and populate it with elements, whose
 classes match the names of social networks:
