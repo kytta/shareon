@@ -1,8 +1,13 @@
 import postcssPluginCssnano from 'cssnano';
+import rollupPluginBanner from 'rollup-plugin-banner';
 import rollupPluginPostcss from 'rollup-plugin-postcss';
 import rollupPluginStrip from '@rollup/plugin-strip';
 import { terser as rollupPluginTerser } from 'rollup-plugin-terser';
 import rollupPluginTypescript from '@rollup/plugin-typescript';
+
+export const banner = () => rollupPluginBanner(
+  '<%= pkg.name %> v<%= pkg.version %> by Nikita Karamov\nInspired by Likely (https://ilyabirman.net/projects/likely/)'
+)
 
 export const postcss = (file, minify) => rollupPluginPostcss({
   extract: file || true,
@@ -15,7 +20,8 @@ export const postcss = (file, minify) => rollupPluginPostcss({
 
 export const strip = () => rollupPluginStrip({
   debugger: true,
-  functions: ['console.log', 'console.debug'],
+  include: ['**/*.js', '**/*.ts'],
+  functions: ['console.log', 'console.debug', 'assert.*'],
   sourceMap: false,
 });
 
