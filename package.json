@@ -1,0 +1,10 @@
+{
+  "name": "shareon",
+  "version": "1.0.0-alpha.0",
+  "description": "Lightweight, stylish and ethical share buttons for popular social networks",
+  "main": "./dist/shareon.js",
+  "repository": "https://github.com/NickKaramoff/shareon",
+  "author": "Nikita Karamov <nick@karamoff.dev>",
+  "license": "MIT",
+  "private": false
+}
