@@ -69,7 +69,7 @@
       ]
     },
     {
-      "limit": "2 KB",
+      "limit": "7 KB",
       "path": "./dist/shareon.min.css",
       "webpack": false
     }
