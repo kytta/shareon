@@ -12,7 +12,7 @@ Lightweight, stylish and ethical share buttons.
 - **Stylish.** Uses official vector logos and colors.
 - **Ethical.** No tracking code is being embedded.
 
-<img src="docs/screen01.png" alt="Example">
+<img src="https://raw.githubusercontent.com/NickKaramoff/shareon/develop/docs/screen01.png" height="60" alt="shareon example">
 
 ```html
 <div class="shareon">
