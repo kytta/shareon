@@ -17,6 +17,11 @@
     "sharing",
     "social networks"
   ],
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
   "main": "./dist/shareon.cjs",
   "module": "./dist/shareon.mjs",
   "exports": {
