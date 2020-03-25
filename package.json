@@ -1,6 +1,6 @@
 {
   "name": "shareon",
-  "version": "1.0.0-alpha.0",
+  "version": "1.0.0-beta.1",
   "homepage": "https://os.karamoff.dev/shareon",
   "repository": {
     "type": "git",
@@ -61,7 +61,10 @@
     },
     {
       "limit": "1 KB",
-      "path": ["./dist/shareon.cjs", "./dist/shareon.mjs"]
+      "path": [
+        "./dist/shareon.cjs",
+        "./dist/shareon.mjs"
+      ]
     }
   ]
 }
