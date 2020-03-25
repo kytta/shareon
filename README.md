@@ -6,7 +6,7 @@
          width="96"
          height="96">
 
-Lightweight, stylish and ethical share buttons for popular social networks.
+Lightweight, stylish and ethical share buttons.
 
 - **Small.** Dependency-free.
 - **Stylish.** Uses official vector logos and colors.
