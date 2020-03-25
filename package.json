@@ -1,7 +1,14 @@
 {
   "name": "shareon",
   "version": "1.0.0-alpha.0",
-  "repository": "https://github.com/NickKaramoff/shareon",
+  "homepage": "https://os.karamoff.dev/shareon",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NickKaramoff/shareon.git"
+  },
+  "bugs": {
+    "url": "https://github.com/NickKaramoff/shareon/issues"
+  },
   "license": "MIT",
 
   "author": "Nikita Karamov <nick@karamoff.dev>",
