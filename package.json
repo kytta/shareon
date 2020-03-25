@@ -70,6 +70,11 @@
         "./dist/shareon.cjs",
         "./dist/shareon.mjs"
       ]
+    },
+    {
+      "limit": "2 KB",
+      "path": "./dist/shareon.css",
+      "webpack": false
     }
   ]
 }
