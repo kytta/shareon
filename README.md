@@ -53,9 +53,12 @@ classes match the names of social networks:
 </div>
 ```
 
+If you use `<a>`, the buttons will get a `href`-attribute to them. In other cases
+they will get a listener on `click` event, so you can use `<button>`s if you wish.
+
 By default the URL and the title of the page will be used in sharing dialogs.
 To change this, you can use the `data-url` and `data-title` attributes. Use them
-on the whole container or on the specific links:
+on the whole container or on the specific buttons:
 
 ```html
 <div class="shareon" data-url="https://example.com">
@@ -66,9 +69,9 @@ on the whole container or on the specific links:
 
 Apart from the URL and title, some networks support extra parameters:
 
-- add `data-via` to a Twitter button to mention a user
-- add `data-text` to a WhatsApp or Telegram button to add custom message text
 - add `data-media` to a Pinterest button to customize the pinned picture
+- add `data-text` to a WhatsApp or Telegram button to add custom message text
+- add `data-via` to a Twitter button to mention a user
 
 Here are all the custom parameters in their glory:
 
