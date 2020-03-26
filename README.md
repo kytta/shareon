@@ -49,6 +49,7 @@ classes match the names of social networks:
     <a class="pinterest"></a>
     <a class="telegram"></a>
     <a class="twitter"></a>
+    <a class="vkontakte"></a>
     <a class="whatsapp"></a>
 </div>
 ```
@@ -69,7 +70,7 @@ on the whole container or on the specific buttons:
 
 Apart from the URL and title, some networks support extra parameters:
 
-- add `data-media` to a Pinterest button to customize the pinned picture
+- add `data-media` to a Pinterest or VK button to customize the pinned picture
 - add `data-text` to a WhatsApp or Telegram button to add custom message text
 - add `data-via` to a Twitter button to mention a user
 
