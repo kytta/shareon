@@ -11,7 +11,7 @@ Lightweight, stylish and ethical share buttons.
 <img src="https://raw.githubusercontent.com/NickKaramoff/shareon/develop/docs/screen01@2x.png" height="114" alt="shareon example">
 
 ----
-Observe the live demo here: [os.karamoff.dev/shareon](https://os.karamoff.dev/shareon)
+Observe the live demo here: [shareon.js.org](https://shareon.js.org)
 
 ## Install
 
