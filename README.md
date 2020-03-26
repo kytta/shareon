@@ -46,6 +46,7 @@ classes match the names of social networks:
 <div class="shareon">
     <a class="facebook"></a>
     <a class="messenger"></a>
+    <a class="odnoklassniki"></a>
     <a class="pinterest"></a>
     <a class="telegram"></a>
     <a class="twitter"></a>
@@ -70,7 +71,7 @@ on the whole container or on the specific buttons:
 
 Apart from the URL and title, some networks support extra parameters:
 
-- add `data-media` to a Pinterest or VK button to customize the pinned picture
+- add `data-media` to an Odnoklassniki, Pinterest or VK button to customize the pinned picture
 - add `data-text` to a WhatsApp or Telegram button to add custom message text
 - add `data-via` to a Twitter button to mention a user
 
