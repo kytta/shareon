@@ -9,6 +9,8 @@ $height:        $button-size - 2*$padding-ver;
 $width:         $button-size - 2*$padding-hor;
 
 .shareon {
+    line-height: 1.1*$button-size;
+
     & > * {
         display: inline-block;
         position: relative;
