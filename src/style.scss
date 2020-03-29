@@ -9,7 +9,7 @@ $height:        $button-size - 2*$padding-ver;
 $width:         $button-size - 2*$padding-hor;
 
 .shareon {
-    line-height: 1.1*$button-size;
+    font-size: 0 !important;
 
     & > * {
         display: inline-block;
@@ -18,6 +18,7 @@ $width:         $button-size - 2*$padding-hor;
         height: $height;
         min-width: $width;
 
+        margin: $padding-ver / 2;
         padding: $padding-ver $padding-hor;
 
         background-color: #ccc;
