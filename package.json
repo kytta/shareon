@@ -30,10 +30,11 @@
   "scripts": {
     "build": "rollup -c ./rollup/rollup.config.prod.js",
     "dev": "rollup -w -c ./rollup/rollup.config.dev.js",
-    "pretest": "run-p build",
+    "pretest": "run-s build",
     "test:lint": "eslint-ci --ext .js,.ts ./src/",
     "test:size": "size-limit",
-    "test": "run-p test:*"
+    "test": "run-p test:*",
+    "postversion": "run-s build"
   },
   "dependencies": {},
   "devDependencies": {
