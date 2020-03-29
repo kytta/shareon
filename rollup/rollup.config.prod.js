@@ -1,4 +1,4 @@
-import { banner, postcss, strip, terser, typescript } from './plugins';
+import { license, postcss, strip, terser, typescript } from './plugins';
 
 const input = './src/index.ts';
 const name = 'shareon';
@@ -24,6 +24,6 @@ export default {
     typescript(),
     strip(),
     postcss(`${outputDir}${name}.min.css`, true),
-    banner()
+    license()
   ],
 };
