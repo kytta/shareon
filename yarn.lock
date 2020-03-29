@@ -5196,6 +5196,13 @@ posix-character-classes@^0.1.0:
   resolved "https://registry.yarnpkg.com/posix-character-classes/-/posix-character-classes-0.1.1.tgz#01eac0fe3b5af71a2a6c02feabb8c1fef7e00eab"
   integrity sha1-AerA/jta9xoqbAL+q7jB/vfgDqs=
 
+postcss-banner@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/postcss-banner/-/postcss-banner-3.0.1.tgz#130ec592cefd3f5b52bc54f7f01c8881603c22fc"
+  integrity sha512-uHZoJ5VmnqHAMGHJU8KJHrkLuynp72N9PPn1T4f0iVBDoApsOkr1OmY4Mk0t2e5lNfrDgOUNEBHj8RbYa8zvbw==
+  dependencies:
+    postcss "^7.0.14"
+
 postcss-calc@^7.0.1:
   version "7.0.2"
   resolved "https://registry.yarnpkg.com/postcss-calc/-/postcss-calc-7.0.2.tgz#504efcd008ca0273120568b0792b16cdcde8aac1"

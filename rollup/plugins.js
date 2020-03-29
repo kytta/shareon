@@ -1,3 +1,6 @@
+import path from 'path';
+
+import postcssPluginBanner from 'postcss-banner';
 import postcssPluginCssnano from 'cssnano';
 import rollupPluginLicense from 'rollup-plugin-license';
 import rollupPluginPostcss from 'rollup-plugin-postcss';
@@ -5,10 +8,14 @@ import rollupPluginStrip from '@rollup/plugin-strip';
 import { terser as rollupPluginTerser } from 'rollup-plugin-terser';
 import rollupPluginTypescript from '@rollup/plugin-typescript';
 
+const pkg = require(path.join(process.cwd(), 'package.json'));
+const bannerText = `${pkg.name} v${pkg.version} by Nikita Karamov
+${pkg.homepage}`;
+
 export const license = () => rollupPluginLicense({
   banner: {
     commentStyle: 'ignored',
-    content: '<%= pkg.name %> v<%= pkg.version %> by Nikita Karamov\nhttps://shareon.js.org'
+    content: bannerText
   }
 });
 
@@ -21,6 +28,10 @@ export const postcss = (file = true, minify) => rollupPluginPostcss({
   plugins: [
     minify && postcssPluginCssnano({
       preset: 'default',
+    }),
+    postcssPluginBanner({
+      banner: bannerText,
+      important: true
     })
   ],
 });
