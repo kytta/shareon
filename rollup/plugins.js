@@ -44,7 +44,6 @@ export const strip = () => rollupPluginStrip({
 });
 
 export const terser = () => rollupPluginTerser({
-  sourcemap: false,
   output: {
     comments: false,
     ecma: 5,

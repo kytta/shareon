@@ -14,6 +14,6 @@ export default {
   },
   plugins: [
     typescript(),
-    postcss(`${outputDir}${name}.css`, false),
+    postcss(`${name}.css`, false),
   ],
 };
