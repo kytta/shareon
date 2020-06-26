@@ -6,7 +6,7 @@ Lightweight, stylish and ethical share buttons.
 
 - **Small.** Dependency-free. CSS+JS bundle is only 3.15 KB minified and gzipped.
 - **Stylish.** Uses official vector logos and colors with no visual mess.
-- **Ethical.** No tracking code is being embedded. JS is used for quick setup only.
+- **Ethical.** Embeds no tracking code. JS is required only for the setup.
 
 <img src="https://raw.githubusercontent.com/NickKaramoff/shareon/master/docs/screen01@2x.png" height="100" width="570" alt="shareon example">
 
@@ -58,7 +58,7 @@ classes match the names of social networks:
 If you use `<a>`, the buttons will get a `href`-attribute to them. In other cases
 they will get a listener on `click` event, so you can use `<button>`s if you wish.
 
-By default the URL and the title of the page will be used in sharing dialogs.
+By default, the URL and the title of the page will be used in sharing dialogs.
 To change this, you can use the `data-url` and `data-title` attributes. Use them
 on the whole container or on the specific buttons:
 
