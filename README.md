@@ -48,10 +48,10 @@ classes match the names of social networks:
     <a class="messenger"></a>
     <a class="odnoklassniki"></a>
     <a class="pinterest"></a>
-    <a class="telegram"></a>
-    <a class="twitter"></a>
-    <a class="vkontakte"></a>
-    <a class="whatsapp"></a>
+    <button class="telegram"></button>
+    <button class="twitter"></button>
+    <button class="vkontakte"></button>
+    <button class="whatsapp"></button>
 </div>
 ```
 
