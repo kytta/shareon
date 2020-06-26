@@ -1,9 +1,10 @@
-import { license, postcss, strip, terser, typescript } from './plugins';
+import {
+  license, postcss, strip, terser, typescript,
+} from './plugins';
 
 const input = './src/index.ts';
 const name = 'shareon';
 const outputDir = './dist/';
-
 
 export default {
   input,
@@ -24,6 +25,6 @@ export default {
     typescript(),
     strip(),
     postcss(`${name}.min.css`, true),
-    license()
+    license(),
   ],
 };

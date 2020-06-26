@@ -1,5 +1,6 @@
 import path from 'path';
 
+/* eslint-disable import/no-extraneous-dependencies */
 import postcssPluginBanner from 'postcss-banner';
 import postcssPluginCssnano from 'cssnano';
 import rollupPluginLicense from 'rollup-plugin-license';
@@ -8,6 +9,8 @@ import rollupPluginStrip from '@rollup/plugin-strip';
 import { terser as rollupPluginTerser } from 'rollup-plugin-terser';
 import rollupPluginTypescript from '@rollup/plugin-typescript';
 
+// TODO: remove rule after changing the Rollup config
+// eslint-disable-next-line import/no-dynamic-require
 const pkg = require(path.join(process.cwd(), 'package.json'));
 const bannerText = `${pkg.name} v${pkg.version} by Nikita Karamov
 ${pkg.homepage}`;
@@ -15,8 +18,8 @@ ${pkg.homepage}`;
 export const license = () => rollupPluginLicense({
   banner: {
     commentStyle: 'ignored',
-    content: bannerText
-  }
+    content: bannerText,
+  },
 });
 
 /**
@@ -31,8 +34,8 @@ export const postcss = (file = true, minify) => rollupPluginPostcss({
     }),
     postcssPluginBanner({
       banner: bannerText,
-      important: true
-    })
+      important: true,
+    }),
   ],
 });
 
