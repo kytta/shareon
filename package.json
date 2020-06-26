@@ -22,9 +22,11 @@
     "url": "https://karamoff.dev"
   },
   "main": "./dist/shareon.cjs",
+  "module": "./dist/shareon.mjs",
   "unpkg": "./dist/shareon.min.js",
   "exports": {
-    "require": "./dist/shareon.cjs"
+    "require": "./dist/shareon.cjs",
+    "import": "./dist/shareon.mjs"
   },
   "files": [
     "dist"

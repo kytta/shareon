@@ -72,6 +72,11 @@ if (isDev) {
   });
   output.push({
     name: pkg.name,
+    format: 'esm',
+    file: `${outputDir}${pkg.name}.mjs`,
+  });
+  output.push({
+    name: pkg.name,
     format: 'iife',
     file: `${outputDir}${pkg.name}.min.js`,
     plugins: [terser({ output: { comments: false } })],
