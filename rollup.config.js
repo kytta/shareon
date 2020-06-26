@@ -11,7 +11,7 @@ const isDev = process.env.ROLLUP_WATCH || process.env.NODE_ENV === 'development'
 const pkg = require('./package.json');
 
 const inputFile = './src/index.ts';
-const outputDir = isDev ? './dev' : './dist/';
+const outputDir = isDev ? './dev/' : './dist/';
 
 const bannerText = `${pkg.name} v${pkg.version} by Nikita Karamov\n${pkg.homepage}`;
 
