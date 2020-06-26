@@ -28,8 +28,8 @@
   },
   "unpkg": "./dist/shareon.min.js",
   "scripts": {
-    "build": "rollup -c ./rollup/rollup.config.prod.js",
-    "dev": "rollup -w -c ./rollup/rollup.config.dev.js",
+    "build": "rollup -c",
+    "dev": "rollup -w -c",
     "pretest": "run-s build",
     "test:lint": "eslint-ci --ext .js,.ts ./src/",
     "test:size": "size-limit",
