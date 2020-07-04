@@ -18,6 +18,7 @@ const NETWORKS: { [name: string]: UrlBuilder } = {
   messenger: (d) => `https://www.facebook.com/dialog/send?app_id=3619024578167617&link=${d.url}&redirect_uri=${d.url}`,
   odnoklassniki: (d) => `https://connect.ok.ru/offer?url=${d.url}&title=${d.title}${d.extra.media ? `&imageUrl=${d.extra.media}` : ''}`,
   pinterest: (d) => `https://pinterest.com/pin/create/button/?url=${d.url}&description=${d.title}${d.extra.media ? `&media=${d.extra.media}` : ''}`,
+  pocket: (d) => `https://getpocket.com/edit.php?url=${d.url}`,
   reddit: (d) => `https://www.reddit.com/submit?title=${d.title}&url=${d.url}`,
   telegram: (d) => `https://telegram.me/share/url?url=${d.url}${d.extra.text ? `&text=${d.extra.text}` : ''}`,
   twitter: (d) => `https://twitter.com/intent/tweet?url=${d.url}&text=${d.title}${d.extra.via ? `&via=${d.extra.via}` : ''}`,
