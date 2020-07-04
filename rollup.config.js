@@ -40,7 +40,7 @@ if (!isDev) {
 }
 
 plugins.push(postcss({
-  extract: `${pkg.name}.css`,
+  extract: `${pkg.name}.min.css`,
   plugins: [
     (!isDev) && postcssPluginCssnano({
       preset: 'default',
