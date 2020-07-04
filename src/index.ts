@@ -14,6 +14,7 @@ type UrlBuilder = (data: PublishPreset) => string;
 
 const NETWORKS: { [name: string]: UrlBuilder } = {
   facebook: (d) => `https://www.facebook.com/sharer/sharer.php?u=${d.url}`,
+  linkedin: (d) => `https://www.linkedin.com/shareArticle?mini=true&url=${d.url}&title=${d.title}`,
   messenger: (d) => `https://www.facebook.com/dialog/send?app_id=3619024578167617&link=${d.url}&redirect_uri=${d.url}`,
   odnoklassniki: (d) => `https://connect.ok.ru/offer?url=${d.url}&title=${d.title}${d.extra.media ? `&imageUrl=${d.extra.media}` : ''}`,
   pinterest: (d) => `https://pinterest.com/pin/create/button/?url=${d.url}&description=${d.title}${d.extra.media ? `&media=${d.extra.media}` : ''}`,
