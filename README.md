@@ -8,7 +8,7 @@ Lightweight, stylish and ethical share buttons.
 - **Stylish.** Uses official vector logos and colors with no visual mess.
 - **Ethical.** Embeds no tracking code. JS is required only for the setup.
 
-<img src="https://raw.githubusercontent.com/NickKaramoff/shareon/master/docs/screen01@2x.png" height="100" width="570" alt="shareon example">
+<img src="https://raw.githubusercontent.com/NickKaramoff/shareon/master/docs/screen01@2x.png" height="114" width="715" alt="shareon example">
 
 ----
 Observe the live demo here: [shareon.js.org](https://shareon.js.org)
@@ -45,11 +45,15 @@ classes match the names of social networks:
 ```html
 <div class="shareon">
     <a class="facebook"></a>
+    <a class="linkedin"></a>
     <a class="messenger"></a>
     <a class="odnoklassniki"></a>
     <a class="pinterest"></a>
+    <a class="pocket"></a>
+    <button class="reddit"></button>
     <button class="telegram"></button>
     <button class="twitter"></button>
+    <button class="viber"></button>
     <button class="vkontakte"></button>
     <button class="whatsapp"></button>
 </div>
@@ -71,8 +75,8 @@ on the whole container or on the specific buttons:
 
 Apart from the URL and title, some networks support extra parameters:
 
-- add `data-media` to an Odnoklassniki, Pinterest or VK button to customize the pinned picture
-- add `data-text` to a WhatsApp or Telegram button to add custom message text
+- add `data-media` to an Odnoklassniki, Pinterest, or VK button to customize the pinned picture
+- add `data-text` to a WhatsApp, Telegram or Viber button to add custom message text
 - add `data-via` to a Twitter button to mention a user
 
 Here are all the custom parameters in their glory:
