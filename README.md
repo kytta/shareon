@@ -8,7 +8,7 @@ Lightweight, stylish and ethical share buttons.
 - **Stylish.** Uses official vector logos and colors with no visual mess.
 - **Ethical.** Embeds no tracking code. JS is required only for the setup.
 
-<img src="https://raw.githubusercontent.com/NickKaramoff/shareon/master/docs/screen01@2x.png" height="114" width="715" alt="shareon example">
+<img src="https://raw.githubusercontent.com/NickKaramoff/shareon/master/docs/screen01@2x.png" height="156" width="416" alt="shareon example">
 
 ----
 Observe the live demo here: [shareon.js.org](https://shareon.js.org)
