@@ -10,7 +10,8 @@ const isDev = process.env.ROLLUP_WATCH || process.env.NODE_ENV === 'development'
 
 const pkg = require('./package.json');
 
-const inputFile = './src/index.ts';
+const mainFile = './src/index.ts';
+const rendererFile = './src/container.ts';
 const outputDir = isDev ? './dev/' : './dist/';
 
 const bannerText = `${pkg.name} v${pkg.version} by Nikita Karamov\n${pkg.homepage}`;
@@ -56,30 +57,46 @@ plugins.push(postcss({
  * OUTPUTS
  */
 
-const output = [];
+/** @type {Array<import('rollup').RollupOptions>} */
+const config = [];
 
 if (isDev) {
-  output.push({
-    name: pkg.name,
-    format: 'iife',
-    file: `${outputDir}${pkg.name}.js`,
+  config.push({
+    input: mainFile,
+    output: {
+      name: pkg.name,
+      format: 'iife',
+      file: `${outputDir}${pkg.name}.js`,
+    },
+    plugins,
   });
 } else {
-  output.push({
-    name: pkg.name,
-    format: 'cjs',
-    file: `${outputDir}${pkg.name}.cjs`,
+  config.push({
+    input: rendererFile,
+    output: {
+      name: pkg.name,
+      format: 'cjs',
+      file: `${outputDir}${pkg.name}.cjs`,
+    },
+    plugins,
   });
-  output.push({
-    name: pkg.name,
-    format: 'esm',
-    file: `${outputDir}${pkg.name}.mjs`,
+  config.push({
+    input: rendererFile,
+    output: {
+      name: pkg.name,
+      format: 'esm',
+      file: `${outputDir}${pkg.name}.mjs`,
+    },
+    plugins,
   });
-  output.push({
-    name: pkg.name,
-    format: 'iife',
-    file: `${outputDir}${pkg.name}.min.js`,
-    plugins: [terser({ output: { comments: false } })],
+  config.push({
+    input: mainFile,
+    output: {
+      name: pkg.name,
+      format: 'iife',
+      file: `${outputDir}${pkg.name}.min.js`,
+    },
+    plugins: plugins.concat(terser({ output: { comments: false } })),
   });
 }
 
@@ -87,8 +104,4 @@ if (isDev) {
  * EXPORT
  */
 
-export default {
-  input: inputFile,
-  output,
-  plugins,
-};
+export default config;
