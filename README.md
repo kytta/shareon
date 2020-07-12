@@ -1,4 +1,4 @@
-# shareon
+# shareon [![build status](https://badgen.net/travis/NickKaramoff/shareon/master)](https://travis-ci.com/NickKaramoff/shareon) [![install size](https://badgen.net/bundlephobia/minzip/shareon)](https://bundlephobia.com/result?p=shareon) [![npm package version](https://badgen.net/npm/v/shareon)](https://npm.im/shareon) [![github license](https://badgen.net/github/license/NickKaramoff/shareon)](https://github.com/NickKaramoff/shareon/blob/master/LICENSE)
 
 <img src="https://raw.githubusercontent.com/googlefonts/noto-emoji/master/png/128/emoji_u1f4ef.png" align="right" alt="Postal Horn emoji" width="96" height="96">
 
