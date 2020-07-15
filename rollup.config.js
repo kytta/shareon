@@ -13,7 +13,7 @@ const pkg = require('./package.json');
 const inputFile = './src/index.ts';
 const outputDir = isDev ? './dev/' : './dist/';
 
-const bannerText = `${pkg.name} v${pkg.version} by Nikita Karamov\n${pkg.homepage}`;
+const bannerText = `${pkg.name.replace('/', '').replace('@', '')} v${pkg.version} by Nikita Karamov\n${pkg.homepage}`;
 
 /*
  * PLUGINS
@@ -40,7 +40,7 @@ if (!isDev) {
 }
 
 plugins.push(postcss({
-  extract: `${pkg.name}.min.css`,
+  extract: `${pkg.name.replace('/', '').replace('@', '')}.min.css`,
   plugins: [
     (!isDev) && postcssPluginCssnano({
       preset: 'default',
@@ -60,25 +60,25 @@ const output = [];
 
 if (isDev) {
   output.push({
-    name: pkg.name,
+    name: pkg.name.replace('/', '').replace('@', ''),
     format: 'iife',
-    file: `${outputDir}${pkg.name}.js`,
+    file: `${outputDir}${pkg.name.replace('/', '').replace('@', '')}.js`,
   });
 } else {
   output.push({
-    name: pkg.name,
+    name: pkg.name.replace('/', '').replace('@', ''),
     format: 'cjs',
-    file: `${outputDir}${pkg.name}.cjs`,
+    file: `${outputDir}${pkg.name.replace('/', '').replace('@', '')}.cjs`,
   });
   output.push({
-    name: pkg.name,
+    name: pkg.name.replace('/', '').replace('@', ''),
     format: 'esm',
-    file: `${outputDir}${pkg.name}.mjs`,
+    file: `${outputDir}${pkg.name.replace('/', '').replace('@', '')}.mjs`,
   });
   output.push({
-    name: pkg.name,
+    name: pkg.name.replace('/', '').replace('@', ''),
     format: 'iife',
-    file: `${outputDir}${pkg.name}.min.js`,
+    file: `${outputDir}${pkg.name.replace('/', '').replace('@', '')}.min.js`,
     plugins: [terser({ output: { comments: false } })],
   });
 }
