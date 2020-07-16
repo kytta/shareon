@@ -1,6 +1,6 @@
 {
-  "name": "@amiceli/shareon",
-  "version": "1.2.1",
+  "name": "shareon",
+  "version": "1.2.0",
   "description": "Lightweight, stylish and ethical share buttons for popular social networks",
   "license": "MIT",
   "homepage": "https://shareon.js.org",
@@ -11,10 +11,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/amiceli/shareon.git"
+    "url": "git+https://github.com/NickKaramoff/shareon.git"
   },
   "bugs": {
-    "url": "https://github.com/amiceli/shareon"
+    "url": "https://github.com/NickKaramoff/shareon/issues"
   },
   "author": {
     "name": "Nikita Karamov",
