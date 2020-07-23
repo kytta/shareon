@@ -21,28 +21,27 @@
     "email": "nick@karamoff.dev",
     "url": "https://karamoff.dev"
   },
-  "main": "./dist/index.cjs",
-  "module": "./dist/index.mjs",
-  "unpkg": "./dist/index.min.js",
+  "main": "./index.js",
+  "module": "./index.mjs",
+  "unpkg": "./index.js",
   "exports": {
     "./package.json": "./package.json",
     ".": {
-      "browser": "./dist/index.min.js",
-      "require": "./dist/index.cjs",
-      "import": "./dist/index.mjs"
+      "browser": "./index.js",
+      "require": "./index.js",
+      "import": "./index.mjs"
     },
-    "./noinit/package.json": "./dist/noinit/package.json",
     "./noinit": {
-      "browser": "./dist/noinit/index.min.js",
-      "require": "./dist/noinit/index.cjs",
-      "import": "./dist/noinit/index.mjs"
+      "browser": "./noinit/index.js",
+      "require": "./noinit/index.js",
+      "import": "./noinit/index.mjs"
     }
   },
-  "browser": {
-    "./index.js": "./dist/index.min.js"
-  },
   "files": [
-    "dist"
+    "index.js",
+    "index.mjs",
+    "noinit/index.js",
+    "noinit/index.mjs"
   ],
   "scripts": {
     "build": "rollup -c",
@@ -79,16 +78,16 @@
   "size-limit": [
     {
       "limit": "1 KB",
-      "path": "./dist/index.min.js",
+      "path": "./index.js",
       "webpack": false
     },
     {
       "limit": "1 KB",
-      "path": "./dist/index.mjs"
+      "path": "./index.mjs"
     },
     {
       "limit": "7 KB",
-      "path": "./dist/index.min.css",
+      "path": "./shareon.min.css",
       "webpack": false
     }
   ]

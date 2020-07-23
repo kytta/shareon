@@ -1,7 +1,0 @@
-{
-  "main": "index.cjs",
-  "module": "index.mjs",
-  "browser": {
-    "./index.js": "./index.min.js"
-  }
-}
