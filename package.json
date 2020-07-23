@@ -25,11 +25,17 @@
   "module": "./dist/shareon.mjs",
   "unpkg": "./dist/shareon.min.js",
   "exports": {
-    "require": "./dist/shareon.cjs",
-    "import": "./dist/shareon.mjs"
-  },
-  "browser": {
-    "./noinit": "./dist/noinit"
+    "./package.json": "./package.json",
+    ".": {
+      "browser": "./dist/shareon.min.js",
+      "require": "./dist/shareon.cjs",
+      "import": "./dist/shareon.mjs"
+    },
+    "./noinit": {
+      "browser": "./dist/noinit/shareon.min.js",
+      "require": "./dist/noinit/shareon.cjs",
+      "import": "./dist/noinit/shareon.mjs"
+    }
   },
   "files": [
     "dist"
