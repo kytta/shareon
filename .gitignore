@@ -1,5 +1,6 @@
 dev
 dist
+.DS_Store
 .idea
 node_modules
 yarn-error.log
