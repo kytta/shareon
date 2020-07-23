@@ -21,21 +21,25 @@
     "email": "nick@karamoff.dev",
     "url": "https://karamoff.dev"
   },
-  "main": "./dist/shareon.cjs",
-  "module": "./dist/shareon.mjs",
-  "unpkg": "./dist/shareon.min.js",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "unpkg": "./dist/index.min.js",
   "exports": {
     "./package.json": "./package.json",
     ".": {
-      "browser": "./dist/shareon.min.js",
-      "require": "./dist/shareon.cjs",
-      "import": "./dist/shareon.mjs"
+      "browser": "./dist/index.min.js",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs"
     },
+    "./noinit/package.json": "./dist/noinit/package.json",
     "./noinit": {
-      "browser": "./dist/noinit/shareon.min.js",
-      "require": "./dist/noinit/shareon.cjs",
-      "import": "./dist/noinit/shareon.mjs"
+      "browser": "./dist/noinit/index.min.js",
+      "require": "./dist/noinit/index.cjs",
+      "import": "./dist/noinit/index.mjs"
     }
+  },
+  "browser": {
+    "./index.js": "./dist/index.min.js"
   },
   "files": [
     "dist"
@@ -75,18 +79,16 @@
   "size-limit": [
     {
       "limit": "1 KB",
-      "path": "./dist/shareon.min.js",
+      "path": "./dist/index.min.js",
       "webpack": false
     },
     {
       "limit": "1 KB",
-      "path": [
-        "./dist/shareon.cjs"
-      ]
+      "path": "./dist/index.mjs"
     },
     {
       "limit": "7 KB",
-      "path": "./dist/shareon.min.css",
+      "path": "./dist/index.min.css",
       "webpack": false
     }
   ]

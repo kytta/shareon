@@ -1,5 +1,6 @@
 dev
 dist
+!dist/noinit/package.json
 .DS_Store
 .idea
 node_modules

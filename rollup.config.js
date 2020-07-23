@@ -68,23 +68,23 @@ const getOutputs = (baseDir) => {
     result.push({
       name: pkg.name,
       format: 'iife',
-      file: `${baseDir}${pkg.name}.js`,
+      file: `${baseDir}index.js`,
     });
   } else {
     result.push({
       name: pkg.name,
       format: 'cjs',
-      file: `${baseDir}${pkg.name}.cjs`,
+      file: `${baseDir}index.cjs`,
     });
     result.push({
       name: pkg.name,
       format: 'esm',
-      file: `${baseDir}${pkg.name}.mjs`,
+      file: `${baseDir}index.mjs`,
     });
     result.push({
       name: pkg.name,
       format: 'iife',
-      file: `${baseDir}${pkg.name}.min.js`,
+      file: `${baseDir}index.min.js`,
       plugins: [terser({ output: { comments: false } })],
     });
   }
