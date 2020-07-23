@@ -10,7 +10,6 @@ const isDev = process.env.ROLLUP_WATCH || process.env.NODE_ENV === 'development'
 
 const pkg = require('./package.json');
 
-const inputFile = './src/index.ts';
 const outputDir = isDev ? './dev/' : './dist/';
 
 const bannerText = `${pkg.name} v${pkg.version} by Nikita Karamov\n${pkg.homepage}`;
@@ -78,8 +77,27 @@ if (isDev) {
   output.push({
     name: pkg.name,
     format: 'iife',
-    file: `${outputDir}${pkg.name}.min.js`,
+    file: `${outputDir}${pkg.name}.noinit.min.js`,
     plugins: [terser({ output: { comments: false } })],
+  });
+}
+
+const config = [{
+  input: isDev ? './src/autoinit.ts' : './src/shareon.ts',
+  output,
+  plugins,
+}];
+
+if (!isDev) {
+  config.push({
+    input: './src/autoinit.ts',
+    output: {
+      name: pkg.name,
+      format: 'iife',
+      file: `${outputDir}${pkg.name}.min.js`,
+      plugins: [terser({ output: { comments: false } })],
+    },
+    plugins,
   });
 }
 
@@ -87,8 +105,4 @@ if (isDev) {
  * EXPORT
  */
 
-export default {
-  input: inputFile,
-  output,
-  plugins,
-};
+export default config;

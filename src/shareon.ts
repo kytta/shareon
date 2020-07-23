@@ -71,6 +71,4 @@ const initializeShareon = () : void => {
   }
 };
 
-window.onload = () => { initializeShareon(); };
-
 export default initializeShareon;
