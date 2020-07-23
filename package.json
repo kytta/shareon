@@ -28,6 +28,9 @@
     "require": "./dist/shareon.cjs",
     "import": "./dist/shareon.mjs"
   },
+  "browser": {
+    "./noinit": "./dist/noinit"
+  },
   "files": [
     "dist"
   ],
