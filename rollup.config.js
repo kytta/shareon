@@ -14,13 +14,14 @@ const outputDir = isDev ? './dev/' : './dist/';
 
 const bannerText = `${pkg.name} v${pkg.version} by Nikita Karamov\n${pkg.homepage}`;
 
-/*
- * PLUGINS
+/**
+ * Plugins to build the project
+ *
+ * @type {Plugin[]}
  */
-
-const plugins = [];
-
-plugins.push(typescript());
+const plugins = [
+  typescript(),
+];
 
 if (!isDev) {
   plugins.push(strip({
@@ -51,58 +52,57 @@ plugins.push(postcss({
   ],
 }));
 
-/*
- * OUTPUTS
+/**
+ * @typedef {import('rollup').OutputOptions} OutputOptions
  */
 
-const output = [];
+/**
+ *
+ * @param {string} baseDir base directory for the output files
+ * @return {OutputOptions[]} array of outputs
+ */
+const getOutputs = (baseDir) => {
+  const result = [];
 
-if (isDev) {
-  output.push({
-    name: pkg.name,
-    format: 'iife',
-    file: `${outputDir}${pkg.name}.js`,
-  });
-} else {
-  output.push({
-    name: pkg.name,
-    format: 'cjs',
-    file: `${outputDir}${pkg.name}.cjs`,
-  });
-  output.push({
-    name: pkg.name,
-    format: 'esm',
-    file: `${outputDir}${pkg.name}.mjs`,
-  });
-  output.push({
-    name: pkg.name,
-    format: 'iife',
-    file: `${outputDir}${pkg.name}.noinit.min.js`,
-    plugins: [terser({ output: { comments: false } })],
-  });
-}
-
-const config = [{
-  input: isDev ? './src/autoinit.ts' : './src/shareon.ts',
-  output,
-  plugins,
-}];
-
-if (!isDev) {
-  config.push({
-    input: './src/autoinit.ts',
-    output: {
+  if (isDev) {
+    result.push({
       name: pkg.name,
       format: 'iife',
-      file: `${outputDir}${pkg.name}.min.js`,
+      file: `${baseDir}${pkg.name}.js`,
+    });
+  } else {
+    result.push({
+      name: pkg.name,
+      format: 'cjs',
+      file: `${baseDir}${pkg.name}.cjs`,
+    });
+    result.push({
+      name: pkg.name,
+      format: 'esm',
+      file: `${baseDir}${pkg.name}.mjs`,
+    });
+    result.push({
+      name: pkg.name,
+      format: 'iife',
+      file: `${baseDir}${pkg.name}.min.js`,
       plugins: [terser({ output: { comments: false } })],
-    },
-    plugins,
-  });
-}
+    });
+  }
 
-/*
- * EXPORT
- */
+  return result;
+};
+
+const config = [
+  {
+    input: './src/autoinit.ts',
+    output: getOutputs(`${outputDir}`),
+    plugins,
+  },
+  {
+    input: './src/shareon.ts',
+    output: getOutputs(`${outputDir}noinit/`),
+    plugins: plugins.slice(0, -1),
+  },
+];
 
 export default config;

@@ -1,5 +1,3 @@
-import './style.scss';
-
 interface PublishPreset {
   url: string,
   title: string,
