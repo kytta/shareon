@@ -44,7 +44,7 @@ function initShareonChild(child: HTMLElement, preset: PublishPreset) {
   }
 }
 
-window.onload = () => {
+const initializeShareon = () : void => {
   const shareonContainers = document.getElementsByClassName('shareon');
 
   for (let i = 0; i < shareonContainers.length; i += 1) {
@@ -70,3 +70,7 @@ window.onload = () => {
     }
   }
 };
+
+window.onload = () => { initializeShareon(); };
+
+export default initializeShareon;
