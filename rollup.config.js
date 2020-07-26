@@ -10,7 +10,7 @@ const isDev = process.env.ROLLUP_WATCH || process.env.NODE_ENV === 'development'
 
 const pkg = require('./package.json');
 
-const outputDir = isDev ? './dev/' : './';
+const outputDir = isDev ? './dev/' : './dist/';
 
 const bannerText = `${pkg.name} v${pkg.version} by Nikita Karamov\n${pkg.homepage}`;
 
@@ -67,32 +67,26 @@ const getOutputs = (baseDir) => {
   if (isDev) {
     result.push({
       name: pkg.name,
-      format: 'umd',
-      file: `${baseDir}index.js`,
+      format: 'iife',
+      file: `${baseDir}${pkg.name}.js`,
     });
   } else {
-    // result.push({
-    //   name: pkg.name,
-    //   format: 'cjs',
-    //   file: `${baseDir}index.cjs`,
-    // });
+    result.push({
+      name: pkg.name,
+      format: 'cjs',
+      file: `${baseDir}${pkg.name}.cjs`,
+    });
     result.push({
       name: pkg.name,
       format: 'esm',
-      file: `${baseDir}index.mjs`,
+      file: `${baseDir}${pkg.name}.mjs`,
     });
     result.push({
       name: pkg.name,
-      format: 'umd',
-      file: `${baseDir}index.js`,
+      format: 'iife',
+      file: `${baseDir}${pkg.name}.min.js`,
       plugins: [terser({ output: { comments: false } })],
     });
-    // result.push({
-    //   name: pkg.name,
-    //   format: 'iife',
-    //   file: `${baseDir}index.min.js`,
-    //   plugins: [terser({ output: { comments: false } })],
-    // });
   }
 
   return result;

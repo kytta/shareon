@@ -1,9 +1,5 @@
 dev
-.DS_Store
+dist
 .idea
 node_modules
 yarn-error.log
-index.js
-index.mjs
-noinit
-shareon.min.css
