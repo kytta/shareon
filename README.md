@@ -18,8 +18,8 @@ Observe the live demo here: [shareon.js.org](https://shareon.js.org)
 Include the link to shareon's JS and CSS in your website:
 
 ```html
-<link href="https://cdn.jsdelivr.net/npm/shareon@1.2.1/dist/shareon.min.css" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/shareon@1.2.1/dist/shareon.min.js" type="text/javascript"></script>
+<link href="https://cdn.jsdelivr.net/npm/shareon@1.3/dist/shareon.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/shareon@1.3/dist/shareon.min.js" type="text/javascript"></script>
 ```
 
 or install it via NPM use it in a JS file that you will bundle:
@@ -31,7 +31,48 @@ yarn add shareon
 ```
 
 ```js
-require('shareon');
+const shareon = require('shareon');
+// or
+import shareon from 'shareon';
+```
+
+## Initialization
+
+By default, shareon will initialize every button after page load. It also
+exports the `shareon` function, that will let you repopulate your buttons with
+updated information (for example, if you changed the page title):
+
+```js
+// shareon auto-initializes
+
+window.title = "Cool new window title";
+shareon();
+```
+
+If you want to postpone the initialization, you can import the `noinit`-version
+of the package. You'll need to manually call the `shareon` function when you
+want the buttons to be initialized:
+
+```html
+<!-- notice the 'noinit' section of the url for JS -->
+<link href="https://cdn.jsdelivr.net/npm/shareon@1.3/dist/noinit/shareon.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/shareon@1.3/dist/shareon.min.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+  // do something important
+  shareon();
+</script>
+```
+
+or, if you're using Node:
+
+```js
+const shareon = require('shareon/dist/noinit/shareon');
+// or
+import shareon from 'shareon/dist/noinit/shareon';
+
+// do something important
+shareon();
 ```
 
 ## Usage

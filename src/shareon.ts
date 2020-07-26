@@ -1,5 +1,3 @@
-import './style.scss';
-
 interface PublishPreset {
   url: string,
   title: string,
@@ -44,7 +42,7 @@ function initShareonChild(child: HTMLElement, preset: PublishPreset) {
   }
 }
 
-window.onload = () => {
+const initializeShareon = () : void => {
   const shareonContainers = document.getElementsByClassName('shareon');
 
   for (let i = 0; i < shareonContainers.length; i += 1) {
@@ -70,3 +68,5 @@ window.onload = () => {
     }
   }
 };
+
+export default initializeShareon;
