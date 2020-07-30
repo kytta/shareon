@@ -18,8 +18,8 @@ Observe the live demo here: [shareon.js.org](https://shareon.js.org)
 Include the link to shareon's JS and CSS in your website:
 
 ```html
-<link href="https://cdn.jsdelivr.net/npm/shareon@1.3/dist/shareon.min.css" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/shareon@1.3/dist/shareon.min.js" type="text/javascript"></script>
+<link href="https://cdn.jsdelivr.net/npm/shareon@1/dist/shareon.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/shareon@1/dist/shareon.min.js" type="text/javascript"></script>
 ```
 
 or install it via NPM use it in a JS file that you will bundle:
@@ -55,8 +55,8 @@ want the buttons to be initialized:
 
 ```html
 <!-- notice the 'noinit' section of the url for JS -->
-<link href="https://cdn.jsdelivr.net/npm/shareon@1.3/dist/noinit/shareon.min.css" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/shareon@1.3/dist/shareon.min.js" type="text/javascript"></script>
+<link href="https://cdn.jsdelivr.net/npm/shareon@1/dist/shareon.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/shareon@1/dist/noinit/shareon.min.js" type="text/javascript"></script>
 
 <script type="text/javascript">
   // do something important
