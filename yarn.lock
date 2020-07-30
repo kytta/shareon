@@ -53,10 +53,10 @@
     estree-walker "^1.0.1"
     magic-string "^0.25.5"
 
-"@rollup/plugin-typescript@^5.0.0":
-  version "5.0.0"
-  resolved "https://registry.npmjs.org/@rollup/plugin-typescript/-/plugin-typescript-5.0.0.tgz#4e7f9d8c32dfa144bf090c6a69105d32c76381af"
-  integrity sha512-ixgeJXTBArPyJnjP85/8SLYJrPdbOmpRqJ5ICmDERrHAKtiVejl4ybqpw/bEtwycOdBlRH3BaePMTavLt+afVA==
+"@rollup/plugin-typescript@^5.0.2":
+  version "5.0.2"
+  resolved "https://registry.npmjs.org/@rollup/plugin-typescript/-/plugin-typescript-5.0.2.tgz#e879b73354851868b805bbd43f15c229123b8a71"
+  integrity sha512-CkS028Itwjqm1uLbFVfpJgtVtnNvZ+og/m6UlNRR5wOOnNTWPcVQzOu5xGdEX+WWJxdvWIqUq2uR/RBt2ZipWg==
   dependencies:
     "@rollup/pluginutils" "^3.0.1"
     resolve "^1.14.1"
@@ -82,25 +82,25 @@
   resolved "https://registry.npmjs.org/@sindresorhus/is/-/is-0.14.0.tgz#9fb3a3cf3132328151f353de4632e01e52102bea"
   integrity sha512-9NET910DNaIPngYnLLPeg+Ogzqsi9uM4mSboU5y6p8S5DzMTVEsJZrawi+BoDNUVBa2DhJqQYUFvMDfgU062LQ==
 
-"@size-limit/file@4.5.2":
-  version "4.5.2"
-  resolved "https://registry.npmjs.org/@size-limit/file/-/file-4.5.2.tgz#c904c08bed011c297f62637c1c86c6c2c5375185"
-  integrity sha512-t8IS2TOs2mm35HHIvH8rG596XZy77121LuIDbRpYbokVygN4EUMmxaV9iteQgpTuhRN4CUbJZJvAi55RMv3K7w==
+"@size-limit/file@4.5.5":
+  version "4.5.5"
+  resolved "https://registry.npmjs.org/@size-limit/file/-/file-4.5.5.tgz#98a435f68f598d71c6f6e9684a45af10ec9bf37d"
+  integrity sha512-VabOMoIllRc36/HthwY7xctwyqzQ/Piy1EEIb/SOHjB2S7IVRKRtXDNULRRD+gaY0gMyHZaK1u81M3xJkVKBAg==
   dependencies:
     semver "7.3.2"
 
-"@size-limit/preset-small-lib@^4.5.2":
-  version "4.5.2"
-  resolved "https://registry.npmjs.org/@size-limit/preset-small-lib/-/preset-small-lib-4.5.2.tgz#7977d0dfe65d5bb535c2a4fd738806e786b8c8f2"
-  integrity sha512-6msDVypvfYm+3oJ5uOPM3AwQyeogL4wUjqxzwNkG1BkNZLhHyFNjf6X7TNylyiABbHB7IXH6x+EA2u7Kt9ymSg==
+"@size-limit/preset-small-lib@^4.5.5":
+  version "4.5.5"
+  resolved "https://registry.npmjs.org/@size-limit/preset-small-lib/-/preset-small-lib-4.5.5.tgz#fd3bc3292648ab32b79f82ab2cd12c43050e2ea4"
+  integrity sha512-U4DJX5+6nj4rQCge8NpXgFKVk3wN0bywS+t9hKzm/sEo14Z2WOx1cGnf7NQVNhYgU1mfwkq60jp01pW+aLua+g==
   dependencies:
-    "@size-limit/file" "4.5.2"
-    "@size-limit/webpack" "4.5.2"
+    "@size-limit/file" "4.5.5"
+    "@size-limit/webpack" "4.5.5"
 
-"@size-limit/webpack@4.5.2":
-  version "4.5.2"
-  resolved "https://registry.npmjs.org/@size-limit/webpack/-/webpack-4.5.2.tgz#68fd089834175874972a04e6240912c2e462efed"
-  integrity sha512-liqD+N3EQXjMyoZ0UmlTdwo8pBj5ORHkebTmCAYPAfS/P46JEVDUi47Q6s+dzOVY9O/JgSGUyf3VrP/Er7gJ0g==
+"@size-limit/webpack@4.5.5":
+  version "4.5.5"
+  resolved "https://registry.npmjs.org/@size-limit/webpack/-/webpack-4.5.5.tgz#ae79b1adf0a0a432a09d8bdcb19dcd053b2e0b95"
+  integrity sha512-u8InqI0jBwGzvDiid4v7K5z7V+TJrETrf+gfBdt/wdaY54NILrgOROlDoka70Fly17mn+geyIJ+VgI8vMH9ptw==
   dependencies:
     css-loader "^3.6.0"
     escape-string-regexp "^4.0.0"
@@ -1049,10 +1049,10 @@ check-types@^8.0.3:
   resolved "https://registry.npmjs.org/check-types/-/check-types-8.0.3.tgz#3356cca19c889544f2d7a95ed49ce508a0ecf552"
   integrity sha512-YpeKZngUmG65rLudJ4taU7VLkOCTMhNl/u4ctNC56LQS/zJTyNH0Lrtwm1tfTsbLlwvlfsA2d1c8vCf/Kh2KwQ==
 
-"chokidar@>=2.0.0 <4.0.0", chokidar@^3.4.0:
-  version "3.4.0"
-  resolved "https://registry.npmjs.org/chokidar/-/chokidar-3.4.0.tgz#b30611423ce376357c765b9b8f904b9fba3c0be8"
-  integrity sha512-aXAaho2VJtisB/1fg1+3nlLJqGOuewTzQpd/Tz0yTg2R0e4IGtshYvtjowyEumcBv2z+y4+kc75Mz7j5xJskcQ==
+"chokidar@>=2.0.0 <4.0.0", chokidar@^3.4.0, chokidar@^3.4.1:
+  version "3.4.1"
+  resolved "https://registry.npmjs.org/chokidar/-/chokidar-3.4.1.tgz#e905bdecf10eaa0a0b1db0c664481cc4cbc22ba1"
+  integrity sha512-TQTJyr2stihpC4Sya9hs2Xh+O2wf+igjL36Y75xx2WdHuiICcn/XJza46Jwt0eT5hVpQOzo3FpY3cj3RVYLX0g==
   dependencies:
     anymatch "~3.1.1"
     braces "~3.0.2"
@@ -1239,10 +1239,10 @@ color@^3.0.0:
     color-convert "^1.9.1"
     color-string "^1.5.2"
 
-colorette@^1.2.0:
-  version "1.2.0"
-  resolved "https://registry.npmjs.org/colorette/-/colorette-1.2.0.tgz#45306add826d196e8c87236ac05d797f25982e63"
-  integrity sha512-soRSroY+OF/8OdA3PTQXwaDJeMc7TfknKKrxeSCencL2a4+Tx5zhxmmv7hdpCjhKBjehzp8+bwe/T68K0hpIjw==
+colorette@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.npmjs.org/colorette/-/colorette-1.2.1.tgz#4d0b921325c14faf92633086a536db6e89564b1b"
+  integrity sha512-puCDz0CzydiSYOrnXpz/PKd69zRrribezjtE9yd4zvytoRc8+RY/KJPvtPFKZS3E3wP6neGyMe0vOTlHO5L3Pw==
 
 commander@^2.18.0, commander@^2.20.0:
   version "2.20.3"
@@ -5601,10 +5601,10 @@ rollup-plugin-license@^2.1.0:
     spdx-expression-validate "2.0.0"
     spdx-satisfies "5.0.0"
 
-rollup-plugin-postcss@^3.1.2:
-  version "3.1.2"
-  resolved "https://registry.npmjs.org/rollup-plugin-postcss/-/rollup-plugin-postcss-3.1.2.tgz#e862033b96fabb73390fd4ccbee0155385d30e46"
-  integrity sha512-29ocL0CqjLj9sUghTG64ZwFxwbo2d0WyOTVtqPg6SEMZyFmKke9TClBf4/CcdFaWHqS+YZGsUpq3mzIBSYrw+A==
+rollup-plugin-postcss@^3.1.3:
+  version "3.1.3"
+  resolved "https://registry.npmjs.org/rollup-plugin-postcss/-/rollup-plugin-postcss-3.1.3.tgz#b11f69a907cc497311f44da12030439545a7bd80"
+  integrity sha512-5Zm70/HkuYaQuhFbiGSO3U0bVj0magAPo09sd4sRE7I434Iwe4p7xF43pYfW0BcDvY0ZxzD3Fh2vRJzsm4OEiQ==
   dependencies:
     chalk "^4.0.0"
     concat-with-sourcemaps "^1.1.0"
@@ -5696,10 +5696,10 @@ safe-regex@^1.1.0:
   resolved "https://registry.npmjs.org/safer-buffer/-/safer-buffer-2.1.2.tgz#44fa161b0187b9549dd84bb91802f9bd8385cd6a"
   integrity sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==
 
-sass@^1.26.9:
-  version "1.26.9"
-  resolved "https://registry.npmjs.org/sass/-/sass-1.26.9.tgz#73c10cbb88c12b22a9e0107725bfd62296f4978f"
-  integrity sha512-t8AkRVi+xvba4yZiLWkJdgJHBFCB3Dh4johniQkPy9ywkgFHNasXFEFP+RG/F6LhQ+aoE4aX+IorIWQjS0esVw==
+sass@^1.26.10:
+  version "1.26.10"
+  resolved "https://registry.npmjs.org/sass/-/sass-1.26.10.tgz#851d126021cdc93decbf201d1eca2a20ee434760"
+  integrity sha512-bzN0uvmzfsTvjz0qwccN1sPm2HxxpNI/Xa+7PlUEMS+nQvbyuEK7Y0qFqxlPHhiNHb1Ze8WQJtU31olMObkAMw==
   dependencies:
     chokidar ">=2.0.0 <4.0.0"
 
@@ -5858,15 +5858,15 @@ simple-swizzle@^0.2.2:
   dependencies:
     is-arrayish "^0.3.1"
 
-size-limit@^4.5.2:
-  version "4.5.2"
-  resolved "https://registry.npmjs.org/size-limit/-/size-limit-4.5.2.tgz#7448e2a41ad1d335143010409446684819cbcc8a"
-  integrity sha512-5UFx+Y7Yo6PkUxwQCigcT/1TrbPqThdD5uoAy1p2Q3ajBRzWdKb+pK2k+/p8D8pEbFIh4JFN+m5fwdPpgAJ1yQ==
+size-limit@^4.5.5:
+  version "4.5.5"
+  resolved "https://registry.npmjs.org/size-limit/-/size-limit-4.5.5.tgz#ce89846dfa947d4fafaa0dd4baf6d7e8888ea5be"
+  integrity sha512-rh4HSU0UVbOjX0vrzJjPjeCvPz6l+xW6QiA+BCAoLv1WzfnklBUnOdHmboF3UzZIxuNa1TmvCUCCDKmIC5XDVw==
   dependencies:
     bytes "^3.1.0"
-    chokidar "^3.4.0"
+    chokidar "^3.4.1"
     ci-job-number "^1.2.2"
-    colorette "^1.2.0"
+    colorette "^1.2.1"
     cosmiconfig "^6.0.0"
     globby "^11.0.1"
     ora "^4.0.4"
