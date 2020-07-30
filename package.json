@@ -41,7 +41,7 @@
     "postversion": "run-s build"
   },
   "devDependencies": {
-    "@rollup/plugin-strip": "^1.3.3",
+    "@rollup/plugin-strip": "^2.0.0",
     "@rollup/plugin-typescript": "^5.0.2",
     "@size-limit/preset-small-lib": "^4.5.5",
     "@typescript-eslint/eslint-plugin": "^3.7.1",
@@ -50,7 +50,7 @@
     "eslint": "^7.5.0",
     "eslint-ci": "^1.0.0",
     "eslint-config-airbnb-base": "^14.2.0",
-    "eslint-config-airbnb-typescript": "^8.0.2",
+    "eslint-config-airbnb-typescript": "^9.0.0",
     "eslint-plugin-import": "^2.22.0",
     "np": "^6.3.2",
     "npm-run-all": "^4.1.5",
