@@ -62,27 +62,31 @@ plugins.push(postcss({
  * @return {OutputOptions[]} array of outputs
  */
 const getOutputs = (baseDir) => {
+  const defaultParameters = {
+    name: pkg.name,
+    exports: 'default',
+  };
   const result = [];
 
   if (isDev) {
     result.push({
-      name: pkg.name,
+      ...defaultParameters,
       format: 'iife',
       file: `${baseDir}${pkg.name}.js`,
     });
   } else {
     result.push({
-      name: pkg.name,
+      ...defaultParameters,
       format: 'cjs',
       file: `${baseDir}${pkg.name}.cjs`,
     });
     result.push({
-      name: pkg.name,
+      ...defaultParameters,
       format: 'esm',
       file: `${baseDir}${pkg.name}.mjs`,
     });
     result.push({
-      name: pkg.name,
+      ...defaultParameters,
       format: 'iife',
       file: `${baseDir}${pkg.name}.min.js`,
       plugins: [terser({ output: { comments: false } })],
