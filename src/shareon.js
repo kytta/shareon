@@ -1,15 +1,18 @@
-import urlBuilderMap from './networks';
+// eslint-disable-next-line import/no-unresolved
+import urlBuilderMap from 'consts:urlBuilderMap';
 
-const initializeShareon = () : void => {
+const initializeShareon = () => {
   const shareonContainers = document.getElementsByClassName('shareon');
 
   // iterate over <div class="shareon">
   for (let i = 0; i < shareonContainers.length; i += 1) {
-    const container = shareonContainers[i] as HTMLElement;
+    /** @type Element */
+    const container = shareonContainers[i];
 
     // iterate over children of <div class="shareon">
     for (let j = 0; j < container.children.length; j += 1) {
-      const child = container.children[j] as HTMLElement;
+      /** @type Element */
+      const child = container.children[j];
 
       if (child) {
         const classListLength = child.classList.length;
@@ -23,28 +26,28 @@ const initializeShareon = () : void => {
             const preset = {
               url: encodeURIComponent(
                 child.dataset.url
-                  || container.dataset.url
-                  || window.location.href,
+                || container.dataset.url
+                || window.location.href,
               ),
               title: encodeURIComponent(
                 child.dataset.title
-                  || container.dataset.title
-                  || document.title,
+                || container.dataset.title
+                || document.title,
               ),
               media: encodeURIComponent(
                 child.dataset.media
-                  || container.dataset.media
-                  || '',
+                || container.dataset.media
+                || '',
               ),
               text: encodeURIComponent(
                 child.dataset.text
-                  || container.dataset.text
-                  || '',
+                || container.dataset.text
+                || '',
               ),
               via: encodeURIComponent(
                 child.dataset.via
-                  || container.dataset.via
-                  || '',
+                || container.dataset.via
+                || '',
               ),
             };
             const url = urlBuilderMap[cls](preset);

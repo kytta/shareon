@@ -4,7 +4,6 @@ import postcssPluginBanner from 'postcss-banner';
 import postcssPluginCssnano from 'cssnano';
 import strip from '@rollup/plugin-strip';
 import { terser } from 'rollup-plugin-terser';
-import typescript from '@rollup/plugin-typescript';
 
 const isDev = process.env.ROLLUP_WATCH || process.env.NODE_ENV === 'development';
 
@@ -20,7 +19,6 @@ const bannerText = `${pkg.name} v${pkg.version} by Nikita Karamov\n${pkg.homepag
  * @type {Plugin[]}
  */
 const plugins = [
-  typescript(),
 ];
 
 if (!isDev) {
@@ -98,12 +96,12 @@ const getOutputs = (baseDir) => {
 
 const config = [
   {
-    input: './src/autoinit.ts',
+    input: './src/autoinit.js',
     output: getOutputs(`${outputDir}`),
     plugins,
   },
   {
-    input: './src/shareon.ts',
+    input: './src/shareon.js',
     output: getOutputs(`${outputDir}noinit/`),
     plugins: plugins.slice(0, -1),
   },
