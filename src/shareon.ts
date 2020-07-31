@@ -1,27 +1,4 @@
-interface PublishPreset {
-  url: string,
-  title: string,
-  media: string,
-  text: string,
-  via: string,
-}
-
-type UrlBuilder = (data: PublishPreset) => string;
-
-const NETWORKS: { [name: string]: UrlBuilder } = {
-  facebook: (d) => `https://www.facebook.com/sharer/sharer.php?u=${d.url}`,
-  linkedin: (d) => `https://www.linkedin.com/shareArticle?mini=true&url=${d.url}&title=${d.title}`,
-  messenger: (d) => `https://www.facebook.com/dialog/send?app_id=3619024578167617&link=${d.url}&redirect_uri=${d.url}`,
-  odnoklassniki: (d) => `https://connect.ok.ru/offer?url=${d.url}&title=${d.title}${d.media ? `&imageUrl=${d.media}` : ''}`,
-  pinterest: (d) => `https://pinterest.com/pin/create/button/?url=${d.url}&description=${d.title}${d.media ? `&media=${d.media}` : ''}`,
-  pocket: (d) => `https://getpocket.com/edit.php?url=${d.url}`,
-  reddit: (d) => `https://www.reddit.com/submit?title=${d.title}&url=${d.url}`,
-  telegram: (d) => `https://telegram.me/share/url?url=${d.url}${d.text ? `&text=${d.text}` : ''}`,
-  twitter: (d) => `https://twitter.com/intent/tweet?url=${d.url}&text=${d.title}${d.via ? `&via=${d.via}` : ''}`,
-  viber: (d) => `viber://forward?text=${d.title}%0D%0A${d.url}${d.text ? `%0D%0A%0D%0A${d.text}` : ''}`,
-  vkontakte: (d) => `https://vk.com/share.php?url=${d.url}&title=${d.title}${d.media ? `&image=${d.media}` : ''}`,
-  whatsapp: (d) => `whatsapp://send?text=${d.title}%0D%0A${d.url}${d.text ? `%0D%0A%0D%0A${d.text}` : ''}`,
-};
+import urlBuilderMap from './networks';
 
 const initializeShareon = () : void => {
   const shareonContainers = document.getElementsByClassName('shareon');
@@ -42,7 +19,7 @@ const initializeShareon = () : void => {
           const cls = child.classList.item(k);
 
           // if it's one of the networks
-          if (Object.prototype.hasOwnProperty.call(NETWORKS, cls)) {
+          if (Object.prototype.hasOwnProperty.call(urlBuilderMap, cls)) {
             const preset = {
               url: encodeURIComponent(
                 child.dataset.url
@@ -70,7 +47,7 @@ const initializeShareon = () : void => {
                   || '',
               ),
             };
-            const url = NETWORKS[cls](preset);
+            const url = urlBuilderMap[cls](preset);
 
             if (child.tagName.toLowerCase() === 'a') {
               child.setAttribute('href', url);
