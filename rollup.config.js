@@ -1,10 +1,16 @@
+import consts from '@nickkaramoff/rollup-plugin-consts';
 import license from 'rollup-plugin-license';
 import postcss from 'rollup-plugin-postcss';
 import postcssPluginBanner from 'postcss-banner';
+import postcssPluginCalc from 'postcss-calc';
 import postcssPluginCssnano from 'cssnano';
+import postcssPluginMixins from 'postcss-mixins';
+import postcssPluginVariables from 'postcss-css-variables';
 import strip from '@rollup/plugin-strip';
 import { terser } from 'rollup-plugin-terser';
-import typescript from '@rollup/plugin-typescript';
+
+import { urlBuilderMap } from './src/networks';
+import networksMixin from './src/networksMixin';
 
 const isDev = process.env.ROLLUP_WATCH || process.env.NODE_ENV === 'development';
 
@@ -20,7 +26,9 @@ const bannerText = `${pkg.name} v${pkg.version} by Nikita Karamov\n${pkg.homepag
  * @type {Plugin[]}
  */
 const plugins = [
-  typescript(),
+  consts({
+    urlBuilderMap,
+  }),
 ];
 
 if (!isDev) {
@@ -42,6 +50,13 @@ if (!isDev) {
 plugins.push(postcss({
   extract: `${pkg.name}.min.css`,
   plugins: [
+    postcssPluginMixins({
+      mixins: {
+        networks: networksMixin,
+      },
+    }),
+    postcssPluginVariables(),
+    postcssPluginCalc(),
     (!isDev) && postcssPluginCssnano({
       preset: 'default',
     }),
@@ -98,12 +113,12 @@ const getOutputs = (baseDir) => {
 
 const config = [
   {
-    input: './src/autoinit.ts',
+    input: './src/autoinit.js',
     output: getOutputs(`${outputDir}`),
     plugins,
   },
   {
-    input: './src/shareon.ts',
+    input: './src/shareon.js',
     output: getOutputs(`${outputDir}noinit/`),
     plugins: plugins.slice(0, -1),
   },
