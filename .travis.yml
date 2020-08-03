@@ -1,9 +1,0 @@
-language: node_js
-node_js:
-  - node
-  - lts/erbium
-  - lts/dubnium
-cache: yarn
-
-install: yarn
-script: yarn test
