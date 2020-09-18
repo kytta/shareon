@@ -57,9 +57,11 @@ const initializeShareon = () => {
               child.setAttribute('rel', 'noopener noreferrer');
               child.setAttribute('target', '_blank');
             } else {
-              child.addEventListener('click', () => {
-                window.open(url, '_blank', 'noopener,noreferrer').opener = null;
-              });
+              const getButtonListener = (buttonUrl) => () => {
+                window.open(buttonUrl, '_blank', 'noopener,noreferrer');
+              };
+
+              child.addEventListener('click', getButtonListener(url));
             }
 
             break; // once a network is detected we don't want to check further
