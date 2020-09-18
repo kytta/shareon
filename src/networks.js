@@ -101,7 +101,7 @@ const urlBuilderMap = Object.fromEntries(
     ]),
 );
 
-export {
-  NETWORKS as fullNetworkMap,
+module.exports = {
+  fullNetworkMap: NETWORKS,
   urlBuilderMap,
 };

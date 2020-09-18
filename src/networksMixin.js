@@ -1,6 +1,6 @@
-import { fullNetworkMap } from './networks';
+const { fullNetworkMap } = require('./networks');
 
-export default function networks() {
+module.exports = function networks() {
   const ruleObj = {};
 
   Object.entries(fullNetworkMap).forEach(([name, network]) => {
@@ -20,4 +20,4 @@ export default function networks() {
   });
 
   return ruleObj;
-}
+};

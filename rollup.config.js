@@ -1,16 +1,10 @@
+import buble from '@rollup/plugin-buble';
 import consts from '@nickkaramoff/rollup-plugin-consts';
 import license from 'rollup-plugin-license';
-import postcss from 'rollup-plugin-postcss';
-import postcssPluginBanner from 'postcss-banner';
-import postcssPluginCalc from 'postcss-calc';
-import postcssPluginCssnano from 'cssnano';
-import postcssPluginMixins from 'postcss-mixins';
-import postcssPluginVariables from 'postcss-css-variables';
 import strip from '@rollup/plugin-strip';
 import { terser } from 'rollup-plugin-terser';
 
-import { urlBuilderMap } from './src/networks';
-import networksMixin from './src/networksMixin';
+const { urlBuilderMap } = require('./src/networks');
 
 const isDev = process.env.ROLLUP_WATCH || process.env.NODE_ENV === 'development';
 
@@ -20,107 +14,61 @@ const outputDir = isDev ? './dev/' : './dist/';
 
 const bannerText = `${pkg.name} v${pkg.version} by Nikita Karamov\n${pkg.homepage}`;
 
-/**
- * Plugins to build the project
- *
- * @type {Plugin[]}
- */
 const plugins = [
   consts({
     urlBuilderMap,
   }),
-];
-
-if (!isDev) {
-  plugins.push(strip({
+  (!isDev) && strip({
     debugger: true,
-    include: ['**/*.js', '**/*.ts'],
+    include: ['**/*.js'],
     functions: ['console.log', 'console.debug', 'assert.*'],
     sourceMap: false,
-  }));
-
-  plugins.push(license({
+  }),
+  (!isDev) && license({
     banner: {
       commentStyle: 'ignored',
       content: bannerText,
     },
-  }));
-}
+  }),
+  (!isDev) && buble({ transforms: { modules: false } }),
+];
 
-plugins.push(postcss({
-  extract: `${pkg.name}.min.css`,
-  plugins: [
-    postcssPluginMixins({
-      mixins: {
-        networks: networksMixin,
-      },
-    }),
-    postcssPluginVariables(),
-    postcssPluginCalc(),
-    (!isDev) && postcssPluginCssnano({
-      preset: 'default',
-    }),
-    postcssPluginBanner({
-      banner: bannerText,
-      important: true,
-    }),
-  ],
-}));
-
-/**
- * @typedef {import('rollup').OutputOptions} OutputOptions
- */
-
-/**
- *
- * @param {string} baseDir base directory for the output files
- * @return {OutputOptions[]} array of outputs
- */
-const getOutputs = (baseDir) => {
+const getOutput = (baseDir) => {
   const defaultParameters = {
     name: pkg.name,
     exports: 'default',
   };
-  const result = [];
 
-  if (isDev) {
-    result.push({
+  return [
+    {
       ...defaultParameters,
       format: 'iife',
-      file: `${baseDir}${pkg.name}.js`,
-    });
-  } else {
-    result.push({
+      file: `${baseDir}${pkg.name}${isDev ? '' : '.min'}.js`,
+      plugins: isDev ? [] : [terser({ output: { comments: false } })],
+    },
+    (!isDev) && {
       ...defaultParameters,
       format: 'cjs',
       file: `${baseDir}${pkg.name}.cjs`,
-    });
-    result.push({
+    },
+    (!isDev) && {
       ...defaultParameters,
       format: 'esm',
       file: `${baseDir}${pkg.name}.mjs`,
-    });
-    result.push({
-      ...defaultParameters,
-      format: 'iife',
-      file: `${baseDir}${pkg.name}.min.js`,
-      plugins: [terser({ output: { comments: false } })],
-    });
-  }
-
-  return result;
+    },
+  ];
 };
 
 const config = [
   {
     input: './src/autoinit.js',
-    output: getOutputs(`${outputDir}`),
+    output: getOutput(`${outputDir}`),
     plugins,
   },
   {
     input: './src/shareon.js',
-    output: getOutputs(`${outputDir}noinit/`),
-    plugins: plugins.slice(0, -1),
+    output: getOutput(`${outputDir}noinit/`),
+    plugins,
   },
 ];
 
