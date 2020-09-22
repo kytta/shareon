@@ -45,26 +45,31 @@ async function js() {
 }
 
 async function css() {
+  const plugins = [
+    mixins({
+      mixins: {
+        networks,
+      },
+    }),
+    cssVariables,
+    calc,
+  ];
+
+  if (!isDev) {
+    plugins.push(
+      cssnano({
+        preset: 'default',
+      }),
+      autoprefixer(),
+      banner({
+        banner: bannerText,
+        important: true,
+      }),
+    );
+  }
+
   gulp.src(path.resolve(__dirname, 'src', 'style.css'))
-    .pipe(postcss({
-      plugins: [
-        mixins({
-          mixins: {
-            networks,
-          },
-        }),
-        cssVariables,
-        calc,
-        (!isDev) && cssnano({
-          preset: 'default',
-        }),
-        autoprefixer,
-        banner({
-          banner: bannerText,
-          important: true,
-        }),
-      ],
-    }))
+    .pipe(postcss(plugins))
     .pipe(rename({
       basename: pkg.name,
       extname: isDev ? '.css' : '.min.css',

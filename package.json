@@ -46,7 +46,7 @@
     "@rollup/plugin-strip": "^2.0.0",
     "@rollup/plugin-typescript": "^5.0.2",
     "@size-limit/preset-small-lib": "^4.5.5",
-    "autoprefixer": "^10.0.0",
+    "autoprefixer": "^9.8.6",
     "browserslist": "^4.14.3",
     "cross-env": "^7.0.2",
     "cssnano": "^4.1.10",
