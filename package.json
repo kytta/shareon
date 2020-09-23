@@ -74,18 +74,18 @@
       "webpack": false
     },
     {
-      "limit": "1 KB",
+      "limit": "7 KB",
       "path": "./dist/shareon.min.js",
       "webpack": false
     },
     {
-      "limit": "1 KB",
+      "limit": "7 KB",
       "path": [
         "./dist/shareon.cjs"
       ]
     },
     {
-      "limit": "1 KB",
+      "limit": "7 KB",
       "path": [
         "./dist/shareon.mjs"
       ]

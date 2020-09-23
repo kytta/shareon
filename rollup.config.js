@@ -4,7 +4,7 @@ import license from 'rollup-plugin-license';
 import strip from '@rollup/plugin-strip';
 import { terser } from 'rollup-plugin-terser';
 
-const { urlBuilderMap } = require('./src/networks');
+const { fullNetworkMap } = require('./src/networks');
 
 const isDev = process.env.ROLLUP_WATCH || process.env.NODE_ENV === 'development';
 
@@ -16,7 +16,7 @@ const bannerText = `${pkg.name} v${pkg.version} by Nikita Karamov\n${pkg.homepag
 
 const plugins = [
   consts({
-    urlBuilderMap,
+    fullNetworkMap,
   }),
   (!isDev) && strip({
     debugger: true,

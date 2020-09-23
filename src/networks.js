@@ -21,6 +21,47 @@
  * }} SocialNetwork
  */
 
+function shareOnMastodon(d) {
+  // Inspired by https://www.256kilobytes.com/content/show/4812/
+  // License: "Feel free to use and/or modify this code on your site"
+
+  const defaultInstance = (
+    localStorage['mastodon.instance'] || 'https://mastodon.social'
+  );
+
+  // eslint-disable-next-line no-alert
+  let instance = prompt(
+    'Enter the address of your Mastodon instance', defaultInstance,
+  );
+
+  if (instance) {
+    if (
+      !(
+        instance.startsWith('https://')
+        || instance.startsWith('http://')
+      )
+    ) {
+      instance = `https://${instance}`;
+    }
+    if (!instance.endsWith('/')) {
+      instance += '/';
+    }
+
+    localStorage['mastodon.instance'] = instance;
+
+    let toot = `${d.title}%0A${d.url}`;
+    if (d.text) {
+      toot += `%0A${d.text}`;
+    }
+    if (d.via) {
+      toot += `%0A${d.via}`;
+    }
+
+    const mastodonUrl = `${instance}share?text=${toot}`;
+    window.open(mastodonUrl, '_blank', 'noopener,noreferrer');
+  }
+}
+
 /**
  * List of social networks available to shareon
  *
@@ -37,6 +78,11 @@ const NETWORKS = {
     icon: 'data:image/svg+xml,%3Csvg fill="%23fff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M23.722 23.72h-4.91v-7.692c0-1.834-.038-4.194-2.559-4.194-2.56 0-2.95 1.995-2.95 4.06v7.827H8.394V7.902h4.716v2.157h.063c.659-1.244 2.261-2.556 4.655-2.556 4.974 0 5.894 3.274 5.894 7.535zM.388 7.902h4.923v15.819H.388zM2.85 5.738A2.849 2.849 0 010 2.886a2.851 2.851 0 112.85 2.852z"/%3E%3C/svg%3E',
     iconWhenText: 'data:image/svg+xml,%3Csvg fill="%23fff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/%3E%3C/svg%3E',
     url: (d) => `https://www.linkedin.com/shareArticle?mini=true&url=${d.url}&title=${d.title}`,
+  },
+  mastodon: {
+    color: '#1f232b',
+    icon: 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="61.076954mm" height="65.47831mm" viewBox="0 0 216.4144 232.00976"%3E%3Cpath d="M211.80734 139.0875c-3.18125 16.36625-28.4925 34.2775-57.5625 37.74875-15.15875 1.80875-30.08375 3.47125-45.99875 2.74125-26.0275-1.1925-46.565-6.2125-46.565-6.2125 0 2.53375.15625 4.94625.46875 7.2025 3.38375 25.68625 25.47 27.225 46.39125 27.9425 21.11625.7225 39.91875-5.20625 39.91875-5.20625l.8675 19.09s-14.77 7.93125-41.08125 9.39c-14.50875.7975-32.52375-.365-53.50625-5.91875C9.23234 213.82 1.40609 165.31125.20859 116.09125c-.365-14.61375-.14-28.39375-.14-39.91875 0-50.33 32.97625-65.0825 32.97625-65.0825C49.67234 3.45375 78.20359.2425 107.86484 0h.72875c29.66125.2425 58.21125 3.45375 74.8375 11.09 0 0 32.975 14.7525 32.975 65.0825 0 0 .41375 37.13375-4.59875 62.915" fill="%233088d4"/%3E%3Cpath d="M177.50984 80.077v60.94125h-24.14375v-59.15c0-12.46875-5.24625-18.7975-15.74-18.7975-11.6025 0-17.4175 7.5075-17.4175 22.3525v32.37625H96.20734V85.42325c0-14.845-5.81625-22.3525-17.41875-22.3525-10.49375 0-15.74 6.32875-15.74 18.7975v59.15H38.90484V80.077c0-12.455 3.17125-22.3525 9.54125-29.675 6.56875-7.3225 15.17125-11.07625 25.85-11.07625 12.355 0 21.71125 4.74875 27.8975 14.2475l6.01375 10.08125 6.015-10.08125c6.185-9.49875 15.54125-14.2475 27.8975-14.2475 10.6775 0 19.28 3.75375 25.85 11.07625 6.36875 7.3225 9.54 17.22 9.54 29.675" fill="%23fff"/%3E%3C/svg%3E',
+    onclick: shareOnMastodon,
   },
   messenger: {
     color: '#0099FF',
@@ -90,18 +136,6 @@ const NETWORKS = {
   },
 };
 
-/**
- * @type {Record<string, UrlBuilder>}
- */
-const urlBuilderMap = Object.fromEntries(
-  Object.entries(NETWORKS)
-    .map((entry) => [
-      entry[0],
-      entry[1].url,
-    ]),
-);
-
 module.exports = {
   fullNetworkMap: NETWORKS,
-  urlBuilderMap,
 };

@@ -1,5 +1,5 @@
 // eslint-disable-next-line import/no-unresolved
-import urlBuilderMap from 'consts:urlBuilderMap';
+import fullNetworkMap from 'consts:fullNetworkMap';
 
 const initializeShareon = () => {
   const shareonContainers = document.getElementsByClassName('shareon');
@@ -22,7 +22,7 @@ const initializeShareon = () => {
           const cls = child.classList.item(k);
 
           // if it's one of the networks
-          if (Object.prototype.hasOwnProperty.call(urlBuilderMap, cls)) {
+          if (Object.prototype.hasOwnProperty.call(fullNetworkMap, cls)) {
             const preset = {
               url: encodeURIComponent(
                 child.dataset.url
@@ -50,21 +50,35 @@ const initializeShareon = () => {
                 || '',
               ),
             };
-            const url = urlBuilderMap[cls](preset);
 
-            if (child.tagName.toLowerCase() === 'a') {
-              child.setAttribute('href', url);
-              child.setAttribute('rel', 'noopener noreferrer');
-              child.setAttribute('target', '_blank');
-            } else {
-              const getButtonListener = (buttonUrl) => () => {
-                window.open(buttonUrl, '_blank', 'noopener,noreferrer');
+            const urlBuilder = fullNetworkMap[cls].url;
+            const { onclick } = fullNetworkMap[cls];
+            if (urlBuilder) {
+              const url = urlBuilder(preset);
+
+              if (child.tagName.toLowerCase() === 'a') {
+                child.setAttribute('href', url);
+                child.setAttribute('rel', 'noopener noreferrer');
+                child.setAttribute('target', '_blank');
+              } else {
+                const getButtonListener = (buttonUrl) => () => {
+                  window.open(buttonUrl, '_blank', 'noopener,noreferrer');
+                };
+
+                child.addEventListener('click', getButtonListener(url));
+              }
+
+              break; // once a network is detected we don't want to check further
+            } else if (onclick) {
+              const getOnclickListener = (onclickFn, presetData) => () => {
+                onclickFn(presetData);
               };
 
-              child.addEventListener('click', getButtonListener(url));
+              child.addEventListener(
+                'click', getOnclickListener(onclick, preset),
+              );
+              break; // once a network is detected we don't want to check further
             }
-
-            break; // once a network is detected we don't want to check further
           }
         }
       }
