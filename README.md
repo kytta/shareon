@@ -137,7 +137,7 @@ Here are all the custom parameters in their glory:
 
 ## Copyright
 
-Includes the
+Includes a modified version of the
 [Mastodon logo](https://commons.wikimedia.org/wiki/File:Mastodon_Logotype_%28Simple%29.svg),
 which is licensed under the
 [APGLv3 license](https://www.gnu.org/licenses/agpl.html) or later.
