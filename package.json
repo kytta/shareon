@@ -33,6 +33,7 @@
   ],
   "scripts": {
     "build": "gulp",
+    "build:dev": "cross-env NODE_ENV=development gulp",
     "dev": "cross-env NODE_ENV=development gulp dev",
     "pretest": "run-s build",
     "test:lint": "eslint --ext .js,.ts ./src/",
