@@ -37,3 +37,5 @@ jobs:
           fqdn: shareon.js.org
           jekyll: false
         if: ${{ github.ref == 'refs/heads/master' }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
