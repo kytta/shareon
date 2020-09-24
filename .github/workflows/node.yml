@@ -25,3 +25,13 @@ jobs:
         uses: bahmutov/npm-install@v1.1.0
       - name: Test
         run: yarn test
+      - name: Copy built files to docs
+        run: cp ./dist/shareon.min.* ./docs
+      - name: Deploy to GitHub Pages
+        uses: crazy-max/ghaction-github-pages@v2.1.2
+        with:
+          keep_history: true
+          build_dir: docs
+          fqdn: shareon.js.org
+          jekyll: false
+        if: github.event == 'push' && github.ref == 'master'
