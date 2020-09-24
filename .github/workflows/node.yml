@@ -28,7 +28,7 @@ jobs:
         
       - name: Copy built files to docs
         run: cp ./dist/shareon.min.* ./docs
-        if: github.event == 'push' && github.ref == 'refs/heads/master'
+        if: ${{ github.ref == 'refs/heads/master' }}
       - name: Deploy to GitHub Pages
         uses: crazy-max/ghaction-github-pages@v2.1.2
         with:
@@ -36,4 +36,4 @@ jobs:
           build_dir: docs
           fqdn: shareon.js.org
           jekyll: false
-        if: github.event == 'push' && github.ref == 'refs/heads/master'
+        if: ${{ github.ref == 'refs/heads/master' }}
