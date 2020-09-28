@@ -49,6 +49,11 @@ const initializeShareon = () => {
                 || container.dataset.via
                 || '',
               ),
+              fbAppId: encodeURIComponent(
+                child.dataset.fbAppId
+                || container.dataset.fbAppId
+                || '',
+              ),
             };
             const url = urlBuilderMap[cls](preset);
 
