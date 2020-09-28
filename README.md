@@ -132,7 +132,7 @@ Here are all the custom parameters in their glory:
     <a class="pinterest" data-media="https://picsum.photos/500">Pin</a>
     <a class="telegram" data-text="Check this out!"></a>
     <a class="twitter" data-via="MyNickname"></a>
-    <a class="mastodon" data-text="Check this out!" data-via="@MyNickname@myserver.social"></a>
+    <a class="mastodon" data-via="@MyNickname@myserver.social"></a>
     <a class="whatsapp" data-url="https://my-cool-website.com">Send</a>
 </div>
 ```
