@@ -69,7 +69,7 @@
                 <a class="facebook"></a>
                 <a class="linkedin"></a>
                 <a class="mastodon"></a>
-                <a class="messenger"></a>
+                <a class="messenger" data-fb-app-id="3619024578167617"></a>
                 <a class="odnoklassniki"></a>
                 <a class="pinterest"></a>
                 <a class="pocket"></a>
@@ -188,7 +188,8 @@ shareon();</code></pre>
     &lt;a class="facebook"&gt;&lt;/a&gt;
     &lt;a class="linkedin"&gt;&lt;/a&gt;
     &lt;a class="mastodon"&gt;&lt;/a&gt;
-    &lt;a class="messenger"&gt;&lt;/a&gt;
+    &lt;!-- FB App ID is required for the Messenger button to function --&gt;
+    &lt;a class="messenger" data-fb-app-id="0123456789012345"&gt;&lt;/a&gt;
     &lt;a class="odnoklassniki"&gt;&lt;/a&gt;
     &lt;a class="pinterest"&gt;&lt;/a&gt;
     &lt;a class="pocket"&gt;&lt;/a&gt;
@@ -203,7 +204,7 @@ shareon();</code></pre>
                 <a class="facebook"></a>
                 <a class="linkedin"></a>
                 <a class="mastodon"></a>
-                <a class="messenger"></a>
+                <a class="messenger" data-fb-app-id="3619024578167617"></a>
                 <a class="odnoklassniki"></a>
                 <a class="pinterest"></a>
                 <a class="pocket"></a>
@@ -243,6 +244,7 @@ shareon();</code></pre>
             </p>
 
             <ul>
+                <li>you <strong>have to</strong> add <code>data-fb-app-id</code> to the FB Messenger button to make sharing even possible</li>
                 <li>add <code>data-media</code> to an Odnoklassniki, Pinterest, or VK button to customize the pinned picture</li>
                 <li>add <code>data-text</code> to a WhatsApp, Mastodon, Telegram, or Viber button to add custom message text</li>
                 <li>add <code>data-via</code> to a Twitter or Mastodon button to mention a user</li>
@@ -254,21 +256,21 @@ shareon();</code></pre>
 
             <pre><code>&lt;div class="shareon" data-url="https://example.com/custom-url"&gt;
     &lt;a class="facebook" data-title="Custom Facebook title"&gt;&lt;/a&gt;
-    &lt;a class="messenger" data-url="https://my-cool-website.com"&gt;&lt;/a&gt;
+    &lt;a class="messenger" data-fb-app-id="0123456789012345"&gt;&lt;/a&gt;
     &lt;a class="pinterest" data-media="https://picsum.photos/500"&gt;Pin&lt;/a&gt;
     &lt;a class="telegram" data-text="Check this out!"&gt;&lt;/a&gt;
     &lt;a class="twitter" data-via="MyNickname"&gt;&lt;/a&gt;
     &lt;a class="mastodon" data-text="Check this out!" data-via="@MyNickname@myserver.social"&gt;&lt;/a&gt;
-    &lt;a class="whatsapp"&gt;Send&lt;/a&gt;
+    &lt;a class="whatsapp" data-url="https://my-cool-website.com"&gt;Send&lt;/a&gt;
 &lt;/div></code></pre>
             <div class="shareon" data-url="https://example.com/custom-url">
                 <a class="facebook" data-title="Custom Facebook title"></a>
-                <a class="messenger" data-url="https://my-cool-website.com"></a>
+                <a class="messenger" data-fb-app-id="3619024578167617"></a>
                 <a class="pinterest" data-media="https://picsum.photos/500">Pin</a>
                 <a class="telegram" data-text="Check this out!"></a>
                 <a class="twitter" data-via="MyNickname"></a>
                 <a class="mastodon" data-text="Check this out!" data-via="@MyNickname@myserver.social"></a>
-                <a class="whatsapp">Send</a>
+                <a class="whatsapp" data-url="https://my-cool-website.com">Send</a>
             </div>
 
         </article>

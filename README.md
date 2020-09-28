@@ -88,7 +88,8 @@ classes match the names of social networks:
     <a class="facebook"></a>
     <a class="linkedin"></a>
     <a class="mastodon"></a>
-    <a class="messenger"></a>
+    <!-- FB App ID is required for the Messenger button to function -->
+    <a class="messenger" data-fb-app-id="0123456789012345"></a>
     <a class="odnoklassniki"></a>
     <a class="pinterest"></a>
     <a class="pocket"></a>
@@ -117,6 +118,7 @@ on the whole container or on the specific buttons:
 
 Apart from the URL and title, some networks support extra parameters:
 
+- you **have to** add `data-fb-app-id` to the FB Messenger button to make sharing even possible
 - add `data-media` to an Odnoklassniki, Pinterest, or VK button to customize the pinned picture
 - add `data-text` to a WhatsApp, Mastodon, Telegram or Viber button to add custom message text
 - add `data-via` to a Twitter or Mastodon button to mention a user
@@ -126,12 +128,12 @@ Here are all the custom parameters in their glory:
 ```html
 <div class="shareon" data-url="https://example.com/custom-url">
     <a class="facebook" data-title="Custom Facebook title"></a>
-    <a class="messenger" data-url="https://my-cool-website.com"></a>
+    <a class="messenger" data-fb-app-id="0123456789012345"></a>
     <a class="pinterest" data-media="https://picsum.photos/500">Pin</a>
     <a class="telegram" data-text="Check this out!"></a>
     <a class="twitter" data-via="MyNickname"></a>
     <a class="mastodon" data-text="Check this out!" data-via="@MyNickname@myserver.social"></a>
-    <a class="whatsapp">Send</a>
+    <a class="whatsapp" data-url="https://my-cool-website.com">Send</a>
 </div>
 ```
 
