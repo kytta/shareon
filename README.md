@@ -120,7 +120,7 @@ Apart from the URL and title, some networks support extra parameters:
 
 - you **have to** add `data-fb-app-id` to the FB Messenger button to make sharing even possible
 - add `data-media` to an Odnoklassniki, Pinterest, or VK button to customize the pinned picture
-- add `data-text` to a WhatsApp, Mastodon, Telegram or Viber button to add custom message text
+- add `data-text` to a WhatsApp, Mastodon, Telegram, or Viber button to add custom message text
 - add `data-via` to a Twitter or Mastodon button to mention a user
 
 Here are all the custom parameters in their glory:
