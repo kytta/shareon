@@ -2,7 +2,7 @@
 
 <img src="https://raw.githubusercontent.com/googlefonts/noto-emoji/master/png/128/emoji_u1f4ef.png" align="right" alt="Postal Horn emoji" width="96" height="96">
 
-Lightweight, stylish and ethical share buttons.
+> Lightweight, stylish and ethical share buttons
 
 - **Small.** Dependency-free. CSS+JS bundle is only 6 KB minified and gzipped.
 - **Stylish.** Uses official vector logos and colors with no visual mess.
@@ -137,7 +137,9 @@ Here are all the custom parameters in their glory:
 </div>
 ```
 
-## Copyright
+## License
+
+MIT © [Nikita Karamov](https://karamoff.dev)
 
 Includes a modified version of the
 [Mastodon logo](https://commons.wikimedia.org/wiki/File:Mastodon_Logotype_%28Simple%29.svg),
