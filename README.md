@@ -1,6 +1,6 @@
 # shareon
 
-<img src="https://raw.githubusercontent.com/googlefonts/noto-emoji/master/png/128/emoji_u1f4ef.png" align="right" alt="Postal Horn emoji" width="96" height="96">
+<img src="https://raw.githubusercontent.com/NickKaramoff/shareon/main/assets/logo.svg" align="right" alt="shareon logo — the Postal Horn emoji" width="96" height="96">
 
 > Lightweight, stylish and ethical share buttons
 
@@ -8,7 +8,7 @@
 - **Stylish.** Uses official vector logos and colors with no visual mess.
 - **Ethical.** Embeds no tracking code. JS is required only for the setup.
 
-<img src="https://raw.githubusercontent.com/NickKaramoff/shareon/main/docs/screen01@2x.png" height="156" width="416" alt="shareon example">
+<img src="https://raw.githubusercontent.com/NickKaramoff/shareon/main/assets/demo@2x.png" height="84" width="392" alt="shareon demo screenshot">
 
 ----
 Observe the live demo here: [shareon.js.org](https://shareon.js.org)
