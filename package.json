@@ -88,5 +88,6 @@
         "./dist/shareon.mjs"
       ]
     }
-  ]
+  ],
+  "dependencies": {}
 }
