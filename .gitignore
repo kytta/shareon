@@ -1,5 +1,6 @@
-dev
-dist
-.idea
-node_modules
+dev/
+dist/
+.idea/
+node_modules/
+.vscode/
 yarn-error.log
