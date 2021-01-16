@@ -3,11 +3,11 @@ name: Node.js CI
 on:
   push:
     branches:
-      - master
+      - main
       - v*
   pull_request:
     branches:
-      - master
+      - main
 
 jobs:
   lint:
@@ -44,7 +44,7 @@ jobs:
 
       - name: Copy built files to docs
         run: cp ./dist/shareon.min.* ./docs
-        if: ${{ github.ref == 'refs/heads/master' }}
+        if: ${{ github.ref == 'refs/heads/main' }}
       - name: Deploy to GitHub Pages
         uses: crazy-max/ghaction-github-pages@v2
         with:
@@ -52,6 +52,6 @@ jobs:
           build_dir: docs
           fqdn: shareon.js.org
           jekyll: false
-        if: ${{ github.ref == 'refs/heads/master' }}
+        if: ${{ github.ref == 'refs/heads/main' }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
