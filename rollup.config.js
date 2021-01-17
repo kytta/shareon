@@ -1,22 +1,57 @@
+import { join, resolve } from 'path';
+
 import buble from '@rollup/plugin-buble';
 import consts from '@nickkaramoff/rollup-plugin-consts';
-import license from 'rollup-plugin-license';
 import strip from '@rollup/plugin-strip';
+import postcss from 'rollup-plugin-postcss';
 import { terser } from 'rollup-plugin-terser';
 
+const autoprefixer = require('autoprefixer');
+const banner = require('postcss-banner');
+const calc = require('postcss-calc');
+const cssnano = require('cssnano');
+const cssVariables = require('postcss-css-variables');
+const mixins = require('postcss-mixins');
+
+const networks = require('./src/networksMixin');
 const { urlBuilderMap } = require('./src/networks');
-
-const isDev = process.env.ROLLUP_WATCH || process.env.NODE_ENV === 'development';
-
 const pkg = require('./package.json');
 
-const outputDir = isDev ? './dev/' : './dist/';
+const isDev = process.env.ROLLUP_WATCH || process.env.NODE_ENV === 'development';
+const outputDir = resolve('.', 'dist');
+const bannerText = `${pkg.name} v${pkg.version}`;
 
-const bannerText = `${pkg.name} v${pkg.version} by Nikita Karamov\n${pkg.homepage}`;
+const postcssPlugins = [
+  mixins({
+    mixins: {
+      networks,
+    },
+  }),
+  cssVariables,
+  calc,
+];
 
-const plugins = [
+if (!isDev) {
+  postcssPlugins.push(
+    cssnano({
+      preset: 'default',
+    }),
+    autoprefixer(),
+    banner({
+      banner: bannerText,
+      important: true,
+      inline: true,
+    }),
+  );
+}
+
+const getPlugins = (css) => [
   consts({
     urlBuilderMap,
+  }),
+  css && postcss({
+    extract: resolve(join(outputDir, 'shareon.min.css')),
+    plugins: postcssPlugins,
   }),
   (!isDev) && strip({
     debugger: true,
@@ -24,13 +59,11 @@ const plugins = [
     functions: ['console.log', 'console.debug', 'assert.*'],
     sourceMap: false,
   }),
-  (!isDev) && license({
-    banner: {
-      commentStyle: 'ignored',
-      content: bannerText,
+  (!isDev) && buble({
+    transforms: {
+      modules: false,
     },
   }),
-  (!isDev) && buble({ transforms: { modules: false } }),
 ];
 
 const getOutput = (baseDir) => {
@@ -43,33 +76,34 @@ const getOutput = (baseDir) => {
     {
       ...defaultParameters,
       format: 'iife',
-      file: `${baseDir}${pkg.name}${isDev ? '' : '.min'}.js`,
-      plugins: isDev ? [] : [terser({ output: { comments: false } })],
+      file: join(baseDir, `${pkg.name}${isDev ? '' : '.min'}.js`),
+      plugins: isDev ? [] : [terser({ output: { comments: /^!/ } })],
+      banner: `/*! ${bannerText} */`,
     },
     (!isDev) && {
       ...defaultParameters,
       format: 'cjs',
-      file: `${baseDir}${pkg.name}.cjs`,
+      file: join(baseDir, `${pkg.name}.cjs`),
+      banner: `/*! ${bannerText} */`,
     },
     (!isDev) && {
       ...defaultParameters,
       format: 'esm',
-      file: `${baseDir}${pkg.name}.mjs`,
+      file: join(baseDir, `${pkg.name}.mjs`),
+      banner: `/*! ${bannerText} */`,
     },
   ];
 };
 
-const config = [
+export default [
   {
-    input: './src/autoinit.js',
-    output: getOutput(`${outputDir}`),
-    plugins,
+    input: join(__dirname, 'src', 'autoinit.js'),
+    output: getOutput(outputDir),
+    plugins: getPlugins(true),
   },
   {
-    input: './src/shareon.js',
-    output: getOutput(`${outputDir}noinit/`),
-    plugins,
+    input: join(__dirname, 'src', 'shareon.js'),
+    output: getOutput(join(outputDir, 'noinit')),
+    plugins: getPlugins(false),
   },
 ];
-
-export default config;
