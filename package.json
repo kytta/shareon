@@ -36,6 +36,7 @@
     "build:dev": "cross-env NODE_ENV=development rollup --config",
     "dev": "cross-env NODE_ENV=development rollup --config --watch",
     "lint": "eslint src/*.js",
+    "release": "np",
     "size": "size-limit",
     "test": "yarn lint && yarn build && yarn size",
     "postversion": "yarn build"
