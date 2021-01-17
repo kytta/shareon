@@ -1,6 +1,7 @@
+import { join } from 'path';
+
 import buble from '@rollup/plugin-buble';
 import consts from '@nickkaramoff/rollup-plugin-consts';
-import license from 'rollup-plugin-license';
 import strip from '@rollup/plugin-strip';
 import { terser } from 'rollup-plugin-terser';
 
@@ -10,9 +11,9 @@ const isDev = process.env.ROLLUP_WATCH || process.env.NODE_ENV === 'development'
 
 const pkg = require('./package.json');
 
-const outputDir = isDev ? './dev/' : './dist/';
+const outputDir = join(__dirname, 'dist');
 
-const bannerText = `${pkg.name} v${pkg.version} by Nikita Karamov\n${pkg.homepage}`;
+const banner = `/*! ${pkg.name} v${pkg.version} */`;
 
 const plugins = [
   consts({
@@ -24,13 +25,11 @@ const plugins = [
     functions: ['console.log', 'console.debug', 'assert.*'],
     sourceMap: false,
   }),
-  (!isDev) && license({
-    banner: {
-      commentStyle: 'ignored',
-      content: bannerText,
+  (!isDev) && buble({
+    transforms: {
+      modules: false,
     },
   }),
-  (!isDev) && buble({ transforms: { modules: false } }),
 ];
 
 const getOutput = (baseDir) => {
@@ -43,33 +42,34 @@ const getOutput = (baseDir) => {
     {
       ...defaultParameters,
       format: 'iife',
-      file: `${baseDir}${pkg.name}${isDev ? '' : '.min'}.js`,
-      plugins: isDev ? [] : [terser({ output: { comments: false } })],
+      file: join(baseDir, `${pkg.name}${isDev ? '' : '.min'}.js`),
+      plugins: isDev ? [] : [terser({ output: { comments: /^!/ } })],
+      banner,
     },
     (!isDev) && {
       ...defaultParameters,
       format: 'cjs',
-      file: `${baseDir}${pkg.name}.cjs`,
+      file: join(baseDir, `${pkg.name}.cjs`),
+      banner,
     },
     (!isDev) && {
       ...defaultParameters,
       format: 'esm',
-      file: `${baseDir}${pkg.name}.mjs`,
+      file: join(baseDir, `${pkg.name}.mjs`),
+      banner,
     },
   ];
 };
 
-const config = [
+export default [
   {
-    input: './src/autoinit.js',
-    output: getOutput(`${outputDir}`),
+    input: join(__dirname, 'src', 'autoinit.js'),
+    output: getOutput(outputDir),
     plugins,
   },
   {
-    input: './src/shareon.js',
-    output: getOutput(`${outputDir}noinit/`),
+    input: join(__dirname, 'src', 'autoinit.js'),
+    output: getOutput(join(outputDir, 'noinit')),
     plugins,
   },
 ];
-
-export default config;
