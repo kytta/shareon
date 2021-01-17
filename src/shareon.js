@@ -1,5 +1,5 @@
 // eslint-disable-next-line import/no-unresolved
-import urlBuilderMap from 'consts:urlBuilderMap';
+import urlBuilderMap from './socialNetworks';
 
 const initializeShareon = () => {
   const shareonContainers = document.getElementsByClassName('shareon');
@@ -55,7 +55,7 @@ const initializeShareon = () => {
                 || '',
               ),
             };
-            const url = urlBuilderMap[cls](preset);
+            const url = (/** @type UrlBuilder */ urlBuilderMap[cls])(preset);
 
             if (child.tagName.toLowerCase() === 'a') {
               child.setAttribute('href', url);
