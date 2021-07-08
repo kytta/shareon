@@ -2,7 +2,7 @@
   "name": "shareon",
   "version": "1.6.2",
   "description": "Lightweight, stylish and ethical share buttons for popular social networks",
-  "license": "MIT",
+  "license": "BSD-3-Clause",
   "homepage": "https://shareon.js.org",
   "keywords": [
     "share buttons",

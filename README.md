@@ -139,7 +139,7 @@ Here are all the custom parameters in their glory:
 
 ## License
 
-MIT © [Nikita Karamov](https://karamoff.dev)
+BSD-3-Clause © [Nikita Karamov](https://karamoff.dev)
 
 shareon logo is the [Postal Horn emoji](https://github.com/googlefonts/noto-emoji/blob/v2020-09-16-unicode13_1/svg/emoji_u1f4ef.svg) from [Noto Emoji](https://github.com/googlefonts/noto-emoji/tree/v2020-09-16-unicode13_1), which is licensed under the [Apache License v2.0](https://github.com/googlefonts/noto-emoji/blob/v2020-09-16-unicode13_1/LICENSE).
 
