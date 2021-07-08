@@ -1,5 +1,84 @@
-// eslint-disable-next-line import/no-unresolved
-import urlBuilderMap from 'consts:urlBuilderMap';
+/**
+ * @typedef {{
+ *   url: string,
+ *   title?: string,
+ *   media?: string,
+ *   text?: string,
+ *   via?: string,
+ *   fbAppId?: string,
+ * }} PublicationData
+ */
+
+/**
+ * @typedef {function(PublicationData): string} UrlBuilder
+ */
+
+/**
+ * @typedef {{
+ *   color: string,
+ *   icon: string,
+ *   iconWhenText?: string,
+ *   url: UrlBuilder
+ * }} SocialNetwork
+ */
+
+/**
+ * List of social networks available to shareon
+ *
+ * @type {Record<string, SocialNetwork>}
+ */
+const NETWORKS = {
+  facebook: {
+    url: (d) => `https://www.facebook.com/sharer/sharer.php?u=${d.url}`,
+  },
+  linkedin: {
+    url: (d) => `https://www.linkedin.com/sharing/share-offsite/?url=${d.url}`,
+  },
+  mastodon: {
+    url: (d) => `https://toot.karamoff.dev/?text=${d.title}%0D%0A${d.url}${d.text ? `%0D%0A%0D%0A${d.text}` : ''}${d.via ? `%0D%0A%0D%0A${d.via}` : ''}`,
+  },
+  messenger: {
+    url: (d) => `https://www.facebook.com/dialog/send?app_id=${d.fbAppId}&link=${d.url}&redirect_uri=${d.url}`,
+  },
+  odnoklassniki: {
+    url: (d) => `https://connect.ok.ru/offer?url=${d.url}&title=${d.title}${d.media ? `&imageUrl=${d.media}` : ''}`,
+  },
+  pinterest: {
+    url: (d) => `https://pinterest.com/pin/create/button/?url=${d.url}&description=${d.title}${d.media ? `&media=${d.media}` : ''}`,
+  },
+  pocket: {
+    url: (d) => `https://getpocket.com/edit.php?url=${d.url}`,
+  },
+  reddit: {
+    url: (d) => `https://www.reddit.com/submit?title=${d.title}&url=${d.url}`,
+  },
+  telegram: {
+    url: (d) => `https://telegram.me/share/url?url=${d.url}${d.text ? `&text=${d.text}` : ''}`,
+  },
+  twitter: {
+    url: (d) => `https://twitter.com/intent/tweet?url=${d.url}&text=${d.title}${d.via ? `&via=${d.via}` : ''}`,
+  },
+  viber: {
+    url: (d) => `viber://forward?text=${d.title}%0D%0A${d.url}${d.text ? `%0D%0A%0D%0A${d.text}` : ''}`,
+  },
+  vkontakte: {
+    url: (d) => `https://vk.com/share.php?url=${d.url}&title=${d.title}${d.media ? `&image=${d.media}` : ''}`,
+  },
+  whatsapp: {
+    url: (d) => `https://wa.me/?text=${d.title}%0D%0A${d.url}${d.text ? `%0D%0A%0D%0A${d.text}` : ''}`,
+  },
+};
+
+/**
+ * @type {Record<string, UrlBuilder>}
+ */
+const urlBuilderMap = Object.fromEntries(
+  Object.entries(NETWORKS)
+    .map((entry) => [
+      entry[0],
+      entry[1].url,
+    ]),
+);
 
 const initializeShareon = () => {
   const shareonContainers = document.getElementsByClassName('shareon');

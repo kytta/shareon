@@ -32,61 +32,31 @@
     "dist"
   ],
   "scripts": {
-    "build": "rollup --config",
-    "build:dev": "cross-env NODE_ENV=development rollup --config",
-    "dev": "cross-env NODE_ENV=development rollup --config --watch",
-    "lint": "eslint src/*.js",
+		"build": "echo 'Coming soon...'",
+    "lint": "eslint shareon.js",
     "release": "np",
     "size": "size-limit",
     "test": "yarn lint && yarn build && yarn size",
     "postversion": "yarn build"
   },
   "devDependencies": {
-    "@nickkaramoff/rollup-plugin-consts": "^1.1.0",
-    "@rollup/plugin-buble": "^0.21.3",
-    "@rollup/plugin-strip": "^2.0.1",
     "@size-limit/preset-small-lib": "^5.0.1",
-    "autoprefixer": "^10.2.6",
-    "browserslist": "^4.16.6",
-    "cross-env": "^7.0.3",
-    "cssnano": "^5.0.6",
+    "esbuild": "^0.12.15",
     "eslint": "^7.18.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.22.1",
     "np": "^7.2.0",
-    "postcss": "^8.2.4",
-    "postcss-banner": "^4.0.1",
-    "postcss-calc": "^8.0.0",
-    "postcss-css-variables": "^0.18.0",
-    "postcss-mixins": "^8.1.0",
-    "rollup": "^2.36.2",
-    "rollup-plugin-postcss": "^4.0.0",
-    "rollup-plugin-terser": "^7.0.2",
     "size-limit": "^5.0.1"
   },
   "size-limit": [
     {
       "limit": "7 KB",
-      "path": "./dist/shareon.min.css",
+      "path": "shareon.css",
       "webpack": false
     },
     {
       "limit": "1 KB",
-      "path": "./dist/shareon.min.js",
-      "webpack": false
-    },
-    {
-      "limit": "1 KB",
-      "path": [
-        "./dist/shareon.cjs"
-      ]
-    },
-    {
-      "limit": "1 KB",
-      "path": [
-        "./dist/shareon.mjs"
-      ]
+      "path": "shareon.js"
     }
-  ],
-  "dependencies": {}
+  ]
 }
