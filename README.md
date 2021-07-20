@@ -1,4 +1,6 @@
 # shareon
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FNickKaramoff%2Fshareon.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2FNickKaramoff%2Fshareon?ref=badge_shield)
+
 
 <img src="https://raw.githubusercontent.com/NickKaramoff/shareon/main/assets/logo.svg" align="right" alt="shareon logo — the Postal Horn emoji" width="96" height="96">
 
@@ -147,3 +149,6 @@ Includes a modified version of the
 [Mastodon logo](https://commons.wikimedia.org/wiki/File:Mastodon_Logotype_%28Simple%29.svg),
 which is licensed under the
 [APGLv3 license](https://www.gnu.org/licenses/agpl.html) or later.
+
+
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FNickKaramoff%2Fshareon.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2FNickKaramoff%2Fshareon?ref=badge_large)
