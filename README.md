@@ -157,6 +157,38 @@ Here are all the custom parameters in their glory:
 </div>
 ```
 
+FAQ
+---
+
+### Can I customize the buttons?
+
+Of course! Just add the styles you want to the `.shareon` selector. For example,
+to make buttons round:
+
+```css
+.shareon > * {
+  border-radius: 36px;
+}
+```
+
+### How do I add my own buttons?
+
+You can
+[create an issue on GitHub](https://github.com/NickKaramoff/shareon/issues/new)
+with an icon request. Note, that I only accept icons of social networks, also
+those, where it is possible to _share_ something.
+
+If you want, you can use the shareon's "backend" to create the buttons yourself.
+See
+[this guide](https://github.com/NickKaramoff/shareon/issues/6#issuecomment-657222019)
+for reference.
+
+### An ad blocker is hiding my buttons!
+
+Sorry pal, but that's the purpose of ad (or in this case, social) blockers.
+shareon strives to be ethical by respecting the user's choices. If the user
+chooses to hide the social buttons, let it be.
+
 Other versions
 --------------
 
