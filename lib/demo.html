@@ -5,16 +5,28 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vite App</title>
+  <title>Shareon Demo Page</title>
 
   <link rel="stylesheet" href="./shareon.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@1/modern-normalize.min.css">
+
+	<style>
+		body {
+			max-width: 800px;
+			margin: 0 auto;
+		}
+
+		.shareon.specimen {
+			font-weight: 600;
+		}
+	</style>
 </head>
 
 <body>
   <main>
-    <h1>Shareon Demo</h1>
+    <h1>Shareon Demo Page</h1>
     <section>
-      <h2>All links</h2>
+      <h2><code>&lt;a&gt;</code></h2>
       <div class="shareon">
         <a class="facebook"></a>
         <a class="linkedin"></a>
@@ -32,7 +44,7 @@
       </div>
     </section>
     <section>
-      <h2>All buttons</h2>
+      <h2><code>&lt;button&gt;</code></h2>
       <div class="shareon">
         <button class="facebook"></button>
         <button class="linkedin"></button>
@@ -50,9 +62,8 @@
       </div>
     </section>
     <section>
-      <h2>All links with custom params</h2>
-      <div class="shareon" data-title="shareon demo page test" data-url="https://demo.shareon.js.org"
-        data-via="nickkaramoff" data-text="hey check this out">
+      <h2><code>&lt;a&gt;</code> with custom params</h2>
+      <div class="shareon" data-title="shareon demo page test" data-url="https://demo.shareon.js.org" data-text="hey check this out">
         <a class="facebook"></a>
         <a class="linkedin"></a>
         <a class="mastodon" data-via="@NickKaramoff@fosstodon.org"></a>
@@ -62,15 +73,15 @@
         <a class="pocket"></a>
         <a class="reddit"></a>
         <a class="telegram"></a>
-        <a class="twitter"></a>
+        <a class="twitter" data-via="nickkaramoff"></a>
         <a class="viber"></a>
         <a class="vkontakte"></a>
         <a class="whatsapp"></a>
       </div>
     </section>
     <section>
-      <h2>All links with texts</h2>
-      <div class="shareon">
+      <h2>Specimen</h2>
+      <div class="shareon specimen">
         <a class="facebook">Share</a>
         <a class="linkedin"></a>
         <a class="mastodon">Toot</a>
@@ -80,18 +91,16 @@
         <br />
         <a class="pocket"></a>
         <a class="reddit"></a>
-        <a class="telegram">Отправить</a>
+        <a class="telegram"></a>
         <a class="twitter"></a>
         <a class="viber"></a>
-        <a class="vkontakte"></a>
+        <a class="vkontakte">Отправить</a>
         <a class="whatsapp"></a>
       </div>
     </section>
   </main>
 
-  <script type="module">
-    import shareon from "./shareon.js";
-  </script>
+	<script type="module" src="./shareon.js"></script>
 </body>
 
 </html>
