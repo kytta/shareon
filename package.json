@@ -29,11 +29,19 @@
     "import": "./dist/shareon.mjs"
   },
   "files": [
-    "dist"
+    "shareon.css",
+    "shareon.css.map",
+    "shareon.js",
+    "shareon.js.map",
+    "shareon.legacy.js",
+    "shareon.legacy.js.map"
   ],
   "scripts": {
-		"build": "echo 'Coming soon...'",
-    "lint": "eslint shareon.js",
+    "build-js": "esbuild lib/shareon.js --format=esm --minify --outfile=shareon.js --sourcemap --target=es6",
+    "build-legacy-js": "esbuild lib/shareon.js --format=iife --minify --outfile=shareon.legacy.js --sourcemap --target=es6 --global-name=shareon",
+    "build-css": "postcss lib/shareon.css --map --output shareon.css",
+    "build": "run-p build-*",
+    "lint": "eslint lib",
     "release": "np",
     "size": "size-limit",
     "test": "yarn lint && yarn build && yarn size",
@@ -41,11 +49,18 @@
   },
   "devDependencies": {
     "@size-limit/preset-small-lib": "^5.0.1",
+    "autoprefixer": "^10.2.6",
+    "cssnano": "^5.0.7",
     "esbuild": "^0.12.15",
     "eslint": "^7.18.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.22.1",
     "np": "^7.2.0",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.3.6",
+    "postcss-calc": "^8.0.0",
+    "postcss-cli": "^8.3.1",
+    "postcss-css-variables": "^0.18.0",
     "size-limit": "^5.0.1"
   },
   "size-limit": [
