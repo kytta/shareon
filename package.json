@@ -21,12 +21,11 @@
     "email": "nick@karamoff.dev",
     "url": "https://karamoff.dev"
   },
-  "main": "./dist/shareon.cjs",
-  "module": "./dist/shareon.mjs",
-  "unpkg": "./dist/shareon.min.js",
+	"type": "module",
+	"main": "./shareon.legacy.js",
+  "module": "./shareon.js",
   "exports": {
-    "require": "./dist/shareon.cjs",
-    "import": "./dist/shareon.mjs"
+		"import": "./shareon.js"
   },
   "files": [
     "shareon.css",
