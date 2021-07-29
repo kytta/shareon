@@ -1,6 +1,6 @@
 {
   "name": "shareon",
-  "version": "1.6.2",
+  "version": "2.0.0-0",
   "description": "Lightweight, stylish and ethical share buttons for popular social networks",
   "license": "BSD-3-Clause",
   "homepage": "https://shareon.js.org",
@@ -27,7 +27,7 @@
   "exports": {
     "import": "./shareon.js"
   },
-	"types": "shareon.d.ts",
+  "types": "shareon.d.ts",
   "files": [
     "shareon.css",
     "shareon.css.map",
@@ -41,7 +41,7 @@
     "build-js": "esbuild lib/shareon.js --format=esm --minify --outfile=shareon.js --sourcemap --target=es6",
     "build-legacy-js": "esbuild lib/shareon.js --format=iife --minify --outfile=shareon.legacy.js --sourcemap --target=es6 --global-name=shareon",
     "build-css": "postcss lib/shareon.css --map --output shareon.css",
-		"build-types": "tsc lib/shareon.js --declaration --allowJs --emitDeclarationOnly --outDir .",
+    "build-types": "tsc lib/shareon.js --declaration --allowJs --emitDeclarationOnly --outDir .",
     "build": "run-p build-*",
     "lint": "eslint lib",
     "release": "np",
