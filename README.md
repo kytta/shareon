@@ -157,6 +157,11 @@ Here are all the custom parameters in their glory:
 </div>
 ```
 
+Other versions
+--------------
+
+- [**WordPress version**](https://wordpress.org/plugins/shareon/) by [Gareth](https://github.com/gareth-gillman)
+
 Licence
 -------
 
