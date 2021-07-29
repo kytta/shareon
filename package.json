@@ -21,24 +21,27 @@
     "email": "nick@karamoff.dev",
     "url": "https://karamoff.dev"
   },
-	"type": "module",
-	"main": "./shareon.legacy.js",
-  "module": "./shareon.js",
+  "type": "module",
+  "main": "shareon.legacy.js",
+  "module": "shareon.js",
   "exports": {
-		"import": "./shareon.js"
+    "import": "./shareon.js"
   },
+	"types": "shareon.d.ts",
   "files": [
     "shareon.css",
     "shareon.css.map",
     "shareon.js",
     "shareon.js.map",
     "shareon.legacy.js",
-    "shareon.legacy.js.map"
+    "shareon.legacy.js.map",
+    "shareon.d.ts"
   ],
   "scripts": {
     "build-js": "esbuild lib/shareon.js --format=esm --minify --outfile=shareon.js --sourcemap --target=es6",
     "build-legacy-js": "esbuild lib/shareon.js --format=iife --minify --outfile=shareon.legacy.js --sourcemap --target=es6 --global-name=shareon",
     "build-css": "postcss lib/shareon.css --map --output shareon.css",
+		"build-types": "tsc lib/shareon.js --declaration --allowJs --emitDeclarationOnly --outDir .",
     "build": "run-p build-*",
     "lint": "eslint lib",
     "release": "np",
@@ -60,7 +63,8 @@
     "postcss-calc": "^8.0.0",
     "postcss-cli": "^8.3.1",
     "postcss-css-variables": "^0.18.0",
-    "size-limit": "^5.0.1"
+    "size-limit": "^5.0.1",
+    "typescript": "^4.3.5"
   },
   "size-limit": [
     {
