@@ -9,6 +9,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ### Changed
 
 - **POTENTIALLY BREAKING:** licence changed to BSD 3-Clause License
+- **BREAKING:** main format is ESM, for browsers as well
+
+### Removed
+
+- **BREAKING:** removed `noinit` variants
+- **BREAKING:** IE 11 is not supported anymore
 
 ## [1.6.2] - 2021-06-29
 
