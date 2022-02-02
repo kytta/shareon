@@ -185,25 +185,25 @@ Initial release of shareon
 - Add Telegram button
 - Add Twitter button
 
-[1.6.2]: https://github.com/NickKaramoff/shareon/compare/v1.6.1...v1.6.2
-[1.6.1]: https://github.com/NickKaramoff/shareon/compare/v1.6.0...v1.6.1
-[1.6.0]: https://github.com/NickKaramoff/shareon/compare/v1.5.0...v1.6.0
-[1.5.0]: https://github.com/NickKaramoff/shareon/compare/v1.4.5...v1.5.0
-[1.4.5]: https://github.com/NickKaramoff/shareon/compare/v1.4.2...v1.4.5
-[1.4.2]: https://github.com/NickKaramoff/shareon/compare/v1.4.1...v1.4.2
-[1.4.1]: https://github.com/NickKaramoff/shareon/compare/v1.4.0...v1.4.1
-[1.4.0]: https://github.com/NickKaramoff/shareon/compare/v1.3.1...v1.4.0
-[1.3.1]: https://github.com/NickKaramoff/shareon/compare/v1.3.0...v1.3.1
-[1.3.0]: https://github.com/NickKaramoff/shareon/compare/v1.2.1...v1.3.0
-[1.2.1]: https://github.com/NickKaramoff/shareon/compare/v1.2.0...v1.2.1
-[1.2.0]: https://github.com/NickKaramoff/shareon/compare/v1.1.5...v1.2.0
-[1.1.5]: https://github.com/NickKaramoff/shareon/compare/v1.1.4...v1.1.5
-[1.1.4]: https://github.com/NickKaramoff/shareon/compare/v1.1.3...v1.1.4
-[1.1.3]: https://github.com/NickKaramoff/shareon/compare/v1.1.2...v1.1.3
-[1.1.2]: https://github.com/NickKaramoff/shareon/compare/v1.1.1...v1.1.2
-[1.1.1]: https://github.com/NickKaramoff/shareon/compare/v1.1.0...v1.1.1
-[1.1.0]: https://github.com/NickKaramoff/shareon/compare/v1.0.0...v1.1.0
-[1.0.0]: https://github.com/NickKaramoff/shareon/compare/v1.0.0-beta.3...v1.0.0
-[1.0.0-beta.3]: https://github.com/NickKaramoff/shareon/compare/v1.0.0-beta.2...v1.0.0-beta.3
-[1.0.0-beta.2]: https://github.com/NickKaramoff/shareon/compare/v1.0.0-beta.1...v1.0.0-beta.2
-[1.0.0-beta.1]: https://github.com/NickKaramoff/shareon/compare/3722ada1da60abb768e00621e66b269f8fa60689...v1.0.0-beta.1
+[1.6.2]: https://github.com/kytta/shareon/compare/v1.6.1...v1.6.2
+[1.6.1]: https://github.com/kytta/shareon/compare/v1.6.0...v1.6.1
+[1.6.0]: https://github.com/kytta/shareon/compare/v1.5.0...v1.6.0
+[1.5.0]: https://github.com/kytta/shareon/compare/v1.4.5...v1.5.0
+[1.4.5]: https://github.com/kytta/shareon/compare/v1.4.2...v1.4.5
+[1.4.2]: https://github.com/kytta/shareon/compare/v1.4.1...v1.4.2
+[1.4.1]: https://github.com/kytta/shareon/compare/v1.4.0...v1.4.1
+[1.4.0]: https://github.com/kytta/shareon/compare/v1.3.1...v1.4.0
+[1.3.1]: https://github.com/kytta/shareon/compare/v1.3.0...v1.3.1
+[1.3.0]: https://github.com/kytta/shareon/compare/v1.2.1...v1.3.0
+[1.2.1]: https://github.com/kytta/shareon/compare/v1.2.0...v1.2.1
+[1.2.0]: https://github.com/kytta/shareon/compare/v1.1.5...v1.2.0
+[1.1.5]: https://github.com/kytta/shareon/compare/v1.1.4...v1.1.5
+[1.1.4]: https://github.com/kytta/shareon/compare/v1.1.3...v1.1.4
+[1.1.3]: https://github.com/kytta/shareon/compare/v1.1.2...v1.1.3
+[1.1.2]: https://github.com/kytta/shareon/compare/v1.1.1...v1.1.2
+[1.1.1]: https://github.com/kytta/shareon/compare/v1.1.0...v1.1.1
+[1.1.0]: https://github.com/kytta/shareon/compare/v1.0.0...v1.1.0
+[1.0.0]: https://github.com/kytta/shareon/compare/v1.0.0-beta.3...v1.0.0
+[1.0.0-beta.3]: https://github.com/kytta/shareon/compare/v1.0.0-beta.2...v1.0.0-beta.3
+[1.0.0-beta.2]: https://github.com/kytta/shareon/compare/v1.0.0-beta.1...v1.0.0-beta.2
+[1.0.0-beta.1]: https://github.com/kytta/shareon/compare/3722ada1da60abb768e00621e66b269f8fa60689...v1.0.0-beta.1

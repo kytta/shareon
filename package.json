@@ -11,15 +11,15 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/NickKaramoff/shareon.git"
+    "url": "git+https://github.com/kytta/shareon.git"
   },
   "bugs": {
-    "url": "https://github.com/NickKaramoff/shareon/issues"
+    "url": "https://github.com/kytta/shareon/issues"
   },
   "author": {
     "name": "Nikita Karamov",
-    "email": "nick@karamoff.dev",
-    "url": "https://karamoff.dev"
+    "email": "me@kytta.dev",
+    "url": "https://www.kytta.dev"
   },
   "main": "./dist/shareon.cjs",
   "module": "./dist/shareon.mjs",
