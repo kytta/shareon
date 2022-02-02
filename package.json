@@ -38,8 +38,8 @@
     "lint": "eslint src/*.js",
     "release": "np",
     "size": "size-limit",
-    "test": "yarn lint && yarn build && yarn size",
-    "postversion": "yarn build"
+    "test": "pnpm run lint && pnpm run build && pnpm run size",
+    "postversion": "pnpm run build"
   },
   "devDependencies": {
     "@nickkaramoff/rollup-plugin-consts": "^1.1.0",

@@ -3,4 +3,4 @@ dist/
 .idea/
 node_modules/
 .vscode/
-yarn-error.log
+pnpm-lock.yaml
