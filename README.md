@@ -10,7 +10,8 @@
 
 <img src="./assets/demo@2x.png" height="84" width="392" alt="shareon demo screenshot">
 
-----
+---
+
 Observe the live demo here: [shareon.js.org](https://shareon.js.org)
 
 ## Install
@@ -18,8 +19,14 @@ Observe the live demo here: [shareon.js.org](https://shareon.js.org)
 Include the link to shareon's JS and CSS in your website:
 
 ```html
-<link href="https://cdn.jsdelivr.net/npm/shareon@1/dist/shareon.min.css" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/shareon@1/dist/shareon.min.js" type="text/javascript"></script>
+<link
+  href="https://cdn.jsdelivr.net/npm/shareon@1/dist/shareon.min.css"
+  rel="stylesheet"
+/>
+<script
+  src="https://cdn.jsdelivr.net/npm/shareon@1/dist/shareon.min.js"
+  type="text/javascript"
+></script>
 ```
 
 or install it via NPM use it in a JS file that you will bundle:
@@ -31,9 +38,9 @@ yarn add shareon
 ```
 
 ```js
-const shareon = require('shareon');
+const shareon = require("shareon");
 // or
-import shareon from 'shareon';
+import shareon from "shareon";
 ```
 
 ## Initialization
@@ -55,8 +62,14 @@ want the buttons to be initialized:
 
 ```html
 <!-- notice the 'noinit' section of the url for JS -->
-<link href="https://cdn.jsdelivr.net/npm/shareon@1/dist/shareon.min.css" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/shareon@1/dist/noinit/shareon.min.js" type="text/javascript"></script>
+<link
+  href="https://cdn.jsdelivr.net/npm/shareon@1/dist/shareon.min.css"
+  rel="stylesheet"
+/>
+<script
+  src="https://cdn.jsdelivr.net/npm/shareon@1/dist/noinit/shareon.min.js"
+  type="text/javascript"
+></script>
 
 <script type="text/javascript">
   // do something important
@@ -67,9 +80,9 @@ want the buttons to be initialized:
 or, if you're using Node:
 
 ```js
-const shareon = require('shareon/dist/noinit/shareon');
+const shareon = require("shareon/dist/noinit/shareon");
 // or
-import shareon from 'shareon/dist/noinit/shareon';
+import shareon from "shareon/dist/noinit/shareon";
 
 // do something important
 shareon();
@@ -78,27 +91,27 @@ shareon();
 ## Usage
 
 > shareon was heavily inspired by [Likely](https://ilyabirman.net/projects/likely/),
-  and has a backwards-compatible API (excluding themes and sizes).
+> and has a backwards-compatible API (excluding themes and sizes).
 
 Create a container with class `shareon` and populate it with elements, whose
 classes match the names of social networks:
 
 ```html
 <div class="shareon">
-    <a class="facebook"></a>
-    <a class="linkedin"></a>
-    <a class="mastodon"></a>
-    <!-- FB App ID is required for the Messenger button to function -->
-    <a class="messenger" data-fb-app-id="0123456789012345"></a>
-    <a class="odnoklassniki"></a>
-    <a class="pinterest"></a>
-    <a class="pocket"></a>
-    <button class="reddit"></button>
-    <button class="telegram"></button>
-    <button class="twitter"></button>
-    <button class="viber"></button>
-    <button class="vkontakte"></button>
-    <button class="whatsapp"></button>
+  <a class="facebook"></a>
+  <a class="linkedin"></a>
+  <a class="mastodon"></a>
+  <!-- FB App ID is required for the Messenger button to function -->
+  <a class="messenger" data-fb-app-id="0123456789012345"></a>
+  <a class="odnoklassniki"></a>
+  <a class="pinterest"></a>
+  <a class="pocket"></a>
+  <button class="reddit"></button>
+  <button class="telegram"></button>
+  <button class="twitter"></button>
+  <button class="viber"></button>
+  <button class="vkontakte"></button>
+  <button class="whatsapp"></button>
 </div>
 ```
 
@@ -111,8 +124,8 @@ on the whole container or on the specific buttons:
 
 ```html
 <div class="shareon" data-url="https://example.com">
-    <a class="facebook" data-title="Custom Facebook title"></a>
-    <a class="twitter" data-title="Custom Twitter title"></a>
+  <a class="facebook" data-title="Custom Facebook title"></a>
+  <a class="twitter" data-title="Custom Twitter title"></a>
 </div>
 ```
 
@@ -127,13 +140,13 @@ Here are all the custom parameters in their glory:
 
 ```html
 <div class="shareon" data-url="https://example.com/custom-url">
-    <a class="facebook" data-title="Custom Facebook title"></a>
-    <a class="messenger" data-fb-app-id="0123456789012345"></a>
-    <a class="pinterest" data-media="https://picsum.photos/500">Pin</a>
-    <a class="telegram" data-text="Check this out!"></a>
-    <a class="twitter" data-via="MyNickname"></a>
-    <a class="mastodon" data-via="@MyNickname@myserver.social"></a>
-    <a class="whatsapp" data-url="https://my-cool-website.com">Send</a>
+  <a class="facebook" data-title="Custom Facebook title"></a>
+  <a class="messenger" data-fb-app-id="0123456789012345"></a>
+  <a class="pinterest" data-media="https://picsum.photos/500">Pin</a>
+  <a class="telegram" data-text="Check this out!"></a>
+  <a class="twitter" data-via="MyNickname"></a>
+  <a class="mastodon" data-via="@MyNickname@myserver.social"></a>
+  <a class="whatsapp" data-url="https://my-cool-website.com">Send</a>
 </div>
 ```
 

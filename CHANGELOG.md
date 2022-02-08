@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Changed
+
+- change code style to [Prettier](https://prettier.io/)
+
 ## [1.6.3] - 2022-02-02
 
 ### Changed
@@ -194,6 +200,7 @@ Initial release of shareon
 - Add Telegram button
 - Add Twitter button
 
+[Unreleased]: https://codeberg.org/kytta/shareon/compare/v1.6.3...main
 [1.6.2]: https://github.com/kytta/shareon/compare/v1.6.2...v1.6.3
 [1.6.2]: https://github.com/kytta/shareon/compare/v1.6.1...v1.6.2
 [1.6.1]: https://github.com/kytta/shareon/compare/v1.6.0...v1.6.1
