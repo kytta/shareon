@@ -1,8 +1,8 @@
 // eslint-disable-next-line import/no-unresolved
-import urlBuilderMap from 'consts:urlBuilderMap';
+import urlBuilderMap from "consts:urlBuilderMap";
 
 const initializeShareon = () => {
-  const shareonContainers = document.getElementsByClassName('shareon');
+  const shareonContainers = document.getElementsByClassName("shareon");
 
   // iterate over <div class="shareon">
   for (let i = 0; i < shareonContainers.length; i += 1) {
@@ -25,48 +25,38 @@ const initializeShareon = () => {
           if (Object.prototype.hasOwnProperty.call(urlBuilderMap, cls)) {
             const preset = {
               url: encodeURIComponent(
-                child.dataset.url
-                || container.dataset.url
-                || window.location.href,
+                child.dataset.url ||
+                  container.dataset.url ||
+                  window.location.href
               ),
               title: encodeURIComponent(
-                child.dataset.title
-                || container.dataset.title
-                || document.title,
+                child.dataset.title || container.dataset.title || document.title
               ),
               media: encodeURIComponent(
-                child.dataset.media
-                || container.dataset.media
-                || '',
+                child.dataset.media || container.dataset.media || ""
               ),
               text: encodeURIComponent(
-                child.dataset.text
-                || container.dataset.text
-                || '',
+                child.dataset.text || container.dataset.text || ""
               ),
               via: encodeURIComponent(
-                child.dataset.via
-                || container.dataset.via
-                || '',
+                child.dataset.via || container.dataset.via || ""
               ),
               fbAppId: encodeURIComponent(
-                child.dataset.fbAppId
-                || container.dataset.fbAppId
-                || '',
+                child.dataset.fbAppId || container.dataset.fbAppId || ""
               ),
             };
             const url = urlBuilderMap[cls](preset);
 
-            if (child.tagName.toLowerCase() === 'a') {
-              child.setAttribute('href', url);
-              child.setAttribute('rel', 'noopener noreferrer');
-              child.setAttribute('target', '_blank');
+            if (child.tagName.toLowerCase() === "a") {
+              child.setAttribute("href", url);
+              child.setAttribute("rel", "noopener noreferrer");
+              child.setAttribute("target", "_blank");
             } else {
               const getButtonListener = (buttonUrl) => () => {
-                window.open(buttonUrl, '_blank', 'noopener,noreferrer');
+                window.open(buttonUrl, "_blank", "noopener,noreferrer");
               };
 
-              child.addEventListener('click', getButtonListener(url));
+              child.addEventListener("click", getButtonListener(url));
             }
 
             break; // once a network is detected we don't want to check further

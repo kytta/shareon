@@ -1,5 +1,5 @@
-import initializeShareon from './shareon';
-import './style.css';
+import initializeShareon from "./shareon";
+import "./style.css";
 
 window.onload = () => {
   initializeShareon();
