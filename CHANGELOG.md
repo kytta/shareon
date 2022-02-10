@@ -22,6 +22,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ### Changed
 
 - **BREAKING:** default version of the package doesn't auto-initialize buttons
+- **BREAKING:** instead of default export, named exports are now used. If IIFE
+  is used, the global object's name is now `Shareon`, and it has one `init()`
+  method
 - remove mixins, defining the code/styles directly in the files
 - use [Vite](https://vitejs.dev/) for building, reducing the devDependencies
   tree and build times drastically
