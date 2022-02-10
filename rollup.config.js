@@ -99,15 +99,8 @@ const getOutput = (baseDir) => {
   ];
 };
 
-export default [
-  {
-    input: join(__dirname, "src", "autoinit.js"),
-    output: getOutput(outputDir),
-    plugins: getPlugins(true),
-  },
-  {
-    input: join(__dirname, "src", "shareon.js"),
-    output: getOutput(join(outputDir, "noinit")),
-    plugins: getPlugins(false),
-  },
-];
+export default {
+  input: join(__dirname, "src", "index.js"),
+  output: getOutput(outputDir),
+  plugins: getPlugins(true),
+};
