@@ -8,10 +8,8 @@ module.exports = {
   plugins: [
     require("postcss-css-variables"),
     require("postcss-calc"),
-    require("cssnano")({
-      preset: "default",
-    }),
     require("autoprefixer"),
+    require("postcss-csso"),
     require("postcss-banner")({
       banner: bannerText,
       important: true,
