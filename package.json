@@ -36,7 +36,6 @@
     "build:dev": "cross-env NODE_ENV=development rollup --config",
     "dev": "cross-env NODE_ENV=development rollup --config --watch",
     "lint": "prettier --check . && eslint src/*.js",
-    "release": "np",
     "size": "size-limit",
     "test": "pnpm run lint && pnpm run build && pnpm run size",
     "postversion": "pnpm run build"
@@ -54,7 +53,6 @@
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-import": "^2.25.4",
-    "np": "^7.6.0",
     "postcss": "^8.4.6",
     "postcss-banner": "^4.0.1",
     "postcss-calc": "^8.2.3",
