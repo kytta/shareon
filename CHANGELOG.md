@@ -6,9 +6,26 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+### Added
+
+- **BREAKING:** new (auto-)init behaviour, inspired by [petite-vue](https://github.com/vuejs/petite-vue)
+  - `require`, `import`, or use `<script>` to include Shareon without
+    initialization
+  - use exported `initializeShareon` function in Node to initialize Shareon
+  - use `init` attribute in `script` to initialize Shareon in-browser
+
+    ```html
+    <script src="path/to/shareon.js" init>
+    ```
+
 ### Changed
 
+- **BREAKING:** default version of the package doesn't auto-initialize buttons
 - change code style to [Prettier](https://prettier.io/)
+
+### Removed
+
+- **BREAKING:** `noinit` version of the package is removed
 
 ## [1.6.3] - 2022-02-02
 
@@ -200,7 +217,7 @@ Initial release of shareon
 - Add Telegram button
 - Add Twitter button
 
-[Unreleased]: https://codeberg.org/kytta/shareon/compare/v1.6.3...main
+[unreleased]: https://codeberg.org/kytta/shareon/compare/v1.6.3...main
 [1.6.2]: https://github.com/kytta/shareon/compare/v1.6.2...v1.6.3
 [1.6.2]: https://github.com/kytta/shareon/compare/v1.6.1...v1.6.2
 [1.6.1]: https://github.com/kytta/shareon/compare/v1.6.0...v1.6.1
