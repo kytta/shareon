@@ -32,9 +32,10 @@
     "dist"
   ],
   "scripts": {
-    "build": "rollup --config",
-    "build:dev": "cross-env NODE_ENV=development rollup --config",
-    "dev": "cross-env NODE_ENV=development rollup --config --watch",
+    "build": "pnpm run build:js && pnpm run build:css",
+    "build:js": "vite build",
+    "build:css": "postcss src/shareon.css -o dist/shareon.min.css --map",
+    "dev": "vite",
     "lint": "prettier --check . && eslint src/*.js",
     "size": "size-limit",
     "test": "pnpm run lint && pnpm run build && pnpm run size",
@@ -55,6 +56,7 @@
     "postcss": "^8.4.6",
     "postcss-banner": "^4.0.1",
     "postcss-calc": "^8.2.3",
+    "postcss-cli": "^9.1.0",
     "postcss-css-variables": "^0.18.0",
     "prettier": "^2.5.1",
     "rollup": "^2.67.0",
