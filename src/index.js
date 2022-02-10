@@ -1,5 +1,5 @@
 import initializeShareon from "./shareon";
-import "./style.css";
+import "./shareon.css";
 
 // TODO: update README
 const s = document.currentScript;
