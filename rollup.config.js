@@ -1,7 +1,6 @@
 import { join, resolve } from "path";
 
 import buble from "@rollup/plugin-buble";
-import consts from "@nickkaramoff/rollup-plugin-consts";
 import strip from "@rollup/plugin-strip";
 import postcss from "rollup-plugin-postcss";
 import { terser } from "rollup-plugin-terser";
@@ -11,10 +10,7 @@ const banner = require("postcss-banner");
 const calc = require("postcss-calc");
 const cssnano = require("cssnano");
 const cssVariables = require("postcss-css-variables");
-const mixins = require("postcss-mixins");
 
-const networks = require("./src/networksMixin");
-const { urlBuilderMap } = require("./src/networks");
 const pkg = require("./package.json");
 
 const isDev =
@@ -22,15 +18,7 @@ const isDev =
 const outputDir = resolve(".", "dist");
 const bannerText = `${pkg.name} v${pkg.version}`;
 
-const postcssPlugins = [
-  mixins({
-    mixins: {
-      networks,
-    },
-  }),
-  cssVariables,
-  calc,
-];
+const postcssPlugins = [cssVariables, calc];
 
 if (!isDev) {
   postcssPlugins.push(
@@ -47,9 +35,6 @@ if (!isDev) {
 }
 
 const getPlugins = (css) => [
-  consts({
-    urlBuilderMap,
-  }),
   css &&
     postcss({
       extract: resolve(join(outputDir, "shareon.min.css")),
