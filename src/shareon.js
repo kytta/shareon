@@ -34,7 +34,7 @@ const openUrl = (buttonUrl) => () => {
   window.open(buttonUrl, "_blank", "noopener,noreferrer");
 };
 
-const initializeShareon = () => {
+const init = () => {
   const shareonContainers = document.querySelectorAll(".shareon");
 
   // iterate over <div class="shareon">
@@ -90,4 +90,4 @@ const initializeShareon = () => {
   }
 };
 
-export default initializeShareon;
+export { init };

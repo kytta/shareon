@@ -1,9 +1,9 @@
-import initializeShareon from "./shareon";
+import { init } from "./shareon";
 
 // TODO: update README
 const s = document.currentScript;
 if (s && s.hasAttribute("init")) {
-  initializeShareon();
+  init();
 }
 
-export { default } from "./shareon";
+export { init } from "./shareon";
