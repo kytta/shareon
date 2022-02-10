@@ -30,6 +30,10 @@ const urlBuilderMap = {
   whatsapp: (d) => `https://wa.me/?text=${d.title}%0D%0A${d.url}${d.text ? `%0D%0A%0D%0A${d.text}` : ''}`,
 };
 
+const openUrl = (buttonUrl) => () => {
+  window.open(buttonUrl, "_blank", "noopener,noreferrer");
+};
+
 const initializeShareon = () => {
   const shareonContainers = document.getElementsByClassName("shareon");
 
@@ -81,11 +85,7 @@ const initializeShareon = () => {
               child.setAttribute("rel", "noopener noreferrer");
               child.setAttribute("target", "_blank");
             } else {
-              const getButtonListener = (buttonUrl) => () => {
-                window.open(buttonUrl, "_blank", "noopener,noreferrer");
-              };
-
-              child.addEventListener("click", getButtonListener(url));
+              child.addEventListener("click", openUrl(url));
             }
 
             break; // once a network is detected we don't want to check further
