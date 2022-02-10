@@ -30,18 +30,30 @@ const urlBuilderMap = {
   whatsapp: (d) => `https://wa.me/?text=${d.title}%0D%0A${d.url}${d.text ? `%0D%0A%0D%0A${d.text}` : ''}`,
 };
 
+const openUrl = (buttonUrl) => () => {
+  window.open(buttonUrl, "_blank", "noopener,noreferrer");
+};
+
 const initializeShareon = () => {
-  const shareonContainers = document.getElementsByClassName("shareon");
+  const shareonContainers = document.querySelectorAll(".shareon");
 
   // iterate over <div class="shareon">
-  for (let i = 0; i < shareonContainers.length; i += 1) {
+  for (
+    let containerIndex = 0;
+    containerIndex < shareonContainers.length;
+    containerIndex += 1
+  ) {
     /** @type Element */
-    const container = shareonContainers[i];
+    const container = shareonContainers[containerIndex];
 
     // iterate over children of <div class="shareon">
-    for (let j = 0; j < container.children.length; j += 1) {
+    for (
+      let childIndex = 0;
+      childIndex < container.children.length;
+      childIndex += 1
+    ) {
       /** @type Element */
-      const child = container.children[j];
+      const child = container.children[childIndex];
 
       if (child) {
         const classListLength = child.classList.length;
@@ -81,11 +93,7 @@ const initializeShareon = () => {
               child.setAttribute("rel", "noopener noreferrer");
               child.setAttribute("target", "_blank");
             } else {
-              const getButtonListener = (buttonUrl) => () => {
-                window.open(buttonUrl, "_blank", "noopener,noreferrer");
-              };
-
-              child.addEventListener("click", getButtonListener(url));
+              child.addEventListener("click", openUrl(url));
             }
 
             break; // once a network is detected we don't want to check further

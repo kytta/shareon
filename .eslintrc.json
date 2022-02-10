@@ -1,13 +1,29 @@
 {
   "root": true,
   "env": {
-    "browser": true,
-    "es6": true,
-    "node": true
+    "browser": true
   },
-  "extends": ["airbnb-base", "prettier"],
+  "extends": ["eslint:recommended", "plugin:unicorn/recommended", "prettier"],
+  "rules": {
+    "unicorn/no-for-loop": 0
+  },
   "parserOptions": {
-    "ecmaVersion": 2020,
+    "ecmaVersion": "latest",
     "sourceType": "module"
-  }
+  },
+  "overrides": [
+    {
+      "files": ["postcss.config.js", "vite.config.js"],
+      "env": {
+        "node": true,
+        "browser": false
+      }
+    },
+    {
+      "files": ["postcss.config.js"],
+      "rules": {
+        "unicorn/prefer-module": 0
+      }
+    }
+  ]
 }
