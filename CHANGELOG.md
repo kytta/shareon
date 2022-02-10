@@ -23,6 +23,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 - **BREAKING:** default version of the package doesn't auto-initialize buttons
 - remove mixins, defining the code/styles directly in the files
+- use [Vite](https://vitejs.dev/) for building, reducing the devDependencies
+  tree and build times drastically
+  - **BREAKING:** newly built files offer worse browser support
 - change code style to [Prettier](https://prettier.io/)
 
 ### Removed
