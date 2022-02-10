@@ -35,7 +35,7 @@ const openUrl = (buttonUrl) => () => {
 };
 
 const initializeShareon = () => {
-  const shareonContainers = document.getElementsByClassName("shareon");
+  const shareonContainers = document.querySelectorAll(".shareon");
 
   // iterate over <div class="shareon">
   for (let i = 0; i < shareonContainers.length; i += 1) {
