@@ -1,5 +1,5 @@
 import { defineConfig } from "vite";
-import * as path from "path";
+import * as path from "node:path";
 import package_ from "./package.json";
 
 export default defineConfig({
