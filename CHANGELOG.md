@@ -9,6 +9,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ### Added
 
 - **BREAKING:** new (auto-)init behaviour, inspired by [petite-vue](https://github.com/vuejs/petite-vue)
+
   - `require`, `import`, or use `<script>` to include Shareon without
     initialization
   - use exported `initializeShareon` function in Node to initialize Shareon
@@ -21,6 +22,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ### Changed
 
 - **BREAKING:** default version of the package doesn't auto-initialize buttons
+- remove mixins, defining the code/styles directly in the files
 - change code style to [Prettier](https://prettier.io/)
 
 ### Removed
