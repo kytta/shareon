@@ -39,7 +39,7 @@
     "build:js": "vite build",
     "build:css": "postcss src/shareon.css -o dist/shareon.min.css --map",
     "dev": "vite",
-    "lint": "prettier --check . && eslint src/*.js",
+    "lint": "prettier --check . && eslint .",
     "size": "size-limit",
     "test": "pnpm run lint && pnpm run build && pnpm run size",
     "postversion": "pnpm run build"
