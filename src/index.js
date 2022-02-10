@@ -6,4 +6,4 @@ if (s && s.hasAttribute("init")) {
   initializeShareon();
 }
 
-export default initializeShareon;
+export { default } from "./shareon";
