@@ -1,5 +1,5 @@
-const pkg = require("./package.json");
-const bannerText = `${pkg.name} v${pkg.version}`;
+const package_ = require("./package.json");
+const bannerText = `${package_.name} v${package_.version}`;
 
 module.exports = {
   map: {

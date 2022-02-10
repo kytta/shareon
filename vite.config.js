@@ -1,6 +1,6 @@
 import { defineConfig } from "vite";
 import * as path from "path";
-import pkg from "./package.json";
+import package_ from "./package.json";
 
 export default defineConfig({
   esbuild: {
@@ -17,7 +17,7 @@ export default defineConfig({
     },
     rollupOptions: {
       output: {
-        banner: `/*! ${pkg.name} v${pkg.version} */`,
+        banner: `/*! ${package_.name} v${package_.version} */`,
       },
     },
   },
