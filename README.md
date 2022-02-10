@@ -8,7 +8,7 @@
 - **Stylish.** Uses official vector logos and colors with no visual mess.
 - **Ethical.** Embeds no tracking code. JS is required only for the setup.
 
-<img src="./assets/demo@2x.png" height="84" width="392" alt="shareon demo screenshot">
+<img src="./assets/demo@2x.png" height="84" width="390" alt="shareon demo screenshot">
 
 ---
 
