@@ -41,7 +41,6 @@
     "postversion": "pnpm run build"
   },
   "devDependencies": {
-    "@nickkaramoff/rollup-plugin-consts": "^1.1.0",
     "@rollup/plugin-buble": "^0.21.3",
     "@rollup/plugin-strip": "^2.1.0",
     "@size-limit/preset-small-lib": "^7.0.5",
@@ -57,7 +56,6 @@
     "postcss-banner": "^4.0.1",
     "postcss-calc": "^8.2.3",
     "postcss-css-variables": "^0.18.0",
-    "postcss-mixins": "^9.0.1",
     "prettier": "^2.5.1",
     "rollup": "^2.67.0",
     "rollup-plugin-postcss": "^4.0.2",
