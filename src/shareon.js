@@ -38,23 +38,9 @@ const initializeShareon = () => {
   const shareonContainers = document.querySelectorAll(".shareon");
 
   // iterate over <div class="shareon">
-  for (
-    let containerIndex = 0;
-    containerIndex < shareonContainers.length;
-    containerIndex += 1
-  ) {
-    /** @type Element */
-    const container = shareonContainers[containerIndex];
-
+  for (const container of shareonContainers) {
     // iterate over children of <div class="shareon">
-    for (
-      let childIndex = 0;
-      childIndex < container.children.length;
-      childIndex += 1
-    ) {
-      /** @type Element */
-      const child = container.children[childIndex];
-
+    for (const child of container.children) {
       if (child) {
         const classListLength = child.classList.length;
 
