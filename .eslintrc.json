@@ -1,13 +1,11 @@
 {
   "root": true,
   "env": {
-    "browser": true,
-    "es6": true,
-    "node": true
+    "browser": true
   },
-  "extends": ["airbnb-base", "prettier"],
+  "extends": ["eslint:recommended", "prettier"],
   "parserOptions": {
-    "ecmaVersion": 2020,
+    "ecmaVersion": "latest",
     "sourceType": "module"
   }
 }
