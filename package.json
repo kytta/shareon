@@ -21,12 +21,15 @@
     "email": "me@kytta.dev",
     "url": "https://www.kytta.dev"
   },
-  "main": "./dist/shareon.cjs",
-  "module": "./dist/shareon.mjs",
-  "unpkg": "./dist/shareon.min.js",
+  "main": "./dist/shareon.umd.js",
+  "unpkg": "./dist/shareon.iife.js",
+  "jsdelivr": "./dist/shareon.iife.js",
+  "module": "./dist/shareon.es.js",
   "exports": {
-    "require": "./dist/shareon.cjs",
-    "import": "./dist/shareon.mjs"
+    ".": {
+      "import": "./dist/shareon.es.js",
+      "require": "./dist/shareon.umd.js"
+    }
   },
   "files": [
     "dist"
@@ -65,7 +68,7 @@
     },
     {
       "limit": "1 KB",
-      "path": "./dist/shareon.mjs"
+      "path": "./dist/shareon.es.js"
     }
   ]
 }
