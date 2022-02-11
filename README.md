@@ -152,6 +152,10 @@ Here are all custom parameters:
 </div>
 ```
 
+## Other versions
+
+- [**WordPress plugin**](https://wordpress.org/plugins/shareon/) by [Gareth](https://github.com/gareth-gillman)
+
 ## Licence
 
 Copyright © 2020–2022 [Nikita Karamov](https://www.kytta.dev/)  
