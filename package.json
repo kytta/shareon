@@ -21,6 +21,11 @@
     "email": "me@kytta.dev",
     "url": "https://www.kytta.dev/"
   },
+  "funding": [
+    "https://github.com/sponsors/kytta/",
+    "https://liberapay.com/kytta",
+    "https://www.paypal.com/paypalme/NickKaramoff"
+  ],
   "main": "./dist/shareon.umd.js",
   "unpkg": "./dist/shareon.iife.js",
   "jsdelivr": "./dist/shareon.iife.js",
