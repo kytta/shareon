@@ -29,7 +29,8 @@
     ".": {
       "import": "./dist/shareon.es.js",
       "require": "./dist/shareon.umd.js"
-    }
+    },
+    "./css": "./dist/shareon.min.css"
   },
   "files": [
     "dist"
