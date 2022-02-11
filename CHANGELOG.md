@@ -19,6 +19,16 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
     <script src="path/to/shareon.js" init>
     ```
 
+- CSS export for use in Webpack/Rollup/etc. ([#35](https://github.com/kytta/shareon/issues/35))
+
+  ```js
+  import "shareon/css";
+  ```
+
+  ```js
+  require("shareon/css");
+  ```
+
 ### Changed
 
 - **BREAKING:** default version of the package doesn't auto-initialize buttons

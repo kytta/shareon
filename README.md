@@ -71,6 +71,7 @@ pnpm add shareon  # or `npm install`, or `yarn add`
 
 ```js
 import { init } from "shareon";
+import "shareon/css"; // most bundlers will transpile this CSS
 
 init();
 ```
@@ -79,6 +80,7 @@ CommonJS imports are also supported:
 
 ```js
 const Shareon = require("shareon");
+require("shareon/css"); // most bundlers will transpile this CSS
 
 Shareon.init();
 ```
