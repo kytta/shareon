@@ -1,6 +1,6 @@
 {
   "name": "shareon",
-  "version": "2.0.0-beta.1",
+  "version": "2.0.0-beta.2",
   "description": "Lightweight, stylish and ethical share buttons for popular social networks",
   "license": "MIT",
   "homepage": "https://shareon.js.org",
@@ -42,11 +42,14 @@
     "lint": "prettier --check . && eslint .",
     "size": "size-limit",
     "test": "pnpm run lint && pnpm run build && pnpm run size",
-    "postversion": "pnpm run build"
+    "postversion": "pnpm run build",
+    "prepublishOnly": "rm -rf ./package && clean-publish",
+    "postpublish": "rm -rf ./package"
   },
   "devDependencies": {
     "@size-limit/preset-small-lib": "^7.0.5",
     "autoprefixer": "^10.4.2",
+    "clean-publish": "^4.0.0",
     "eslint": "^8.8.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-unicorn": "^40.1.0",
@@ -69,5 +72,12 @@
       "limit": "1 KB",
       "path": "./dist/shareon.es.js"
     }
-  ]
+  ],
+  "publishConfig": {
+    "directory": "package"
+  },
+  "clean-publish": {
+    "withoutPublish": true,
+    "tempDir": "package"
+  }
 }
