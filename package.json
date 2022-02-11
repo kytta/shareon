@@ -19,7 +19,7 @@
   "author": {
     "name": "Nikita Karamov",
     "email": "me@kytta.dev",
-    "url": "https://www.kytta.dev"
+    "url": "https://www.kytta.dev/"
   },
   "main": "./dist/shareon.umd.js",
   "unpkg": "./dist/shareon.iife.js",
