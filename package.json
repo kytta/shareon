@@ -69,6 +69,7 @@
     "size-limit": "^7.0.5",
     "vite": "^2.8.0"
   },
+  "browserslist": "> 0.3%, last 2 versions, Firefox ESR, not dead",
   "size-limit": [
     {
       "limit": "7 KB",
