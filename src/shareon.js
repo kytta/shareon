@@ -50,6 +50,17 @@ const init = () => {
         for (let k = 0; k < classListLength; k += 1) {
           const cls = child.classList.item(k);
 
+          // if it's "Copy URL"
+          if (cls === "copy-url") {
+            child.addEventListener("click", () => {
+              const url =
+                child.dataset.url ||
+                container.dataset.url ||
+                window.location.href;
+              navigator.clipboard.writeText(url);
+            });
+          }
+
           // if it's one of the networks
           if (Object.prototype.hasOwnProperty.call(urlBuilderMap, cls)) {
             const preset = {
