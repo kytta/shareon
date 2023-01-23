@@ -24,7 +24,7 @@
   margin: calc(var(--padding-ver) / 2);
   padding: var(--padding-ver) var(--padding-hor);
 
-  background-color: #ccc;
+  background-color: #333;
   border-radius: calc(var(--icon-size) / 6);
   border: none;
   box-sizing: content-box;
