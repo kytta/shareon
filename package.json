@@ -11,10 +11,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://codeberg.org/kytta/shareon.git"
+    "url": "https://github.com/kytta/shareon.git"
   },
   "bugs": {
-    "url": "https://codeberg.org/kytta/shareon/issues"
+    "url": "https://github.com/kytta/shareon/issues"
   },
   "author": {
     "name": "Nikita Karamov",

@@ -179,4 +179,4 @@ but the icons themselves may be subject to copyright of the respective owners.
 
 ---
 
-This project is hosted on Codeberg: <https://codeberg.org/kytta/shareon>
+This project is hosted on GitHub: <https://github.com/kytta/shareon>
