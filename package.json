@@ -26,6 +26,7 @@
     "https://liberapay.com/kytta",
     "https://www.paypal.com/paypalme/NickKaramoff"
   ],
+  "type": "module",
   "main": "./dist/shareon.umd.js",
   "unpkg": "./dist/shareon.iife.js",
   "jsdelivr": "./dist/shareon.iife.js",
