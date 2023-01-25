@@ -4,6 +4,33 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Changed
+
+- Sourcemaps are not being output any more
+  - They're being loaded automatically and don't serve any other purpose.
+    Disabling those helps us save a few bytes
+- Change minifier to esbuild (instead of terser)
+  - This disables the minification of ESM, which is a good thing, because
+    otherwise the file can't be tree-shaken properly
+- Shareon is now `type: "module"`
+  - This doesn't change anything for the end users
+- Banner was removed
+  - It took unnecessary bytes, and embedding it was somewhat buggy
+- Browserslist config now targets `defaults`
+  - Opera 90 and Samsung Browser 17 aren't targeted. Shareon will still work on
+    these browsers.
+  - the previous config (using `last 3 versions instead` of `last 2 versions`)
+    didn't change coverage that much
+
+### Behind-the-scenes
+
+- Updated to Vite v4
+- CSS is now bundled using Vite
+  - this makes the build script leaner; it's still processed with PostCSS
+- Moved PostCSS and ESLint config to package.json
+
 ## [2.0.1] - 2023-01-23
 
 ### Changed
