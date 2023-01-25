@@ -59,7 +59,6 @@
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-unicorn": "^44.0.2",
     "postcss": "^8.4.19",
-    "postcss-banner": "^4.0.1",
     "postcss-calc": "^8.2.4",
     "postcss-css-variables": "^0.18.0",
     "postcss-csso": "^6.0.1",
