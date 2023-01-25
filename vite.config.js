@@ -4,7 +4,6 @@ import package_ from "./package.json";
 
 export default defineConfig({
   build: {
-    sourcemap: true,
     target: "esnext",
     lib: {
       entry: path.resolve("./src/index.js"),
@@ -25,4 +24,7 @@ export default defineConfig({
       },
     },
   },
+  css: {
+    devSourcemap: true
+  }
 });
