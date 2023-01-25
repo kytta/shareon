@@ -1,6 +1,5 @@
 import { defineConfig } from "vite";
 import * as path from "node:path";
-import package_ from "./package.json";
 
 export default defineConfig({
   build: {
@@ -19,7 +18,6 @@ export default defineConfig({
           if (assetInfo.name === "style.css") return "shareon.min.css";
           return assetInfo.name;
         },
-        banner: `/*! ${package_.name} v${package_.version} */`,
       },
     },
   },
