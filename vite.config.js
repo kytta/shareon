@@ -9,7 +9,7 @@ export default defineConfig({
       name: "Shareon",
       formats: ["es", "umd", "iife"],
       // Workaround to keep the old file names
-      fileName: (format, _) => `shareon.${format}.js`,
+      fileName: (format) => `shareon.${format}.js`,
     },
     rollupOptions: {
       output: {
@@ -24,6 +24,6 @@ export default defineConfig({
     },
   },
   css: {
-    devSourcemap: true
-  }
+    devSourcemap: true,
+  },
 });
