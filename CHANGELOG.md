@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [2.0.2] - 2023-01-25
 
 ### Changed
 
@@ -269,7 +269,8 @@ Initial release of shareon
 - Add Telegram button
 - Add Twitter button
 
-[unreleased]: https://github.com/kytta/shareon/compare/v2.0.1...main
+[unreleased]: https://github.com/kytta/shareon/compare/v2.0.2...main
+[2.0.2]: https://github.com/kytta/shareon/compare/v2.0.1...v2.0.2
 [2.0.1]: https://github.com/kytta/shareon/compare/v2.0.0...v2.0.1
 [2.0.0]: https://github.com/kytta/shareon/compare/v1.6.3...v2.0.0
 [1.6.2]: https://github.com/kytta/shareon/compare/v1.6.2...v1.6.3
