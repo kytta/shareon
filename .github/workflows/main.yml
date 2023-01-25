@@ -18,6 +18,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18
+          cache: pnpm
       - name: Install dependencies
         run: pnpm install --ignore-scripts
       - name: Lint
@@ -29,7 +30,8 @@ jobs:
         env:
           FORCE_COLOR: 2
       - name: Check size
-        uses: andresz1/size-limit-action@v1
+        uses: getsentry/size-limit-action@v5
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           skip_step: build
+          if: github.event_name == 'pull_request'
