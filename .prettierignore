@@ -1,1 +1,2 @@
-./.gitignore
+dist/
+pnpm-lock.yaml
