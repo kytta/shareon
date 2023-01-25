@@ -10,16 +10,10 @@
   },
   "overrides": [
     {
-      "files": ["postcss.config.js", "vite.config.js"],
+      "files": ["vite.config.js"],
       "env": {
         "node": true,
         "browser": false
-      }
-    },
-    {
-      "files": ["postcss.config.js"],
-      "rules": {
-        "unicorn/prefer-module": 0
       }
     }
   ]
