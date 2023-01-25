@@ -4,7 +4,6 @@ import package_ from "./package.json";
 
 export default defineConfig({
   build: {
-    target: "esnext",
     lib: {
       entry: path.resolve("./src/index.js"),
       name: "Shareon",
