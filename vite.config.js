@@ -10,6 +10,8 @@ export default defineConfig({
       entry: path.resolve("./src/index.js"),
       name: "Shareon",
       formats: ["es", "umd", "iife"],
+      // Workaround to keep the old file names
+      fileName: (format, _) => `shareon.${format}.js`,
     },
     rollupOptions: {
       output: {
