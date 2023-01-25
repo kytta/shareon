@@ -42,9 +42,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "pnpm run build:js && pnpm run build:css",
-    "build:js": "vite build",
-    "build:css": "postcss src/shareon.css -o dist/shareon.min.css --map",
+    "build": "vite build",
     "dev": "vite",
     "lint": "prettier --check . && eslint .",
     "size": "size-limit",
@@ -63,7 +61,6 @@
     "postcss": "^8.4.19",
     "postcss-banner": "^4.0.1",
     "postcss-calc": "^8.2.4",
-    "postcss-cli": "^10.0.0",
     "postcss-css-variables": "^0.18.0",
     "postcss-csso": "^6.0.1",
     "prettier": "^2.7.1",

@@ -15,6 +15,12 @@ export default defineConfig({
     },
     rollupOptions: {
       output: {
+        // Workaround for a correct file name
+        // See: https://github.com/vitejs/vite/issues/4863
+        assetFileNames: (assetInfo) => {
+          if (assetInfo.name === "style.css") return "shareon.min.css";
+          return assetInfo.name;
+        },
         banner: `/*! ${package_.name} v${package_.version} */`,
       },
     },
