@@ -66,6 +66,31 @@
     "size-limit": "^8.1.0",
     "vite": "^4.0.4"
   },
+  "eslintConfig": {
+    "env": {
+      "browser": true
+    },
+    "extends": [
+      "eslint:recommended",
+      "plugin:unicorn/recommended",
+      "prettier"
+    ],
+    "parserOptions": {
+      "ecmaVersion": "latest",
+      "sourceType": "module"
+    },
+    "overrides": [
+      {
+        "files": [
+          "vite.config.js"
+        ],
+        "env": {
+          "node": true,
+          "browser": false
+        }
+      }
+    ]
+  },
   "postcss": {
     "plugins": {
       "postcss-css-variables": {},
