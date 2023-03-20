@@ -58,6 +58,10 @@ const init = () => {
                 container.dataset.url ||
                 window.location.href;
               navigator.clipboard.writeText(url);
+              child.classList.add("done");
+              setTimeout(() => {
+                child.classList.remove("done");
+              }, 1000);
             });
           }
 
