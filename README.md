@@ -88,7 +88,8 @@ Shareon.init();
 ## Usage
 
 Create a container with class `shareon` and populate it with elements, class
-names of which match the names of the social networks:
+names of which match the names of the social networks (or `copy-url`, for the
+'Copy URL' button:
 
 ```html
 <div class="shareon">
@@ -106,6 +107,7 @@ names of which match the names of the social networks:
   <a class="viber"></a>
   <a class="vkontakte"></a>
   <a class="whatsapp"></a>
+  <a class="copy-url"></a>
 </div>
 ```
 
