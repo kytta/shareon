@@ -1,0 +1,29 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.4.0
+    hooks:
+      - id: end-of-file-fixer
+      - id: fix-byte-order-marker
+      - id: mixed-line-ending
+      - id: trailing-whitespace
+        args: [--markdown-linebreak-ext=md]
+      - id: check-json
+      - id: check-toml
+      - id: check-yaml
+  - repo: https://github.com/pre-commit/mirrors-prettier
+    rev: "v3.0.0-alpha.6"
+    hooks:
+      - id: prettier
+        additional_dependencies:
+          - prettier@2
+  - repo: https://github.com/pre-commit/mirrors-eslint
+    rev: "v8.36.0"
+    hooks:
+      - id: eslint
+        files: \.([jt]s|astro)$ # *.js, *.ts and *.astro
+        types: [file]
+        additional_dependencies:
+          - eslint
+          - eslint-config-prettier
+          - eslint-plugin-unicorn
+          - prettier@2
