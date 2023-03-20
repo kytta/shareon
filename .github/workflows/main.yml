@@ -35,4 +35,3 @@ jobs:
           main_branch: main
           github_token: ${{ secrets.GITHUB_TOKEN }}
           skip_step: build
-        if: github.event_name == 'pull_request'
