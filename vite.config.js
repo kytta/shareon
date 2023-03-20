@@ -1,6 +1,8 @@
 import { defineConfig } from "vite";
 import * as path from "node:path";
 
+import lightningcss from "vite-plugin-lightningcss";
+
 export default defineConfig({
   build: {
     lib: {
@@ -24,4 +26,5 @@ export default defineConfig({
   css: {
     devSourcemap: true,
   },
+  plugins: [lightningcss({})],
 });

@@ -53,19 +53,16 @@
   },
   "devDependencies": {
     "@size-limit/preset-small-lib": "^8.2.4",
-    "autoprefixer": "^10.4.14",
     "clean-publish": "^4.0.1",
     "eslint": "^8.36.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-unicorn": "^46.0.0",
-    "postcss": "^8.4.19",
-    "postcss-calc": "^8.2.4",
-    "postcss-css-variables": "^0.18.0",
-    "postcss-csso": "^6.0.1",
     "prettier": "^2.8.5",
     "size-limit": "^8.2.4",
-    "vite": "^4.2.1"
+    "vite": "^4.2.1",
+    "vite-plugin-lightningcss": "^0.0.5"
   },
+  "browserslist": "cover 95%, last 2 versions, Firefox ESR, not dead",
   "eslintConfig": {
     "env": {
       "browser": true
@@ -90,14 +87,6 @@
         }
       }
     ]
-  },
-  "postcss": {
-    "plugins": {
-      "postcss-css-variables": {},
-      "postcss-calc": {},
-      "autoprefixer": {},
-      "postcss-csso": {}
-    }
   },
   "size-limit": [
     {
