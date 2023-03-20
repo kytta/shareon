@@ -32,6 +32,7 @@ jobs:
       - name: Check size
         uses: getsentry/size-limit-action@v5
         with:
+          main_branch: main
           github_token: ${{ secrets.GITHUB_TOKEN }}
           skip_step: build
         if: github.event_name == 'pull_request'
