@@ -17,7 +17,7 @@ repos:
         additional_dependencies:
           - prettier@2
   - repo: https://github.com/pre-commit/mirrors-eslint
-    rev: "v8.39.0"
+    rev: "v8.40.0"
     hooks:
       - id: eslint
         files: \.([jt]s|astro)$ # *.js, *.ts and *.astro
