@@ -17,7 +17,7 @@ import "./shareon.css";
  * }) => string}}
  */
 const urlBuilderMap = {
-  facebook: (d) => `https://www.facebook.com/sharer/sharer.php?u=${d.url}`,
+  facebook: (d) => `https://www.facebook.com/sharer/sharer.php?u=${d.url}${d.hashtag? `&hashtag=#${d.hashtag}` : ''}`,
   linkedin: (d) => `https://www.linkedin.com/sharing/share-offsite/?url=${d.url}`,
   mastodon: (d) => `https://toot.kytta.dev/?text=${d.title}%0D%0A${d.url}${d.text ? `%0D%0A%0D%0A${d.text}` : ''}${d.via ? `%0D%0A%0D%0A${d.via}` : ''}`,
   messenger: (d) => `https://www.facebook.com/dialog/send?app_id=${d.fbAppId}&link=${d.url}&redirect_uri=${d.url}`,
@@ -26,7 +26,7 @@ const urlBuilderMap = {
   pocket: (d) => `https://getpocket.com/edit.php?url=${d.url}`,
   reddit: (d) => `https://www.reddit.com/submit?title=${d.title}&url=${d.url}`,
   telegram: (d) => `https://telegram.me/share/url?url=${d.url}${d.text ? `&text=${d.text}` : ''}`,
-  twitter: (d) => `https://twitter.com/intent/tweet?url=${d.url}&text=${d.title}${d.via ? `&via=${d.via}` : ''}`,
+  twitter: (d) => `https://twitter.com/intent/tweet?url=${d.url}&text=${d.title}${d.via ? `&via=${d.via}` : ''}${d.hashtags? `&hashtags=${d.hashtags}` : ''}`,
   viber: (d) => `viber://forward?text=${d.title}%0D%0A${d.url}${d.text ? `%0D%0A%0D%0A${d.text}` : ''}`,
   vkontakte: (d) => `https://vk.com/share.php?url=${d.url}&title=${d.title}${d.media ? `&image=${d.media}` : ''}`,
   whatsapp: (d) => `https://wa.me/?text=${d.title}%0D%0A${d.url}${d.text ? `%0D%0A%0D%0A${d.text}` : ''}`,
@@ -84,6 +84,12 @@ const init = () => {
               ),
               via: encodeURIComponent(
                 child.dataset.via || container.dataset.via || ""
+              ),
+              hashtag: encodeURIComponent(
+                child.dataset.hashtag || container.dataset.hashtag || ""
+              ),
+              hashtags: encodeURIComponent(
+                child.dataset.hashtags?.replaceAll(', ', ',') || container.dataset.hashtags?.replaceAll(', ', ',') || ""
               ),
               fbAppId: encodeURIComponent(
                 child.dataset.fbAppId || container.dataset.fbAppId || ""
