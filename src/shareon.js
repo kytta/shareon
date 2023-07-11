@@ -71,22 +71,24 @@ const init = () => {
               url: encodeURIComponent(
                 child.dataset.url ||
                   container.dataset.url ||
-                  window.location.href
+                  window.location.href,
               ),
               title: encodeURIComponent(
-                child.dataset.title || container.dataset.title || document.title
+                child.dataset.title ||
+                  container.dataset.title ||
+                  document.title,
               ),
               media: encodeURIComponent(
-                child.dataset.media || container.dataset.media || ""
+                child.dataset.media || container.dataset.media || "",
               ),
               text: encodeURIComponent(
-                child.dataset.text || container.dataset.text || ""
+                child.dataset.text || container.dataset.text || "",
               ),
               via: encodeURIComponent(
-                child.dataset.via || container.dataset.via || ""
+                child.dataset.via || container.dataset.via || "",
               ),
               fbAppId: encodeURIComponent(
-                child.dataset.fbAppId || container.dataset.fbAppId || ""
+                child.dataset.fbAppId || container.dataset.fbAppId || "",
               ),
             };
             const url = urlBuilderMap[cls](preset);
