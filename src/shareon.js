@@ -30,6 +30,7 @@ const urlBuilderMap = {
   viber: (d) => `viber://forward?text=${d.title}%0D%0A${d.url}${d.text ? `%0D%0A%0D%0A${d.text}` : ''}`,
   vkontakte: (d) => `https://vk.com/share.php?url=${d.url}&title=${d.title}${d.media ? `&image=${d.media}` : ''}`,
   whatsapp: (d) => `https://wa.me/?text=${d.title}%0D%0A${d.url}${d.text ? `%0D%0A%0D%0A${d.text}` : ''}`,
+  ms_teams: (d) => `https://teams.microsoft.com/share?href=${d.url}${d.text ? `&msgText=${d.text}` : ''}`,
 };
 
 const openUrl = (buttonUrl) => () => {
