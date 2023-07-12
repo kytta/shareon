@@ -66,6 +66,35 @@ const init = () => {
             });
           }
 
+          // if it's "Web Share"
+          if (cls === "web-share") {
+            child.addEventListener("click", () => {
+              const url =
+                child.dataset.url ||
+                container.dataset.url ||
+                window.location.href;
+              const title =
+                child.dataset.title ||
+                container.dataset.title ||
+                '';
+              const text =
+                child.dataset.text ||
+                container.dataset.text ||
+                '';
+              console.log(url);
+              if (navigator.share) {
+                navigator.share({
+                  title: title,
+                  text: url
+                })
+                  .then(() => console.log('Successful share'))
+                  .catch((error) => console.log('Error sharing', error));
+              } else {
+                console.log('Web Share API not available.')
+              }
+            });
+          }
+
           // if it's one of the networks
           if (Object.prototype.hasOwnProperty.call(urlBuilderMap, cls)) {
             const preset = {
