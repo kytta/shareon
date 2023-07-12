@@ -74,23 +74,19 @@ const init = () => {
                 container.dataset.url ||
                 window.location.href;
               const title =
-                child.dataset.title ||
-                container.dataset.title ||
-                '';
-              const text =
-                child.dataset.text ||
-                container.dataset.text ||
-                '';
+                child.dataset.title || container.dataset.title || "";
+              const text = child.dataset.text || container.dataset.text || "";
               console.log(url);
               if (navigator.share) {
-                navigator.share({
-                  title: title,
-                  text: url
-                })
-                  .then(() => console.log('Successful share'))
-                  .catch((error) => console.log('Error sharing', error));
+                navigator
+                  .share({
+                    title: title,
+                    text: url,
+                  })
+                  .then(() => console.log("Successful share"))
+                  .catch((error) => console.log("Error sharing", error));
               } else {
-                console.log('Web Share API not available.')
+                console.log("Web Share API not available.");
               }
             });
           }
