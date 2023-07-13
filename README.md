@@ -141,16 +141,19 @@ Apart from the URL and title, some networks support extra parameters:
 - add `data-text` to a WhatsApp, Mastodon, Telegram, or Viber button to add
   custom message text
 - add `data-via` to a Twitter or Mastodon button to mention a user
+- add `data-hashtags` to a Twitter or Facebook button to include hashtags in the shared post.
+  - Twitter supports multiple hashtags, and you need to specify them with out `#` and seperated with `,`, it shoule be something like this `ai,technologies,aigc`.
+  - Facebook only supports a single hashtag. If you pass multiple hashtags with `,` seperated, the library will only use the first one.
 
 Here are all custom parameters:
 
 ```html
 <div class="shareon" data-url="https://custom.url/for-this-page">
-  <a class="facebook" data-title="Custom Facebook title"></a>
+  <a class="facebook" data-title="Custom Facebook title" data-hashtags="awesome"></a>
   <a class="messenger" data-fb-app-id="0123456789012345"></a>
   <a class="pinterest" data-media="https://custom.picture/for-pinterest">Pin</a>
   <a class="telegram" data-text="Check this out!"></a>
-  <a class="twitter" data-via="MyNickname"></a>
+  <a class="twitter" data-via="MyNickname" data-hashtags="shareon,awesome,brilliant"></a>
   <a class="mastodon" data-via="@MyNickname@myserver.social"></a>
   <a class="whatsapp" data-url="https://custom.url/for-whatsapp">Send</a>
 </div>
