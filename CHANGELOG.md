@@ -285,7 +285,7 @@ Initial release of shareon
 [2.0.2]: https://github.com/kytta/shareon/compare/v2.0.1...v2.0.2
 [2.0.1]: https://github.com/kytta/shareon/compare/v2.0.0...v2.0.1
 [2.0.0]: https://github.com/kytta/shareon/compare/v1.6.3...v2.0.0
-[1.6.2]: https://github.com/kytta/shareon/compare/v1.6.2...v1.6.3
+[1.6.3]: https://github.com/kytta/shareon/compare/v1.6.2...v1.6.3
 [1.6.2]: https://github.com/kytta/shareon/compare/v1.6.1...v1.6.2
 [1.6.1]: https://github.com/kytta/shareon/compare/v1.6.0...v1.6.1
 [1.6.0]: https://github.com/kytta/shareon/compare/v1.5.0...v1.6.0
