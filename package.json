@@ -108,7 +108,7 @@
       "path": "./dist/shareon.min.css"
     },
     {
-      "limit": "1 KB",
+      "limit": "1069 B",
       "path": "./dist/shareon.es.js"
     }
   ],

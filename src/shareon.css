@@ -175,6 +175,10 @@
   background-image: url("data:image/svg+xml,%3Csvg fill='%23fff' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.199 4.841H.11c.194 9.312 4.85 14.907 13.012 14.907h.462v-5.327c3 .299 5.268 2.492 6.178 5.327H24c-1.164-4.237-4.223-6.58-6.133-7.475 1.91-1.105 4.596-3.79 5.238-7.432h-3.85c-.836 2.955-3.313 5.641-5.67 5.895V4.84h-3.85v10.326C7.347 14.57 4.333 11.675 4.199 4.84Z'/%3E%3C/svg%3E");
 }
 
+.shareon > .web-share:before {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23fff' stroke-width='2'%3E%3Ccircle cx='18' cy='5' r='3'/%3E%3Ccircle cx='6' cy='12' r='3'/%3E%3Ccircle cx='18' cy='19' r='3'/%3E%3Cpath d='m8.59 13.51l6.83 3.98m-.01-10.98l-6.82 3.98'/%3E%3C/g%3E%3C/svg%3E");
+}
+
 .shareon > .whatsapp {
   background-color: #25d366;
 }
