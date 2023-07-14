@@ -4,6 +4,18 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.2.0] - 2023-07-15
+
+### Added
+
+- `data-hashtags` for Facebook and Twitter by Edward in https://github.com/kytta/shareon/pull/60
+- Microsoft Teams button by Dimitrios in https://github.com/kytta/shareon/pull/66
+- Web Share API button by Dimitrios in https://github.com/kytta/shareon/pull/67
+
+### Changed
+
+- the advertized bundle size now uses Brotli for compression (https://github.com/kytta/shareon/pull/69)
+
 ## [2.1.0] - 2023-03-20
 
 ### Added
@@ -280,7 +292,8 @@ Initial release of shareon
 - Add Telegram button
 - Add Twitter button
 
-[unreleased]: https://github.com/kytta/shareon/compare/v2.1.0...main
+[unreleased]: https://github.com/kytta/shareon/compare/v2.2.0...main
+[2.2.0]: https://github.com/kytta/shareon/compare/v2.1.0...v2.2.0
 [2.1.0]: https://github.com/kytta/shareon/compare/v2.0.2...v2.1.0
 [2.0.2]: https://github.com/kytta/shareon/compare/v2.0.1...v2.0.2
 [2.0.1]: https://github.com/kytta/shareon/compare/v2.0.0...v2.0.1
