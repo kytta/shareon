@@ -52,19 +52,19 @@
     "postpublish": "rm -rf ./package"
   },
   "devDependencies": {
-    "@size-limit/preset-small-lib": "^8.2.4",
+    "@size-limit/preset-small-lib": "^8.2.6",
     "autoprefixer": "^10.4.14",
-    "clean-publish": "^4.0.1",
-    "eslint": "^8.36.0",
+    "clean-publish": "^4.2.0",
+    "eslint": "^8.45.0",
     "eslint-config-prettier": "^8.8.0",
-    "eslint-plugin-unicorn": "^46.0.0",
-    "postcss": "^8.4.19",
+    "eslint-plugin-unicorn": "^46.0.1",
+    "postcss": "^8.4.26",
     "postcss-calc": "^8.2.4",
     "postcss-css-variables": "^0.18.0",
     "postcss-csso": "^6.0.1",
     "prettier": "^3.0.0",
-    "size-limit": "^8.2.4",
-    "vite": "^4.2.1"
+    "size-limit": "^8.2.6",
+    "vite": "^4.4.4"
   },
   "prettier": {
     "embeddedLanguageFormatting": "off"
