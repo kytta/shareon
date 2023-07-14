@@ -104,12 +104,14 @@
   },
   "size-limit": [
     {
-      "limit": "7 KB",
-      "path": "./dist/shareon.min.css"
+      "limit": "6 KB",
+      "path": "./dist/shareon.min.css",
+      "brotli": true
     },
     {
-      "limit": "1069 B",
-      "path": "./dist/shareon.es.js"
+      "limit": "1 KB",
+      "path": "./dist/shareon.es.js",
+      "brotli": true
     }
   ],
   "publishConfig": {
