@@ -24,4 +24,4 @@ repos:
           - eslint
           - eslint-config-prettier
           - eslint-plugin-unicorn
-          - prettier@2
+          - prettier@3
