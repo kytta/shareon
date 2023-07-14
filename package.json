@@ -62,9 +62,12 @@
     "postcss-calc": "^8.2.4",
     "postcss-css-variables": "^0.18.0",
     "postcss-csso": "^6.0.1",
-    "prettier": "^2.8.5",
+    "prettier": "^3.0.0",
     "size-limit": "^8.2.4",
     "vite": "^4.2.1"
+  },
+  "prettier": {
+    "embeddedLanguageFormatting": "off"
   },
   "eslintConfig": {
     "env": {
