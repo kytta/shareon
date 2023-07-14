@@ -25,6 +25,7 @@ const urlBuilderMap = {
   pinterest: (d) => `https://pinterest.com/pin/create/button/?url=${d.url}&description=${d.title}${d.media ? `&media=${d.media}` : ''}`,
   pocket: (d) => `https://getpocket.com/edit.php?url=${d.url}`,
   reddit: (d) => `https://www.reddit.com/submit?title=${d.title}&url=${d.url}`,
+  teams: (d) => `https://teams.microsoft.com/share?href=${d.url}${d.text ? `&msgText=${d.text}` : ''}`,
   telegram: (d) => `https://telegram.me/share/url?url=${d.url}${d.text ? `&text=${d.text}` : ''}`,
   twitter: (d) => `https://twitter.com/intent/tweet?url=${d.url}&text=${d.title}${d.via ? `&via=${d.via}` : ''}${d.hashtags? `&hashtags=${d.hashtags}` : ''}`,
   viber: (d) => `viber://forward?text=${d.title}%0D%0A${d.url}${d.text ? `%0D%0A%0D%0A${d.text}` : ''}`,
