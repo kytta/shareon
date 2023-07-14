@@ -66,6 +66,9 @@
     "size-limit": "^8.2.4",
     "vite": "^4.2.1"
   },
+  "prettier": {
+    "embeddedLanguageFormatting": "off"
+  },
   "eslintConfig": {
     "env": {
       "browser": true
