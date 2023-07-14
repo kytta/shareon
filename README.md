@@ -102,6 +102,7 @@ names of which match the names of the social networks (or `copy-url`, for the
   <a class="pinterest"></a>
   <a class="pocket"></a>
   <a class="reddit"></a>
+  <a class="teams"></a>
   <a class="telegram"></a>
   <a class="twitter"></a>
   <a class="viber"></a>
