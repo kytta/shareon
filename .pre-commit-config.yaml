@@ -26,3 +26,13 @@ repos:
           - eslint-config-prettier
           - eslint-plugin-unicorn
           - prettier@3
+  - repo: local
+    hooks:
+      - id: svgo
+        name: optimize SVG files
+        entry: svgo
+        types: [svg]
+        files: 'src/icons/.*\.svg'
+        language: node
+        additional_dependencies:
+          - "svgo"
