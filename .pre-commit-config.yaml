@@ -3,6 +3,7 @@ repos:
     rev: v4.4.0
     hooks:
       - id: end-of-file-fixer
+        exclude: 'src/icons/.*\.svg'
       - id: fix-byte-order-marker
       - id: mixed-line-ending
       - id: trailing-whitespace
