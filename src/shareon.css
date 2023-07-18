@@ -44,11 +44,10 @@
   height: var(--shareon-size);
   width: var(--shareon-size);
 
-  background-image: var(--shareon-svg);
-  background-repeat: no-repeat;
-  background-size: var(--shareon-size) var(--shareon-size);
+  background-color: currentColor;
+  mask: no-repeat center / 100%;
+  mask-image: var(--shareon-svg);
   content: "";
-  vertical-align: middle;
 }
 
 .shareon > .copy-url {
