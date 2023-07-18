@@ -65,7 +65,7 @@ export default {
       // Sort the attributes on the <svg> tag
       name: "sortAttrs",
       params: {
-        order: ["fill", "stroke", "viewBox"],
+        order: ["viewBox"],
         xmlnsOrder: "end",
       },
     },
