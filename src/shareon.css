@@ -1,37 +1,40 @@
 :root {
-  --button-size: 36px;
-  --icon-size: 20px;
-
-  --padding-ver: calc(0.3 * var(--icon-size));
-  --padding-hor: calc(var(--icon-size) / 2);
-  --padding-icon: calc((var(--button-size) - var(--icon-size)) / 2);
-
-  --height: calc(var(--button-size) - 2 * var(--padding-ver));
-  --width: calc(var(--button-size) - 2 * var(--padding-hor));
+  --shareon-size: 20px;
+  --shareon-padding: 8px;
+  --shareon-radius: 4px;
+  --shareon-fg: #fff;
+  --shareon-bg: unset;
 }
 
 .shareon {
-  font-size: 0 !important;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 4px;
 }
 
 .shareon > * {
-  display: inline-block;
-  position: relative;
+  --svg: unset;
+  --color: #333;
 
-  height: var(--height);
-  min-width: var(--width);
-
-  margin: calc(var(--padding-ver) / 2);
-  padding: var(--padding-ver) var(--padding-hor);
-
-  background-color: #333;
-  border-radius: calc(var(--icon-size) / 6);
-  border: none;
   box-sizing: content-box;
-  color: white;
-  line-height: 1.5;
+  height: var(--shareon-size);
+  min-width: var(--shareon-size);
+  padding: var(--shareon-padding);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--shareon-padding);
+
+  border: none;
+  border-radius: var(--shareon-radius);
+  color: var(--shareon-fg, var(--color));
+  background-color: var(--shareon-bg, var(--color));
+
+  font-size: calc(var(--shareon-size) * 0.8);
+  text-decoration: none;
+
   transition: opacity 300ms ease;
-  vertical-align: middle;
 }
 
 .shareon > *:hover {
@@ -40,148 +43,96 @@
   opacity: 0.7;
 }
 
-.shareon > *:not(:empty) {
-  font-size: calc(0.8 * var(--icon-size));
-  text-decoration: none;
-}
-
-.shareon > *:not(:empty)::before {
-  position: relative;
-
-  height: 100%;
-  width: calc(var(--icon-size) + var(--padding-icon));
-
-  top: 0;
-  left: 0;
-
-  background-position: 0 50%;
-}
-
 .shareon > *::before {
-  display: inline-block;
-  position: absolute;
+  height: var(--shareon-size);
+  width: var(--shareon-size);
 
-  height: var(--icon-size);
-  width: var(--icon-size);
-
-  top: var(--padding-icon);
-  left: var(--padding-icon);
-
-  background-repeat: no-repeat;
-  background-size: var(--icon-size) var(--icon-size);
+  background-color: currentColor;
+  mask: var(--svg) no-repeat center / 100%;
   content: "";
-  vertical-align: bottom;
 }
 
-.shareon > .copy-url:before {
-  background-image: url("icons/copy-url.svg");
+.shareon > .copy-url {
+  --svg: url("icons/copy-url.svg");
 }
 
-.shareon > .copy-url.done:before {
-  background-image: url("icons/copy-url-done.svg");
+.shareon > .copy-url.done {
+  --svg: url("icons/copy-url-done.svg");
 }
 
 .shareon > .facebook {
-  background-color: #1877f2;
-}
-.shareon > .facebook:before {
-  background-image: url("icons/facebook.svg");
+  --svg: url("icons/facebook.svg");
+  --color: #1877f2;
 }
 
 .shareon > .linkedin {
-  background-color: #0a66c2;
+  --svg: url("icons/linkedin-in.svg");
+  --color: #0a66c2;
 }
-.shareon > .linkedin:before {
-  background-image: url("icons/linkedin-in.svg");
-}
-.shareon > .linkedin:not(:empty):before {
-  background-image: url("icons/linkedin.svg");
+.shareon > .linkedin:not(:empty) {
+  --svg: url("icons/linkedin.svg");
 }
 
 .shareon > .mastodon {
-  background-color: #6364ff;
-}
-.shareon > .mastodon:before {
-  background-image: url("icons/mastodon.svg");
+  --svg: url("icons/mastodon.svg");
+  --color: #6364ff;
 }
 
 .shareon > .messenger {
-  background-color: #00b2ff;
-}
-.shareon > .messenger:before {
-  background-image: url("icons/messenger.svg");
+  --svg: url("icons/messenger.svg");
+  --color: #00b2ff;
 }
 
 .shareon > .odnoklassniki {
-  background-color: #ee8208;
-}
-.shareon > .odnoklassniki:before {
-  background-image: url("icons/odnoklassniki.svg");
+  --svg: url("icons/odnoklassniki.svg");
+  --color: #ee8208;
 }
 
 .shareon > .pinterest {
-  background-color: #bd081c;
-}
-.shareon > .pinterest:before {
-  background-image: url("icons/pinterest.svg");
+  --svg: url("icons/pinterest.svg");
+  --color: #bd081c;
 }
 
 .shareon > .pocket {
-  background-color: #ef3f56;
-}
-.shareon > .pocket:before {
-  background-image: url("icons/pocket.svg");
+  --svg: url("icons/pocket.svg");
+  --color: #ef3f56;
 }
 
 .shareon > .reddit {
-  background-color: #ff4500;
-}
-.shareon > .reddit:before {
-  background-image: url("icons/reddit.svg");
+  --svg: url("icons/reddit.svg");
+  --color: #ff4500;
 }
 
 .shareon > .telegram {
-  background-color: #26a5e4;
-}
-.shareon > .telegram:before {
-  background-image: url("icons/telegram.svg");
+  --svg: url("icons/telegram.svg");
+  --color: #26a5e4;
 }
 
 .shareon > .teams {
-  background-color: #6264a7;
-}
-.shareon > .teams:before {
-  background-image: url("icons/teams.svg");
+  --svg: url("icons/teams.svg");
+  --color: #6264a7;
 }
 
 .shareon > .twitter {
-  background-color: #1d9bf0;
-}
-.shareon > .twitter:before {
-  background-image: url("icons/twitter.svg");
+  --svg: url("icons/twitter.svg");
+  --color: #1d9bf0;
 }
 
 .shareon > .viber {
-  background-color: #7360f2;
-}
-.shareon > .viber:before {
-  background-image: url("icons/viber.svg");
+  --svg: url("icons/viber.svg");
+  --color: #7360f2;
 }
 
 .shareon > .vkontakte {
-  background-color: #0077ff;
-}
-.shareon > .vkontakte:before {
-  background-image: url("icons/vkontakte.svg");
+  --svg: url("icons/vkontakte.svg");
+  --color: #0077ff;
 }
 
-.shareon > .web-share:before {
-  background-image: url("icons/web-share.svg");
+.shareon > .web-share {
+  --svg: url("icons/web-share.svg");
 }
 
 .shareon > .whatsapp {
-  background-color: #25d366;
-}
-.shareon > .whatsapp:before {
-  background-image: url("icons/whatsapp.svg");
+  --svg: url("icons/whatsapp.svg");
+  --color: #25d366;
 }
