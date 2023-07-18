@@ -1,13 +1,13 @@
 :root {
-  --button-size: 36px;
-  --icon-size: 20px;
+  --shareon-size: 36px;
+  --shareon-icon-size: 20px;
 
-  --padding-ver: calc(0.3 * var(--icon-size));
-  --padding-hor: calc(var(--icon-size) / 2);
-  --padding-icon: calc((var(--button-size) - var(--icon-size)) / 2);
+  --padding-ver: calc(0.3 * var(--shareon-icon-size));
+  --padding-hor: calc(var(--shareon-icon-size) / 2);
+  --padding-icon: calc((var(--shareon-size) - var(--shareon-icon-size)) / 2);
 
-  --height: calc(var(--button-size) - 2 * var(--padding-ver));
-  --width: calc(var(--button-size) - 2 * var(--padding-hor));
+  --height: calc(var(--shareon-size) - 2 * var(--padding-ver));
+  --width: calc(var(--shareon-size) - 2 * var(--padding-hor));
 }
 
 .shareon {
@@ -25,7 +25,7 @@
   padding: var(--padding-ver) var(--padding-hor);
 
   background-color: #333;
-  border-radius: calc(var(--icon-size) / 6);
+  border-radius: calc(var(--shareon-icon-size) / 6);
   border: none;
   box-sizing: content-box;
   color: white;
@@ -41,7 +41,7 @@
 }
 
 .shareon > *:not(:empty) {
-  font-size: calc(0.8 * var(--icon-size));
+  font-size: calc(0.8 * var(--shareon-icon-size));
   text-decoration: none;
 }
 
@@ -49,7 +49,7 @@
   position: relative;
 
   height: 100%;
-  width: calc(var(--icon-size) + var(--padding-icon));
+  width: calc(var(--shareon-icon-size) + var(--padding-icon));
 
   top: 0;
   left: 0;
@@ -61,14 +61,14 @@
   display: inline-block;
   position: absolute;
 
-  height: var(--icon-size);
-  width: var(--icon-size);
+  height: var(--shareon-icon-size);
+  width: var(--shareon-icon-size);
 
   top: var(--padding-icon);
   left: var(--padding-icon);
 
   background-repeat: no-repeat;
-  background-size: var(--icon-size) var(--icon-size);
+  background-size: var(--shareon-icon-size) var(--shareon-icon-size);
   content: "";
   vertical-align: bottom;
 }
