@@ -2,8 +2,6 @@
   --shareon-size: 20px;
   --shareon-padding: 8px;
   --shareon-radius: 4px;
-  --shareon-svg: none;
-  --shareon-background: #333;
 }
 
 .shareon {
@@ -13,6 +11,9 @@
 }
 
 .shareon > * {
+  --svg: unset;
+  --color: #333;
+
   box-sizing: content-box;
   height: var(--shareon-size);
   min-width: var(--shareon-size);
@@ -26,7 +27,7 @@
   border: none;
   border-radius: var(--shareon-radius);
   color: white;
-  background-color: var(--shareon-background);
+  background-color: var(--color);
 
   font-size: calc(var(--shareon-size) * 0.8);
   text-decoration: none;
@@ -45,92 +46,91 @@
   width: var(--shareon-size);
 
   background-color: currentColor;
-  mask: no-repeat center / 100%;
-  mask-image: var(--shareon-svg);
+  mask: var(--svg) no-repeat center / 100%;
   content: "";
 }
 
 .shareon > .copy-url {
-  --shareon-svg: url("icons/copy-url.svg");
+  --svg: url("icons/copy-url.svg");
 }
 
 .shareon > .copy-url.done {
-  --shareon-svg: url("icons/copy-url-done.svg");
+  --svg: url("icons/copy-url-done.svg");
 }
 
 .shareon > .facebook {
-  --shareon-svg: url("icons/facebook.svg");
-  --shareon-background: #1877f2;
+  --svg: url("icons/facebook.svg");
+  --color: #1877f2;
 }
 
 .shareon > .linkedin {
-  --shareon-svg: url("icons/linkedin-in.svg");
-  --shareon-background: #0a66c2;
+  --svg: url("icons/linkedin-in.svg");
+  --color: #0a66c2;
 }
 .shareon > .linkedin:not(:empty) {
-  --shareon-svg: url("icons/linkedin.svg");
+  --svg: url("icons/linkedin.svg");
 }
 
 .shareon > .mastodon {
-  --shareon-svg: url("icons/mastodon.svg");
-  --shareon-background: #6364ff;
+  --svg: url("icons/mastodon.svg");
+  --color: #6364ff;
 }
 
 .shareon > .messenger {
-  --shareon-svg: url("icons/messenger.svg");
-  --shareon-background: #00b2ff;
+  --svg: url("icons/messenger.svg");
+  --color: #00b2ff;
 }
 
 .shareon > .odnoklassniki {
-  --shareon-svg: url("icons/odnoklassniki.svg");
-  --shareon-background: #ee8208;
+  --svg: url("icons/odnoklassniki.svg");
+  --color: #ee8208;
 }
 
 .shareon > .pinterest {
-  --shareon-svg: url("icons/pinterest.svg");
-  --shareon-background: #bd081c;
+  --svg: url("icons/pinterest.svg");
+  --color: #bd081c;
 }
 
 .shareon > .pocket {
-  --shareon-svg: url("icons/pocket.svg");
-  --shareon-background: #ef3f56;
+  --svg: url("icons/pocket.svg");
+  --color: #ef3f56;
 }
 
 .shareon > .reddit {
-  --shareon-svg: url("icons/reddit.svg");
-  --shareon-background: #ff4500;
+  --svg: url("icons/reddit.svg");
+  --color: #ff4500;
 }
 
 .shareon > .telegram {
-  --shareon-svg: url("icons/telegram.svg");
-  --shareon-background: #26a5e4;
+  --svg: url("icons/telegram.svg");
+  --color: #26a5e4;
 }
 
 .shareon > .teams {
-  --shareon-svg: url("icons/teams.svg");
-  --shareon-background: #6264a7;
+  --svg: url("icons/teams.svg");
+  --color: #6264a7;
 }
 
 .shareon > .twitter {
-  --shareon-svg: url("icons/twitter.svg");
-  --shareon-background: #1d9bf0;
+  --svg: url("icons/twitter.svg");
+  --color: #1d9bf0;
 }
 
 .shareon > .viber {
-  --shareon-svg: url("icons/viber.svg");
-  --shareon-background: #7360f2;
+  --svg: url("icons/viber.svg");
+  --color: #7360f2;
 }
 
 .shareon > .vkontakte {
-  --shareon-svg: url("icons/vkontakte.svg");
-  --shareon-background: #0077ff;
+  --svg: url("icons/vkontakte.svg");
+  --color: #0077ff;
 }
 
 .shareon > .web-share {
-  --shareon-svg: url("icons/web-share.svg");
+  --svg: url("icons/web-share.svg");
 }
 
 .shareon > .whatsapp {
-  --shareon-svg: url("icons/whatsapp.svg");
-  --shareon-background: #25d366;
+  --svg: url("icons/whatsapp.svg");
+  --color: #25d366;
 }
