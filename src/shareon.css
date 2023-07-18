@@ -1,37 +1,37 @@
 :root {
-  --shareon-size: 36px;
-  --shareon-icon-size: 20px;
-
-  --padding-ver: calc(0.3 * var(--shareon-icon-size));
-  --padding-hor: calc(var(--shareon-icon-size) / 2);
-  --padding-icon: calc((var(--shareon-size) - var(--shareon-icon-size)) / 2);
-
-  --height: calc(var(--shareon-size) - 2 * var(--padding-ver));
-  --width: calc(var(--shareon-size) - 2 * var(--padding-hor));
+  --shareon-size: 20px;
+  --shareon-padding: 8px;
+  --shareon-radius: 4px;
 }
 
 .shareon {
-  font-size: 0 !important;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 4px;
 }
 
 .shareon > * {
-  display: inline-block;
-  position: relative;
+  --shareon-background: #333;
 
-  height: var(--height);
-  min-width: var(--width);
-
-  margin: calc(var(--padding-ver) / 2);
-  padding: var(--padding-ver) var(--padding-hor);
-
-  background-color: #333;
-  border-radius: calc(var(--shareon-icon-size) / 6);
-  border: none;
   box-sizing: content-box;
+  height: var(--shareon-size);
+  min-width: var(--shareon-size);
+  padding: var(--shareon-padding);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--shareon-padding);
+
+  border: none;
+  border-radius: var(--shareon-radius);
   color: white;
-  line-height: 1.5;
+  background-color: var(--shareon-background);
+
+  font-size: calc(var(--shareon-size) * 0.8);
+  text-decoration: none;
+
   transition: opacity 300ms ease;
-  vertical-align: middle;
 }
 
 .shareon > *:hover {
@@ -40,37 +40,14 @@
   opacity: 0.7;
 }
 
-.shareon > *:not(:empty) {
-  font-size: calc(0.8 * var(--shareon-icon-size));
-  text-decoration: none;
-}
-
-.shareon > *:not(:empty)::before {
-  position: relative;
-
-  height: 100%;
-  width: calc(var(--shareon-icon-size) + var(--padding-icon));
-
-  top: 0;
-  left: 0;
-
-  background-position: 0 50%;
-}
-
 .shareon > *::before {
-  display: inline-block;
-  position: absolute;
-
-  height: var(--shareon-icon-size);
-  width: var(--shareon-icon-size);
-
-  top: var(--padding-icon);
-  left: var(--padding-icon);
+  height: var(--shareon-size);
+  width: var(--shareon-size);
 
   background-repeat: no-repeat;
-  background-size: var(--shareon-icon-size) var(--shareon-icon-size);
+  background-size: var(--shareon-size) var(--shareon-size);
   content: "";
-  vertical-align: bottom;
+  vertical-align: middle;
 }
 
 .shareon > .copy-url:before {
