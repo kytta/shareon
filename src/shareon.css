@@ -2,6 +2,8 @@
   --shareon-size: 20px;
   --shareon-padding: 8px;
   --shareon-radius: 4px;
+  --shareon-fg: #fff;
+  --shareon-bg: unset;
 }
 
 .shareon {
@@ -26,8 +28,8 @@
 
   border: none;
   border-radius: var(--shareon-radius);
-  color: white;
-  background-color: var(--color);
+  color: var(--shareon-fg, var(--color));
+  background-color: var(--shareon-bg, var(--color));
 
   font-size: calc(var(--shareon-size) * 0.8);
   text-decoration: none;
