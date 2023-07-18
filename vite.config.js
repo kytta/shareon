@@ -24,4 +24,7 @@ export default defineConfig({
   css: {
     devSourcemap: true,
   },
+  server: {
+    host: "127.0.0.1",
+  },
 });
