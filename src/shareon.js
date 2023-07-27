@@ -13,7 +13,10 @@ import "./shareon.css";
  *   media?: string,
  *   text?: string,
  *   via?: string,
- *   fbAppId?: string
+ *   fbAppId?: string,
+ *   posttype?: string,
+ *   tags?:[string],
+ *   content?: string || [string]
  * }) => string}}
  */
 const urlBuilderMap = {
@@ -31,6 +34,7 @@ const urlBuilderMap = {
   viber: (d) => `viber://forward?text=${d.title}%0D%0A${d.url}${d.text ? `%0D%0A%0D%0A${d.text}` : ''}`,
   vkontakte: (d) => `https://vk.com/share.php?url=${d.url}&title=${d.title}${d.media ? `&image=${d.media}` : ''}`,
   whatsapp: (d) => `https://wa.me/?text=${d.title}%0D%0A${d.url}${d.text ? `%0D%0A%0D%0A${d.text}` : ''}`,
+  tumblr: (d) => `https://www.tumblr.com/widgets/share/tool?posttype=${d.posttype}&tags=${d.tags}${d.title? `&title=${d.title}`:''}&content=${d.content}${d.caption? `&caption=${d.caption}`:''}${d.via? `&show-via=${d.via}`:''}`,
 };
 
 const openUrl = (buttonUrl) => () => {

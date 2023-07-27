@@ -185,3 +185,10 @@
 .shareon > .whatsapp:before {
   background-image: url("icons/whatsapp.svg");
 }
+
+.shareon > .tumblr {
+  background-color: #36465d;
+}
+.shareon > .tumblr:before {
+  background-image: url("icons/tumblr.svg");
+}
