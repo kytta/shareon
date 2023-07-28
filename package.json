@@ -49,7 +49,8 @@
     "test": "pnpm run lint && pnpm run build && pnpm run size",
     "postversion": "pnpm run build",
     "prepublishOnly": "rm -rf ./package && clean-publish",
-    "postpublish": "rm -rf ./package"
+    "postpublish": "rm -rf ./package",
+    "preinstall": "npx only-allow pnpm"
   },
   "devDependencies": {
     "@size-limit/preset-small-lib": "^8.2.6",
@@ -58,6 +59,7 @@
     "eslint": "^8.45.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-unicorn": "^47.0.0",
+    "only-allow": "^1.1.1",
     "postcss": "^8.4.26",
     "postcss-calc": "^9.0.1",
     "postcss-css-variables": "^0.19.0",
