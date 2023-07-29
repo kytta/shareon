@@ -140,6 +140,13 @@
   background-image: url("icons/reddit.svg");
 }
 
+.shareon > .teams {
+  background-color: #6264a7;
+}
+.shareon > .teams:before {
+  background-image: url("icons/teams.svg");
+}
+
 .shareon > .telegram {
   background-color: #26a5e4;
 }
@@ -147,11 +154,11 @@
   background-image: url("icons/telegram.svg");
 }
 
-.shareon > .teams {
-  background-color: #6264a7;
+.shareon > .tumblr {
+  background-color: #36465d;
 }
-.shareon > .teams:before {
-  background-image: url("icons/teams.svg");
+.shareon > .tumblr:before {
+  background-image: url("icons/tumblr.svg");
 }
 
 .shareon > .twitter {
@@ -184,11 +191,4 @@
 }
 .shareon > .whatsapp:before {
   background-image: url("icons/whatsapp.svg");
-}
-
-.shareon > .tumblr {
-  background-color: #36465d;
-}
-.shareon > .tumblr:before {
-  background-image: url("icons/tumblr.svg");
 }
