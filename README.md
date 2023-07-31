@@ -104,6 +104,7 @@ names of which match the names of the social networks (or `copy-url`, for the
   <a class="reddit"></a>
   <a class="teams"></a>
   <a class="telegram"></a>
+  <a class="tumblr"></a>
   <a class="twitter"></a>
   <a class="viber"></a>
   <a class="vkontakte"></a>
@@ -139,12 +140,13 @@ Apart from the URL and title, some networks support extra parameters:
   even possible
 - add `data-media` to an Odnoklassniki, Pinterest, or VK button to customize
   the pinned picture
-- add `data-text` to a WhatsApp, Mastodon, Telegram, or Viber button to add
+- add `data-text` to a Mastodon, Telegram, Tumblr, Viber, or WhatsApp button to add
   custom message text
-- add `data-via` to a Twitter or Mastodon button to mention a user
-- add `data-hashtags` to a Twitter or Facebook button to include hashtags in the shared post.
-  - Twitter supports multiple hashtags, and you need to specify them with out `#` and seperated with `,`, it shoule be something like this `ai,technologies,aigc`.
-  - Facebook only supports a single hashtag. If you pass multiple hashtags with `,` seperated, the library will only use the first one.
+- add `data-via` to a Mastodon, Tumblr, or Twitter button to mention a user
+- add `data-hashtags` to a Facebook, Tumblr, or Twitter button to include hashtags in the shared post.
+  - should be a comma-separated string, for example `stuff,tech,buttons`
+  - Twitter & Tumblr support multiple hashtags
+  - Facebook only supports a single hashtag; only the first one will be used
 
 Here are all custom parameters:
 
@@ -154,6 +156,7 @@ Here are all custom parameters:
   <a class="messenger" data-fb-app-id="0123456789012345"></a>
   <a class="pinterest" data-media="https://custom.picture/for-pinterest">Pin</a>
   <a class="telegram" data-text="Check this out!"></a>
+  <a class="tumblr" data-hashtags="nice,buttons" data-text="These are some nice buttons" data-via="myblog"></a>
   <a class="twitter" data-via="MyNickname" data-hashtags="shareon,awesome,brilliant"></a>
   <a class="mastodon" data-via="@MyNickname@myserver.social"></a>
   <a class="whatsapp" data-url="https://custom.url/for-whatsapp">Send</a>
