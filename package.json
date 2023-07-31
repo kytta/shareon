@@ -49,7 +49,8 @@
     "test": "pnpm run lint && pnpm run build && pnpm run size",
     "postversion": "pnpm run build",
     "prepublishOnly": "rm -rf ./package && clean-publish",
-    "postpublish": "rm -rf ./package"
+    "postpublish": "rm -rf ./package",
+    "preinstall": "npx only-allow pnpm"
   },
   "devDependencies": {
     "@size-limit/preset-small-lib": "^8.2.6",
