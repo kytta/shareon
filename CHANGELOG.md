@@ -4,6 +4,18 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.3.0] - 2023-08-01
+
+### Added
+
+- [#80](https://github.com/kytta/shareon/pull/80):
+  Tumblr button by [Isaac](https://github.com/kabszac)
+
+### Behind-the-scenes
+
+- [#82](https://github.com/kytta/shareon/pull/82):
+  PNPM is now enforced by [Anderson](https://github.com/andersonjoseph)
+
 ## [2.2.3] - 2023-07-19
 
 ### Fixed
@@ -314,7 +326,8 @@ Initial release of shareon
 - Add Telegram button
 - Add Twitter button
 
-[unreleased]: https://github.com/kytta/shareon/compare/v2.2.3...main
+[unreleased]: https://github.com/kytta/shareon/compare/v2.3.0...main
+[2.3.0]: https://github.com/kytta/shareon/compare/v2.2.3...v2.3.0
 [2.2.3]: https://github.com/kytta/shareon/compare/v2.2.2...v2.2.3
 [2.2.2]: https://github.com/kytta/shareon/compare/v2.2.1...v2.2.2
 [2.2.1]: https://github.com/kytta/shareon/compare/v2.2.0...v2.2.1
