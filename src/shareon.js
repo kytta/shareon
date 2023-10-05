@@ -18,7 +18,7 @@ import "./shareon.css";
  */
 const urlBuilderMap = {
   facebook: (d) => `https://www.facebook.com/sharer/sharer.php?u=${d.url}${d.hashtags? `&hashtag=%23${d.hashtags.split('%2C')[0]}` : ''}`,
-  linkedin: (d) => `https://www.linkedin.com/sharing/share-offsite/?url=${d.url}${encodeURIComponent('?latest')}`,
+  linkedin: (d) => `https://www.linkedin.com/sharing/share-offsite/?url=${d.url}${encodeURIComponent('?' + new Date().getTime())}`,
   mastodon: (d) => `https://toot.kytta.dev/?text=${d.title}%0D%0A${d.url}${d.text ? `%0D%0A%0D%0A${d.text}` : ''}${d.via ? `%0D%0A%0D%0A${d.via}` : ''}`,
   messenger: (d) => `https://www.facebook.com/dialog/send?app_id=${d.fbAppId}&link=${d.url}&redirect_uri=${d.url}`,
   odnoklassniki: (d) => `https://connect.ok.ru/offer?url=${d.url}&title=${d.title}${d.media ? `&imageUrl=${d.media}` : ''}`,
