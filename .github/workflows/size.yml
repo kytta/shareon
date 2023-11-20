@@ -1,17 +1,17 @@
-name: Lint
+name: Size Limit
 on:
-  push:
-    branches:
-      - main
   pull_request:
     branches:
       - main
 
+permissions:
+  pull-requests: write
+
 jobs:
-  lint:
+  size:
     runs-on: ubuntu-latest
     env:
-      FORCE_COLOR: 2
+      CI_JOB_NUMBER: 1
 
     steps:
       - uses: actions/checkout@v4
@@ -24,5 +24,8 @@ jobs:
           cache: pnpm
       - name: Install dependencies
         run: pnpm install --ignore-scripts
-      - name: Lint
-        run: pnpm lint
+      - name: Check size
+        uses: getsentry/size-limit-action@v6
+        with:
+          main_branch: main
+          github_token: ${{ secrets.GITHUB_TOKEN }}
