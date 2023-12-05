@@ -46,7 +46,7 @@ devDependencies:
     version: 11.0.0
   vite:
     specifier: ^5.0.0
-    version: 5.0.0
+    version: 5.0.5
 
 packages:
 
@@ -1546,6 +1546,15 @@ packages:
       source-map-js: 1.0.2
     dev: true
 
+  /postcss@8.4.32:
+    resolution: {integrity: sha512-D/kj5JNu6oo2EIy+XL/26JEDTlIbB8hw85G8StOE6L74RQAVVP5rej6wxCNqyMbR4RkPfqvezVbPw81Ngd6Kcw==}
+    engines: {node: ^10 || ^12 || >=14}
+    dependencies:
+      nanoid: 3.3.7
+      picocolors: 1.0.0
+      source-map-js: 1.0.2
+    dev: true
+
   /prelude-ls@1.2.1:
     resolution: {integrity: sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==}
     engines: {node: '>= 0.8.0'}
@@ -1835,8 +1844,8 @@ packages:
       spdx-expression-parse: 3.0.1
     dev: true
 
-  /vite@5.0.0:
-    resolution: {integrity: sha512-ESJVM59mdyGpsiNAeHQOR/0fqNoOyWPYesFto8FFZugfmhdHx8Fzd8sF3Q/xkVhZsyOxHfdM7ieiVAorI9RjFw==}
+  /vite@5.0.5:
+    resolution: {integrity: sha512-OekeWqR9Ls56f3zd4CaxzbbS11gqYkEiBtnWFFgYR2WV8oPJRRKq0mpskYy/XaoCL3L7VINDhqqOMNDiYdGvGg==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
     peerDependencies:
@@ -1864,7 +1873,7 @@ packages:
         optional: true
     dependencies:
       esbuild: 0.19.6
-      postcss: 8.4.31
+      postcss: 8.4.32
       rollup: 4.5.0
     optionalDependencies:
       fsevents: 2.3.3
