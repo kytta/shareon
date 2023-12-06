@@ -53,20 +53,20 @@
     "preinstall": "npx only-allow pnpm"
   },
   "devDependencies": {
-    "@size-limit/preset-small-lib": "^11.0.0",
+    "@size-limit/preset-small-lib": "^11.0.1",
     "autoprefixer": "^10.4.16",
     "clean-publish": "^4.2.0",
-    "eslint": "^8.54.0",
-    "eslint-config-prettier": "^9.0.0",
+    "eslint": "^8.55.0",
+    "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-unicorn": "^49.0.0",
-    "postcss": "^8.4.31",
+    "postcss": "^8.4.32",
     "postcss-calc": "^9.0.1",
     "postcss-css-variables": "^0.19.0",
     "postcss-csso": "^6.0.1",
     "postcss-url": "^10.1.3",
     "prettier": "^3.1.0",
-    "size-limit": "^11.0.0",
-    "vite": "^5.0.0"
+    "size-limit": "^11.0.1",
+    "vite": "^5.0.6"
   },
   "prettier": {
     "embeddedLanguageFormatting": "off"
