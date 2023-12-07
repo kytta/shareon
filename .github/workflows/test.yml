@@ -1,4 +1,5 @@
-name: Lint
+name: Test
+
 on:
   push:
     branches:
@@ -7,22 +8,26 @@ on:
     branches:
       - main
 
+env:
+  FORCE_COLOR: 2
+
 jobs:
-  lint:
+  test:
     runs-on: ubuntu-latest
-    env:
-      FORCE_COLOR: 2
 
     steps:
       - uses: actions/checkout@v4
       - uses: pnpm/action-setup@v2
         with:
-          version: latest
+          version: 8
       - uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: pnpm
       - name: Install dependencies
         run: pnpm install --ignore-scripts
-      - name: Lint
-        run: pnpm lint
+      # pre-commit dioes this for us
+      # - name: Lint
+      #   run: pnpm run lint
+      - name: Build
+        run: pnpm run build
