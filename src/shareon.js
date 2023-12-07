@@ -17,7 +17,7 @@ import "./shareon.css";
  * }) => string}}
  */
 const urlBuilderMap = {
-  facebook: (d) => `https://www.facebook.com/sharer/sharer.php?u=${d.url}${d.hashtags? `&hashtag=%23${d.hashtags.split('%2C')[0]}` : ''}`,
+  facebook: (d) => `https://www.facebook.com/sharer/sharer.php?u=${d.url}${d.hashtags ? `&hashtag=%23${d.hashtags.split('%2C')[0]}` : ''}`,
   email: (d) => `mailto:?subject=${d.title}&body=${d.url}`,
   linkedin: (d) => `https://www.linkedin.com/sharing/share-offsite/?url=${d.url}`,
   mastodon: (d) => `https://toot.kytta.dev/?text=${d.title}%0D%0A${d.url}${d.text ? `%0D%0A%0D%0A${d.text}` : ''}${d.via ? `%0D%0A%0D%0A${d.via}` : ''}`,
@@ -28,8 +28,8 @@ const urlBuilderMap = {
   reddit: (d) => `https://www.reddit.com/submit?title=${d.title}&url=${d.url}`,
   teams: (d) => `https://teams.microsoft.com/share?href=${d.url}${d.text ? `&msgText=${d.text}` : ''}`,
   telegram: (d) => `https://telegram.me/share/url?url=${d.url}${d.text ? `&text=${d.text}` : ''}`,
-  tumblr: (d) => `https://www.tumblr.com/widgets/share/tool?posttype=link${d.hashtags? `&tags=${d.hashtags}` : ''}&title=${d.title}&content=${d.url}&canonicalUrl=${d.url}${d.text? `&caption=${d.text}`:''}${d.via? `&show-via=${d.via}`:''}`,
-  twitter: (d) => `https://twitter.com/intent/tweet?url=${d.url}&text=${d.title}${d.via ? `&via=${d.via}` : ''}${d.hashtags? `&hashtags=${d.hashtags}` : ''}`,
+  tumblr: (d) => `https://www.tumblr.com/widgets/share/tool?posttype=link${d.hashtags ? `&tags=${d.hashtags}` : ''}&title=${d.title}&content=${d.url}&canonicalUrl=${d.url}${d.text ? `&caption=${d.text}` : ''}${d.via ? `&show-via=${d.via}` : ''}`,
+  twitter: (d) => `https://twitter.com/intent/tweet?url=${d.url}&text=${d.title}${d.via ? `&via=${d.via}` : ''}${d.hashtags ? `&hashtags=${d.hashtags}` : ''}`,
   viber: (d) => `viber://forward?text=${d.title}%0D%0A${d.url}${d.text ? `%0D%0A%0D%0A${d.text}` : ''}`,
   vkontakte: (d) => `https://vk.com/share.php?url=${d.url}&title=${d.title}${d.media ? `&image=${d.media}` : ''}`,
   whatsapp: (d) => `https://wa.me/?text=${d.title}%0D%0A${d.url}${d.text ? `%0D%0A%0D%0A${d.text}` : ''}`,
@@ -65,6 +65,13 @@ const init = () => {
               setTimeout(() => {
                 child.classList.remove("done");
               }, 1000);
+            });
+          }
+
+          // if it's "Print"
+          if (cls === "print") {
+            child.addEventListener("click", () => {
+              window.print();
             });
           }
 
