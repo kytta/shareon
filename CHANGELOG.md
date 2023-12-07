@@ -11,6 +11,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - [#99](https://github.com/kytta/shareon/pull/99)
   Email button
 
+- [#100](https://github.com/kytta/shareon/pull/100)
+  Print button
+
 ## [2.3.0] - 2023-08-01
 
 ### Added
