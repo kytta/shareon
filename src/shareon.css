@@ -137,6 +137,10 @@
   background-image: url("icons/pocket.svg");
 }
 
+.shareon > .print:before {
+  background-image: url("icons/print.svg");
+}
+
 .shareon > .reddit {
   background-color: #ff4500;
 }
