@@ -1,4 +1,5 @@
 name: Size Limit
+
 on:
   pull_request:
     branches:
@@ -15,16 +16,16 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+      - name: Fetch Git refs
+        run: git fetch --no-tags --prune --depth=1 origin +refs/heads/*:refs/remotes/origin/*
       - uses: pnpm/action-setup@v2
         with:
-          version: latest
+          version: 8
       - uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: pnpm
-      - name: Install dependencies
-        run: pnpm install --ignore-scripts
-      - name: Check size
+      - name: Check package size
         uses: andresz1/size-limit-action@v1
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
