@@ -81,6 +81,10 @@
   background-image: url("icons/copy-url-done.svg");
 }
 
+.shareon > .email:before {
+  background-image: url("icons/email.svg");
+}
+
 .shareon > .facebook {
   background-color: #1877f2;
 }

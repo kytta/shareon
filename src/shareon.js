@@ -18,6 +18,7 @@ import "./shareon.css";
  */
 const urlBuilderMap = {
   facebook: (d) => `https://www.facebook.com/sharer/sharer.php?u=${d.url}${d.hashtags? `&hashtag=%23${d.hashtags.split('%2C')[0]}` : ''}`,
+  email: (d) => `mailto:?subject=${d.title}&body=${d.url}`,
   linkedin: (d) => `https://www.linkedin.com/sharing/share-offsite/?url=${d.url}`,
   mastodon: (d) => `https://toot.kytta.dev/?text=${d.title}%0D%0A${d.url}${d.text ? `%0D%0A%0D%0A${d.text}` : ''}${d.via ? `%0D%0A%0D%0A${d.via}` : ''}`,
   messenger: (d) => `https://www.facebook.com/dialog/send?app_id=${d.fbAppId}&link=${d.url}&redirect_uri=${d.url}`,
