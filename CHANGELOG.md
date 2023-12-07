@@ -4,15 +4,21 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [2.4.0] - 2023-12-07
 
 ### Added
 
 - [#99](https://github.com/kytta/shareon/pull/99)
   Email button
-
 - [#100](https://github.com/kytta/shareon/pull/100)
   Print button
+
+### Behind-the-scenes
+
+- [#95](https://github.com/kytta/shareon/pull/95)
+  Update to Vite v5
+- [#101](https://github.com/kytta/shareon/pull/101)
+  Enable automatic package publishing
 
 ## [2.3.0] - 2023-08-01
 
@@ -336,7 +342,8 @@ Initial release of shareon
 - Add Telegram button
 - Add Twitter button
 
-[unreleased]: https://github.com/kytta/shareon/compare/v2.3.0...main
+[unreleased]: https://github.com/kytta/shareon/compare/v2.4.0...main
+[2.4.0]: https://github.com/kytta/shareon/compare/v2.3.0...v2.4.0
 [2.3.0]: https://github.com/kytta/shareon/compare/v2.2.3...v2.3.0
 [2.2.3]: https://github.com/kytta/shareon/compare/v2.2.2...v2.2.3
 [2.2.2]: https://github.com/kytta/shareon/compare/v2.2.1...v2.2.2
