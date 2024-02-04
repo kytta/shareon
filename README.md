@@ -94,6 +94,7 @@ names of which match the names of the social networks (or `copy-url`, for the
 ```html
 <div class="shareon">
   <a class="facebook"></a>
+  <a class="fediverse"></a>
   <a class="linkedin"></a>
   <a class="mastodon"></a>
   <!-- FB App ID is required for the Messenger button to function -->
@@ -140,6 +141,8 @@ Apart from the URL and title, some networks support extra parameters:
 
 - you **MUST** add `data-fb-app-id` to the FB Messenger button to make sharing
   even possible
+- add `data-s2f-instance` to the Fediverse button to set your Share₂Fedi
+  instance
 - add `data-media` to an Odnoklassniki, Pinterest, or VK button to customize
   the pinned picture
 - add `data-text` to a Mastodon, Telegram, Tumblr, Viber, or WhatsApp button to add
@@ -155,6 +158,7 @@ Here are all custom parameters:
 ```html
 <div class="shareon" data-url="https://custom.url/for-this-page">
   <a class="facebook" data-title="Custom Facebook title" data-hashtags="awesome"></a>
+  <a class="fediverse" data-s2f-instance="s2f.mydomain.example"></a>
   <a class="messenger" data-fb-app-id="0123456789012345"></a>
   <a class="pinterest" data-media="https://custom.picture/for-pinterest">Pin</a>
   <a class="telegram" data-text="Check this out!"></a>

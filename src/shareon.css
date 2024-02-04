@@ -92,6 +92,13 @@
   background-image: url("icons/facebook.svg");
 }
 
+.shareon > .fediverse {
+  background-color: #8a54af;
+}
+.shareon > .fediverse:before {
+  background-image: url("icons/fediverse.svg");
+}
+
 .shareon > .linkedin {
   background-color: #0a66c2;
 }
