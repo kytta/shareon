@@ -94,6 +94,7 @@ names of which match the names of the social networks (or `copy-url`, for the
 ```html
 <div class="shareon">
   <a class="facebook"></a>
+  <a class="fediverse"></a>
   <a class="linkedin"></a>
   <a class="mastodon"></a>
   <!-- FB App ID is required for the Messenger button to function -->
