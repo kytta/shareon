@@ -28,13 +28,8 @@ repos:
           - eslint-config-prettier@9
           - eslint-plugin-unicorn@49
           - prettier@3
-  - repo: local
+  - repo: https://github.com/kytta/mirrors-svgo
+    rev: v3.2.0
     hooks:
       - id: svgo
-        name: optimize SVG files
-        entry: svgo
-        types: [svg]
-        files: 'src/icons/.*\.svg'
-        language: node
-        additional_dependencies:
-          - svgo
+        files: "^src/icons/"
