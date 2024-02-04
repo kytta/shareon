@@ -8,8 +8,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ### Added
 
-- Fediverse button (via [Share₂Fedi](https://github.com/kytta/share2fedi))
-- Custom Share₂Fedi instance for the Fediverse button
+- [#108](https://github.com/kytta/shareon/pull/108)
+  Fediverse button (via [Share₂Fedi](https://github.com/kytta/share2fedi))
 
 ## [2.4.0] - 2023-12-07
 
