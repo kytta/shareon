@@ -21,6 +21,7 @@
         font-weight: 600;
       }
     </style>
+    <link rel="stylesheet" href="shareon.css" />
   </head>
 
   <body>
@@ -134,7 +135,10 @@
     </main>
 
     <script type="module">
-      import { init } from "./src/shareon.js";
+      new EventSource("/esbuild")
+        .addEventListener("change", () => location.reload())
+
+      import { init } from "./shareon.js";
       init();
     </script>
   </body>

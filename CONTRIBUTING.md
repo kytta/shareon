@@ -97,7 +97,7 @@ In `src/shareon.css`, add two lines for the icon: one for the colour and one for
 Open `index.html` in the repository root and add the icon to the list of all buttons. Then, launch the dev server:
 
 ```sh
-pnpm dev --open
+pnpm dev
 ```
 
 The final button should:
