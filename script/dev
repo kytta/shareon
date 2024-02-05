@@ -1,0 +1,28 @@
+#!/usr/bin/env node
+
+import * as path from "node:path";
+import * as esbuild from "esbuild";
+
+const dir = path.join(".", "dev");
+
+const ctx = await esbuild.context({
+  entryPoints: [path.join(".", "src", "index.js")],
+  entryNames: "[dir]/shareon",
+  bundle: true,
+  sourcemap: true,
+  outdir: dir,
+  format: "esm",
+  loader: {
+    ".svg": "dataurl",
+  },
+});
+
+await ctx.watch();
+
+const { host, port } = await ctx.serve({
+  host: "127.0.0.1",
+  port: 9001,
+  servedir: dir,
+});
+
+console.info("Serving at", new URL(`http://${host}:${port}`).toString());

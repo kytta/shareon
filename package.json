@@ -43,7 +43,7 @@
   ],
   "scripts": {
     "build": "vite build",
-    "dev": "vite",
+    "dev": "node script/dev",
     "lint": "prettier --check . && eslint .",
     "size": "size-limit",
     "test": "pnpm run lint && pnpm run build && pnpm run size",
@@ -56,6 +56,7 @@
     "@size-limit/preset-small-lib": "^11.0.2",
     "autoprefixer": "^10.4.17",
     "clean-publish": "^4.2.0",
+    "esbuild": "^0.20.0",
     "eslint": "^8.56.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-unicorn": "^50.0.1",
