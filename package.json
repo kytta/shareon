@@ -42,7 +42,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "vite build",
+    "build": "node script/build",
     "dev": "node script/dev",
     "lint": "prettier --check . && eslint .",
     "size": "size-limit",
@@ -117,7 +117,7 @@
     },
     {
       "limit": "1 KiB",
-      "path": "./dist/shareon.es.js",
+      "path": "./dist/shareon.mjs",
       "brotli": true
     }
   ],

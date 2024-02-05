@@ -3,18 +3,18 @@
 import * as path from "node:path";
 import * as esbuild from "esbuild";
 
+import { commonOptions } from "./.build-common.mjs";
+
 const dir = path.join(".", "dev");
 
 const ctx = await esbuild.context({
-  entryPoints: [path.join(".", "src", "index.js")],
-  entryNames: "[dir]/shareon",
-  bundle: true,
-  sourcemap: true,
+  ...commonOptions,
+  entryPoints: [
+    path.join(".", "src", "index.js"),
+    path.join(".", "src", "shareon.css"),
+  ],
   outdir: dir,
   format: "esm",
-  loader: {
-    ".svg": "dataurl",
-  },
 });
 
 await ctx.watch();
