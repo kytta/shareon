@@ -28,7 +28,7 @@ jobs:
       - name: Install dependencies
         run: pnpm install --ignore-scripts
       - name: Build
-        run: pnpm run build
+        run: script/build
       - name: Publish to NPM (with provenance)
         run: pnpm publish --no-git-checks --access public --tag ${{ github.event.release.prerelease && 'next' || 'latest' }}
         env:

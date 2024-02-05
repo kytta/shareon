@@ -1,0 +1,28 @@
+#!/usr/bin/env node
+
+import * as path from "node:path";
+import * as esbuild from "esbuild";
+
+import { commonOptions } from "./.build-common.mjs";
+
+const dir = path.join(".", "dev");
+
+const ctx = await esbuild.context({
+  ...commonOptions,
+  entryPoints: [
+    path.join(".", "src", "index.js"),
+    path.join(".", "src", "shareon.css"),
+  ],
+  outdir: dir,
+  format: "esm",
+});
+
+await ctx.watch();
+
+const { host, port } = await ctx.serve({
+  host: "127.0.0.1",
+  port: 9001,
+  servedir: dir,
+});
+
+console.info("Serving at", new URL(`http://${host}:${port}`).toString());

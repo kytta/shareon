@@ -1,0 +1,46 @@
+#!/usr/bin/env node
+
+import * as path from "node:path";
+import * as esbuild from "esbuild";
+
+import { commonOptions, formatToJsExtension } from "./.build-common.mjs";
+
+/** @type {import('esbuild').BuildOptions} */
+const commonBuildOptions = {
+  ...commonOptions,
+  metafile: true,
+  outdir: path.join(".", "dist"),
+};
+
+const buildJs = async (format, entry = "shareon.js", minify = true) =>
+  esbuild.build({
+    ...commonBuildOptions,
+    entryPoints: [path.join(".", "src", entry)],
+    format,
+    minify,
+    outExtension: { ".js": formatToJsExtension.get(format) },
+  });
+
+const buildCss = async () =>
+  esbuild.build({
+    ...commonBuildOptions,
+    entryPoints: [path.join(".", "src", "shareon.css")],
+    minify: true,
+    outExtension: { ".css": ".min.css" },
+  });
+
+const results = await Promise.all([
+  buildJs("esm", "shareon.js", false),
+  buildJs("cjs"),
+  buildJs("iife", "index.js"),
+  buildCss(),
+]);
+
+console.table(
+  Object.fromEntries(
+    results
+      .flatMap((result) => Object.entries(result.metafile.outputs))
+      .filter(([fileName, _]) => !fileName.endsWith(".map"))
+      .map(([filename, { bytes }]) => [filename, { bytes }]),
+  ),
+);
