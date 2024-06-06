@@ -1,6 +1,6 @@
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.5.0
+    rev: v4.6.0
     hooks:
       - id: end-of-file-fixer
         exclude: 'src/icons/.*\.svg'
@@ -18,7 +18,7 @@ repos:
         additional_dependencies:
           - prettier@3
   - repo: https://github.com/pre-commit/mirrors-eslint
-    rev: "v9.0.0-alpha.2"
+    rev: "v9.4.0"
     hooks:
       - id: eslint
         files: \.([jt]s|astro)$ # *.js, *.ts and *.astro
@@ -29,7 +29,7 @@ repos:
           - eslint-plugin-unicorn@49
           - prettier@3
   - repo: https://github.com/kytta/mirrors-svgo
-    rev: v3.2.0
+    rev: v3.3.2
     hooks:
       - id: svgo
         files: "^src/icons/"
