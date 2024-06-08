@@ -1,5 +1,3 @@
-import "./shareon.css";
-
 // prettier-ignore
 /**
  * Map of social networks to their respective URL builders.

@@ -4,6 +4,20 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### 🔥 BREAKING CHANGES
+
+- [#109](https://github.com/kytta/shareon/pull/109)
+  new exported files
+  - UMD version was removed and replaced with a CommonJS version. Use `shareon.cjs`
+  - ESM version was renamed. Instead of `shareon.es.js`, use `shareon.mjs`.
+
+### Behind-the-scenes
+
+- [#109](https://github.com/kytta/shareon/pull/109)
+  Use esbuild without using Vite
+
 ## [2.5.0] - 2024-02-04
 
 ### Added
