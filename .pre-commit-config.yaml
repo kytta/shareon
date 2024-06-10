@@ -29,7 +29,7 @@ repos:
           - eslint-plugin-unicorn@49
           - prettier@3
   - repo: https://github.com/kytta/mirrors-svgo
-    rev: v3.3.2
+    rev: v4.0.0-rc.0
     hooks:
       - id: svgo
         files: "^src/icons/"
