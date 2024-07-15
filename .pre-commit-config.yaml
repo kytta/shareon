@@ -18,7 +18,7 @@ repos:
         additional_dependencies:
           - prettier@3
   - repo: https://github.com/pre-commit/mirrors-eslint
-    rev: "v9.4.0"
+    rev: "v9.7.0"
     hooks:
       - id: eslint
         files: \.([jt]s|astro)$ # *.js, *.ts and *.astro
@@ -29,7 +29,7 @@ repos:
           - eslint-plugin-unicorn@49
           - prettier@3
   - repo: https://github.com/kytta/mirrors-svgo
-    rev: v3.3.2
+    rev: v4.0.0-rc.0
     hooks:
       - id: svgo
         files: "^src/icons/"
