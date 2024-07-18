@@ -15,8 +15,8 @@ importers:
         specifier: ^10.4.19
         version: 10.4.19(postcss@8.4.39)
       clean-publish:
-        specifier: ^4.4.0
-        version: 4.4.0
+        specifier: ^5.0.0
+        version: 5.0.0
       eslint:
         specifier: ^8.57.0
         version: 8.57.0
@@ -30,8 +30,8 @@ importers:
         specifier: ^8.4.39
         version: 8.4.39
       postcss-calc:
-        specifier: ^9.0.1
-        version: 9.0.1(postcss@8.4.39)
+        specifier: ^10.0.0
+        version: 10.0.0(postcss@8.4.39)
       postcss-css-variables:
         specifier: ^0.19.0
         version: 0.19.0(postcss@8.4.39)
@@ -450,9 +450,9 @@ packages:
     resolution: {integrity: sha512-NIxF55hv4nSqQswkAeiOi1r83xy8JldOFDTWiug55KBu9Jnblncd2U6ViHmYgHf01TPZS77NJBhBMKdWj9HQMQ==}
     engines: {node: '>=8'}
 
-  clean-publish@4.4.0:
-    resolution: {integrity: sha512-wAJxoegQKPN/BhAp1cOb7XID5Q3LBMpMUOmLjr1zWUwOOR7QDM+3zN3ViJQVAy4WbCXLI8bTJrFglIO1ldkE0g==}
-    engines: {node: '>= 16.0.0'}
+  clean-publish@5.0.0:
+    resolution: {integrity: sha512-1qjtqP3piZL4t8SqGojOyA12bg8AtbFPIQstNvxmss1fhwfma3CqMJ/Y/kbRvAllLX2/c4ZKjcCCKDqEtpcymA==}
+    engines: {node: '>= 18.0.0'}
     hasBin: true
 
   clean-regexp@1.0.0:
@@ -809,6 +809,10 @@ packages:
     resolution: {integrity: sha512-DMy+ERcEW2q8Z2Po+WNXuw3c5YaUSFjAO5GsJqfEl7UjvtIuFKO6ZrKvcItdy98dwFI2N1tg3zNIdKaQT+aNdA==}
     engines: {node: '>=8.6'}
 
+  micromatch@4.0.7:
+    resolution: {integrity: sha512-LPP/3KorzCwBxfeUuZmaR6bG2kdeHSbe0P2tY3FLRU4vYrjYz5hI4QZwV0njUx3jeuKe67YukQ1LSPZBKDqO/Q==}
+    engines: {node: '>=8.6'}
+
   mime@2.5.2:
     resolution: {integrity: sha512-tqkh47FzKeCPD2PUiPB6pkbMzsCasjxAfC62/Wap5qrUWcb+sFasXUC5I3gYM5iBM8v/Qpn4UK0x+j0iHyFPDg==}
     engines: {node: '>=4.0.0'}
@@ -925,11 +929,11 @@ packages:
     resolution: {integrity: sha512-Nc3IT5yHzflTfbjgqWcCPpo7DaKy4FnpB0l/zCAW0Tc7jxAiuqSxHasntB3D7887LSrA93kDJ9IXovxJYxyLCA==}
     engines: {node: '>=4'}
 
-  postcss-calc@9.0.1:
-    resolution: {integrity: sha512-TipgjGyzP5QzEhsOZUaIkeO5mKeMFpebWzRogWG/ysonUlnHcq5aJe0jOjpfzUU8PeSaBQnrE8ehR0QA5vs8PQ==}
-    engines: {node: ^14 || ^16 || >=18.0}
+  postcss-calc@10.0.0:
+    resolution: {integrity: sha512-OmjhudoNTP0QleZCwl1i6NeBwN+5MZbY5ersLZz69mjJiDVv/p57RjRuKDkHeDWr4T+S97wQfsqRTNoDHB2e3g==}
+    engines: {node: ^18.12 || ^20.9 || >=22.0}
     peerDependencies:
-      postcss: ^8.2.2
+      postcss: ^8.4.38
 
   postcss-css-variables@0.19.0:
     resolution: {integrity: sha512-Hr0WEYKLK9VCrY15anHXOd4RCvJy/xRvCnWdplGBeLInwEj6Z14hgzTb2W/39dYTCnS8hnHUfU4/F1zxX0IZuQ==}
@@ -942,8 +946,8 @@ packages:
     peerDependencies:
       postcss: ^8.0.0
 
-  postcss-selector-parser@6.0.13:
-    resolution: {integrity: sha512-EaV1Gl4mUEV4ddhDnv/xtj7sxwrwxdetHdWUGnT4VJQf+4d05v6lHYZr8N573k5Z0BViss7BDhfWtKS3+sfAqQ==}
+  postcss-selector-parser@6.1.1:
+    resolution: {integrity: sha512-b4dlw/9V8A71rLIDsSwVmak9z2DuBUB7CA1/wSdelNEzqsjoSPeADTWNO09lpH49Diy3/JIZ2bSPB1dI3LJCHg==}
     engines: {node: '>=4'}
 
   postcss-url@10.1.3:
@@ -1482,12 +1486,12 @@ snapshots:
 
   ci-info@3.9.0: {}
 
-  clean-publish@4.4.0:
+  clean-publish@5.0.0:
     dependencies:
       cross-spawn: 7.0.3
       fast-glob: 3.3.2
       lilconfig: 3.1.2
-      micromatch: 4.0.5
+      micromatch: 4.0.7
 
   clean-regexp@1.0.0:
     dependencies:
@@ -1867,6 +1871,11 @@ snapshots:
       braces: 3.0.3
       picomatch: 2.3.1
 
+  micromatch@4.0.7:
+    dependencies:
+      braces: 3.0.3
+      picomatch: 2.3.1
+
   mime@2.5.2: {}
 
   min-indent@1.0.1: {}
@@ -1964,10 +1973,10 @@ snapshots:
 
   pluralize@8.0.0: {}
 
-  postcss-calc@9.0.1(postcss@8.4.39):
+  postcss-calc@10.0.0(postcss@8.4.39):
     dependencies:
       postcss: 8.4.39
-      postcss-selector-parser: 6.0.13
+      postcss-selector-parser: 6.1.1
       postcss-value-parser: 4.2.0
 
   postcss-css-variables@0.19.0(postcss@8.4.39):
@@ -1982,7 +1991,7 @@ snapshots:
       csso: 5.0.5
       postcss: 8.4.39
 
-  postcss-selector-parser@6.0.13:
+  postcss-selector-parser@6.1.1:
     dependencies:
       cssesc: 3.0.0
       util-deprecate: 1.0.2
