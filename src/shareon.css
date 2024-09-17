@@ -207,3 +207,10 @@
 .shareon > .whatsapp:before {
   background-image: url("icons/whatsapp.svg");
 }
+
+.shareon > .hackernews {
+  background-color: #ff6600;
+}
+.shareon > .hackernews:before {
+  background-image: url("icons/hackernews.svg");
+}
