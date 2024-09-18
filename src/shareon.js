@@ -21,6 +21,7 @@ const urlBuilderMap = {
   facebook: (d) => `https://www.facebook.com/sharer/sharer.php?u=${d.url}${d.hashtags ? `&hashtag=%23${d.hashtags.split('%2C')[0]}` : ''}`,
   fediverse: (d) => `https://${d.s2fInstance}/?text=${d.title}%0D%0A${d.url}${d.text ? `%0D%0A%0D%0A${d.text}` : ''}${d.via ? `%0D%0A%0D%0A${d.via}` : ''}`,
   email: (d) => `mailto:?subject=${d.title}&body=${d.url}`,
+  hackernews: (d) => `https://news.ycombinator.com/submitlink?u=${d.url}&t=${d.title}`,
   linkedin: (d) => `https://www.linkedin.com/sharing/share-offsite/?url=${d.url}`,
   mastodon: (d) => `https://toot.kytta.dev/?text=${d.title}%0D%0A${d.url}${d.text ? `%0D%0A%0D%0A${d.text}` : ''}${d.via ? `%0D%0A%0D%0A${d.via}` : ''}`,
   messenger: (d) => `https://www.facebook.com/dialog/send?app_id=${d.fbAppId}&link=${d.url}&redirect_uri=${d.url}`,
@@ -35,7 +36,6 @@ const urlBuilderMap = {
   viber: (d) => `viber://forward?text=${d.title}%0D%0A${d.url}${d.text ? `%0D%0A%0D%0A${d.text}` : ''}`,
   vkontakte: (d) => `https://vk.com/share.php?url=${d.url}&title=${d.title}${d.media ? `&image=${d.media}` : ''}`,
   whatsapp: (d) => `https://wa.me/?text=${d.title}%0D%0A${d.url}${d.text ? `%0D%0A%0D%0A${d.text}` : ''}`,
-  hackernews: (d) => `https://news.ycombinator.com/submitlink?u=${d.url}&t=${d.title}`,
 };
 
 const openUrl = (buttonUrl) => () => {

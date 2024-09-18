@@ -99,6 +99,13 @@
   background-image: url("icons/fediverse.svg");
 }
 
+.shareon > .hackernews {
+  background-color: #fb651e;
+}
+.shareon > .hackernews:before {
+  background-image: url("icons/hackernews.svg");
+}
+
 .shareon > .linkedin {
   background-color: #0a66c2;
 }
@@ -206,11 +213,4 @@
 }
 .shareon > .whatsapp:before {
   background-image: url("icons/whatsapp.svg");
-}
-
-.shareon > .hackernews {
-  background-color: #ff6600;
-}
-.shareon > .hackernews:before {
-  background-image: url("icons/hackernews.svg");
 }
