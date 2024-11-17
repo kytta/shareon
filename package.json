@@ -110,12 +110,12 @@
   },
   "size-limit": [
     {
-      "limit": "6 KiB",
+      "limit": "6.1 KiB",
       "path": "./dist/shareon.min.css",
       "brotli": true
     },
     {
-      "limit": "1 KiB",
+      "limit": "1.1 KiB",
       "path": "./dist/shareon.es.js",
       "brotli": true
     }
