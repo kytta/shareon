@@ -4,7 +4,7 @@
 
 > Lightweight, stylish, and ethical share buttons
 
-- **Small.** Dependency-free. CSS+JS bundle is under 7.5 kB minified and brotlied.
+- **Small.** Dependency-free. CSS+JS bundle is 7.5 kB minified and brotlied.
 - **Stylish.** Uses official vector logos and colours with no visual mess.
 - **Ethical.** Embeds no tracking code. JS is required only for the setup.
 
