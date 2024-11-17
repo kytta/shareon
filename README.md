@@ -93,6 +93,7 @@ names of which match the names of the social networks (or `copy-url`, for the
 
 ```html
 <div class="shareon">
+  <a class="bluesky"></a>
   <a class="facebook"></a>
   <a class="fediverse"></a>
   <a class="linkedin"></a>
@@ -145,7 +146,7 @@ Apart from the URL and title, some networks support extra parameters:
   instance
 - add `data-media` to an Odnoklassniki, Pinterest, or VK button to customize
   the pinned picture
-- add `data-text` to a Mastodon, Telegram, Tumblr, Viber, or WhatsApp button to add
+- add `data-text` to a Bluesky, Mastodon, Telegram, Tumblr, Viber, or WhatsApp button to add
   custom message text
 - add `data-via` to a Mastodon, Tumblr, or Twitter button to mention a user
 - add `data-hashtags` to a Facebook, Tumblr, or Twitter button to include hashtags in the shared post.
