@@ -8,7 +8,7 @@
 - **Stylish.** Uses official vector logos and colours with no visual mess.
 - **Ethical.** Embeds no tracking code. JS is required only for the setup.
 
-<a href="https://shareon.js.org/"><img src="./assets/demo@2x.png" height="126" width="333" alt="Shareon demo screenshot"></a>
+<a href="https://shareon.js.org/"><img src="./assets/demo@2x.png" height="126" width="438" alt="Demo screenshot of all buttons Shareon supports"></a>
 
 See the live demo at [shareon.js.org](https://shareon.js.org)
 
