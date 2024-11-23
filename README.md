@@ -4,11 +4,11 @@
 
 > Lightweight, stylish, and ethical share buttons
 
-- **Small.** Dependency-free. CSS+JS bundle is under 7.5 kB minified and brotlied.
+- **Small.** Dependency-free. CSS+JS bundle is 7.5 kB minified and brotlied.
 - **Stylish.** Uses official vector logos and colours with no visual mess.
 - **Ethical.** Embeds no tracking code. JS is required only for the setup.
 
-<a href="https://shareon.js.org/"><img src="./assets/demo@2x.png" height="126" width="333" alt="Shareon demo screenshot"></a>
+<a href="https://shareon.js.org/"><img src="./assets/demo@2x.png" height="126" width="438" alt="Demo screenshot of all buttons Shareon supports"></a>
 
 See the live demo at [shareon.js.org](https://shareon.js.org)
 
@@ -93,6 +93,7 @@ names of which match the names of the social networks (or `copy-url`, for the
 
 ```html
 <div class="shareon">
+  <a class="bluesky"></a>
   <a class="facebook"></a>
   <a class="fediverse"></a>
   <a class="linkedin"></a>
@@ -145,7 +146,7 @@ Apart from the URL and title, some networks support extra parameters:
   instance
 - add `data-media` to an Odnoklassniki, Pinterest, or VK button to customize
   the pinned picture
-- add `data-text` to a Mastodon, Telegram, Tumblr, Viber, or WhatsApp button to add
+- add `data-text` to a Bluesky, Mastodon, Telegram, Tumblr, Viber, or WhatsApp button to add
   custom message text
 - add `data-via` to a Mastodon, Tumblr, or Twitter button to mention a user
 - add `data-hashtags` to a Facebook, Tumblr, or Twitter button to include hashtags in the shared post.

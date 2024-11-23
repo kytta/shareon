@@ -18,6 +18,7 @@ import "./shareon.css";
  * }) => string}}
  */
 const urlBuilderMap = {
+  bluesky: (d) => `https://bsky.app/intent/compose?text=${d.text || d.title}%0A%0A${d.url}`,
   facebook: (d) => `https://www.facebook.com/sharer/sharer.php?u=${d.url}${d.hashtags ? `&hashtag=%23${d.hashtags.split('%2C')[0]}` : ''}`,
   fediverse: (d) => `https://${d.s2fInstance}/?text=${d.title}%0D%0A${d.url}${d.text ? `%0D%0A%0D%0A${d.text}` : ''}${d.via ? `%0D%0A%0D%0A${d.via}` : ''}`,
   email: (d) => `mailto:?subject=${d.title}&body=${d.url}`,

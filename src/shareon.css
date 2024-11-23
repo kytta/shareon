@@ -73,6 +73,13 @@
   vertical-align: bottom;
 }
 
+.shareon > .bluesky {
+  background-color: #0285ff;
+}
+.shareon > .bluesky:before {
+  background-image: url("icons/bluesky.svg");
+}
+
 .shareon > .copy-url:before {
   background-image: url("icons/copy-url.svg");
 }
