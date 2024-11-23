@@ -4,6 +4,33 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.6.0] - 2024-11-23
+
+### Added
+
+- [#132](https://github.com/kytta/shareon/pull/132)
+  Hacker News button by [Abdelhadi](https://github.com/Abd-Elhadi)
+- [#134](https://github.com/kytta/shareon/pull/134)
+  Bluesky button
+
+### Security
+
+- [#122](https://github.com/kytta/shareon/pull/122)
+  Bump `braces` to v3.0.3
+- [#135](https://github.com/kytta/shareon/pull/135)
+  Bump `micromatch` to 4.0.8
+- [#136](https://github.com/kytta/shareon/pull/136)
+  Bump `cross-spawn` to v7.0.5
+- [#137](https://github.com/kytta/shareon/pull/137)
+  Bump `rollup` to v4.27.2
+
+### Behind-the-scenes
+
+- [#123](https://github.com/kytta/shareon/pull/123)
+  Use PNPM lockfile v9
+- [#124](https://github.com/kytta/shareon/pull/124)
+  Update dev dependencies
+
 ## [2.5.0] - 2024-02-04
 
 ### Added
@@ -349,8 +376,9 @@ Initial release of shareon
 - Add Telegram button
 - Add Twitter button
 
-[unreleased]: https://github.com/kytta/shareon/compare/v2.5.0...main
-[2.4.0]: https://github.com/kytta/shareon/compare/v2.4.0...v2.5.0
+[unreleased]: https://github.com/kytta/shareon/compare/v2.6.0...main
+[2.6.0]: https://github.com/kytta/shareon/compare/v2.5.0...v2.6.0
+[2.5.0]: https://github.com/kytta/shareon/compare/v2.4.0...v2.5.0
 [2.4.0]: https://github.com/kytta/shareon/compare/v2.3.0...v2.4.0
 [2.3.0]: https://github.com/kytta/shareon/compare/v2.2.3...v2.3.0
 [2.2.3]: https://github.com/kytta/shareon/compare/v2.2.2...v2.2.3
