@@ -11,7 +11,7 @@
     />
     <meta
       name="description"
-      content="They’re under 6 kB in size, look good, and don't track your users. It's the perfect choice for your blog, news site, or project page!"
+      content="They’re 7.5 kB in size, look good, and don't track your users. It's the perfect choice for your blog, news site, or project page!"
     />
     <meta
       name="keywords"
@@ -25,11 +25,11 @@
     />
 
     <link
-      href="https://cdn.jsdelivr.net/npm/shareon@2/dist/shareon.min.css"
+      href="https://cdn.jsdelivr.net/npm/shareon@2.6/dist/shareon.min.css"
       rel="stylesheet"
     />
     <script
-      src="https://cdn.jsdelivr.net/npm/shareon@2/dist/shareon.iife.js"
+      src="https://cdn.jsdelivr.net/npm/shareon@2.6/dist/shareon.iife.js"
       defer
       init
     ></script>
@@ -67,7 +67,7 @@
     />
     <meta
       property="og:description"
-      content="They’re under 6 kB in size, look good, and don't track your users. It's the perfect choice for your blog, news site, or project page!"
+      content="They’re 7.5 kB in size, look good, and don't track your users. It's the perfect choice for your blog, news site, or project page!"
     />
     <meta property="og:image" content="https://shareon.js.org/banner.png" />
 
@@ -80,7 +80,7 @@
     />
     <meta
       property="twitter:description"
-      content="They’re under 6 kB in size, look good, and don't track your users. It's the perfect choice for your blog, news site, or project page!"
+      content="They’re under 7.5 kB in size, look good, and don't track your users. It's the perfect choice for your blog, news site, or project page!"
     />
     <meta
       property="twitter:image"
@@ -127,32 +127,37 @@
           data-title="Shareon — lightweight, stylish, and ethical share buttons"
           style="text-align: center"
         >
-          <a class="facebook"></a>
+          <a class="bluesky"></a>
+          <a class="facebook">Share</a>
+          <a class="fediverse"></a>
+          <a class="hackernews"></a>
           <a class="linkedin"></a>
           <a class="mastodon">Toot</a>
           <a class="messenger" data-fb-app-id="3619024578167617"></a>
           <a class="odnoklassniki"></a>
-          <a class="pinterest">Pin</a>
           <br />
+          <a class="pinterest">Pin</a>
           <a class="pocket"></a>
           <a class="reddit"></a>
           <a class="teams"></a>
-          <a class="telegram"></a>
+          <a class="telegram">Send</a>
           <a class="tumblr"></a>
-          <a class="twitter">Tweet</a>
-          <br />
+          <a class="twitter"></a>
           <a class="viber"></a>
+          <br />
           <a class="vkontakte">Поделиться</a>
           <a class="whatsapp"></a>
           <a class="copy-url"></a>
-          <a class="web-share">Share</a>
+          <a class="email"></a>
+          <a class="print">Print</a>
+          <a class="web-share"></a>
         </div>
 
         <p>Unlike many other share buttons, Shareon are:</p>
 
         <ul>
           <li>
-            <b>lightweight</b>, clocking in at only 6 KB brotlied code (JS+CSS),
+            <b>lightweight</b>, clocking in at only 7.5 kB brotlied code (JS+CSS),
           </li>
           <li>
             <b>stylish</b>, using official vector logos and colours with no
@@ -216,7 +221,10 @@ Shareon.init();</code></pre>
         </p>
 
         <pre><code>&lt;div class="shareon"&gt;
+    &lt;a class="bluesky"&gt;&lt;/a&gt;
     &lt;a class="facebook"&gt;&lt;/a&gt;
+    &lt;a class="fediverse"&gt;&lt;/a&gt;
+    &lt;a class="hackernews"&gt;&lt;/a&gt;
     &lt;a class="linkedin"&gt;&lt;/a&gt;
     &lt;a class="mastodon"&gt;&lt;/a&gt;
     &lt;!-- FB App ID is required for the Messenger button to function --&gt;
@@ -233,9 +241,16 @@ Shareon.init();</code></pre>
     &lt;a class="vkontakte"&gt;&lt;/a&gt;
     &lt;a class="whatsapp"&gt;&lt;/a&gt;
     &lt;a class="copy-url"&gt;&lt;/a&gt;
+    &lt;a class="email"&gt;&lt;/a&gt;
+    &lt;a class="print"&gt;&lt;/a&gt;
+    &lt;!-- Does not work in every browser --&gt;
+    &lt;a class="web-share"&gt;&lt;/a&gt;
 &lt;/div&gt;</code></pre>
         <div class="shareon">
+          <a class="bluesky"></a>
           <a class="facebook"></a>
+          <a class="fediverse"></a>
+          <a class="hackernews"></a>
           <a class="linkedin"></a>
           <a class="mastodon"></a>
           <a class="messenger" data-fb-app-id="3619024578167617"></a>
@@ -251,6 +266,9 @@ Shareon.init();</code></pre>
           <a class="vkontakte"></a>
           <a class="whatsapp"></a>
           <a class="copy-url"></a>
+          <a class="email"></a>
+          <a class="print"></a>
+          <a class="web-share"></a>
         </div>
 
         <p>
@@ -273,7 +291,7 @@ Shareon.init();</code></pre>
 
     <footer>
       <p>
-        Copyright © 2020–2023
+        Copyright © 2020–2024
         <a href="https://www.kytta.dev/">Nikita Karamov</a>
         <br />
         Licenced under the MIT License.
