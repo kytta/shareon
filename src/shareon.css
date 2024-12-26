@@ -123,6 +123,13 @@
   background-image: url("icons/linkedin.svg");
 }
 
+.shareon > .lobsters {
+  background-color: #ac130d;
+}
+.shareon > .lobsters:before {
+  background-image: url("icons/lobsters.svg");
+}
+
 .shareon > .mastodon {
   background-color: #6364ff;
 }
