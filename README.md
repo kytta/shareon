@@ -96,7 +96,9 @@ names of which match the names of the social networks (or `copy-url`, for the
   <a class="bluesky"></a>
   <a class="facebook"></a>
   <a class="fediverse"></a>
+  <a class="hackernews"></a>
   <a class="linkedin"></a>
+  <a class="lobsters"></a>
   <a class="mastodon"></a>
   <!-- FB App ID is required for the Messenger button to function -->
   <a class="messenger" data-fb-app-id="0123456789012345"></a>
@@ -114,6 +116,7 @@ names of which match the names of the social networks (or `copy-url`, for the
   <a class="copy-url"></a>
   <a class="email"></a>
   <a class="print"></a>
+  <a class="web-share"></a>
 </div>
 ```
 
