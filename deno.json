@@ -5,5 +5,10 @@
   },
   "fmt": {
     "exclude": ["pnpm-lock.yaml", "**/*.md"]
+  },
+  "lint": {
+    "rules": {
+      "tags": ["recommended"]
+    }
   }
 }
