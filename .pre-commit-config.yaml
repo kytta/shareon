@@ -1,3 +1,7 @@
+ci:
+  skip:
+    - deno-fmt
+
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v5.0.0
@@ -11,6 +15,22 @@ repos:
       - id: check-json
       - id: check-toml
       - id: check-yaml
+  - repo: local
+    hooks:
+      - id: deno-fmt
+        name: deno fmt
+        entry: deno fmt
+        language: system
+        types_or:
+          - html
+          - css
+          - javascript
+          - ts
+          - json
+          - yaml
+        exclude_types:
+          - markdown
+        exclude: ^pnpm-lock\.yaml$
   - repo: https://github.com/pre-commit/mirrors-eslint
     rev: "v9.14.0"
     hooks:
