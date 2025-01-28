@@ -1,0 +1,8 @@
+#!/bin/sh
+
+set -eu
+
+ROOT="$(dirname "$(dirname "$0")")"
+
+"$ROOT"/script/fmt
+"$ROOT"/script/lint --fix
