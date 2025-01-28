@@ -41,7 +41,7 @@ const urlBuilderMap = {
 };
 
 const openUrl = (buttonUrl) => () => {
-  window.open(buttonUrl, "_blank", "noopener,noreferrer");
+  globalThis.open(buttonUrl, "_blank", "noopener,noreferrer");
 };
 
 const init = () => {
@@ -63,7 +63,7 @@ const init = () => {
             child.addEventListener("click", () => {
               const url = child.dataset.url ||
                 container.dataset.url ||
-                window.location.href;
+                globalThis.location.href;
               navigator.clipboard.writeText(url);
               child.classList.add("done");
               setTimeout(() => {
@@ -75,7 +75,7 @@ const init = () => {
           // if it's "Print"
           if (cls === "print") {
             child.addEventListener("click", () => {
-              window.print();
+              globalThis.print();
             });
           }
 
@@ -88,7 +88,7 @@ const init = () => {
               text: child.dataset.text || container.dataset.text || "",
               url: child.dataset.url ||
                 container.dataset.url ||
-                window.location.href,
+                globalThis.location.href,
             };
 
             if (navigator.canShare && navigator.canShare(data)) {
@@ -106,7 +106,7 @@ const init = () => {
               url: encodeURIComponent(
                 child.dataset.url ||
                   container.dataset.url ||
-                  window.location.href,
+                  globalThis.location.href,
               ),
               title: encodeURIComponent(
                 child.dataset.title ||
