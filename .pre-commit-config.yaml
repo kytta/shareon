@@ -1,6 +1,7 @@
 ci:
   skip:
     - deno-fmt
+    - deno-lint
 
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
@@ -31,6 +32,14 @@ repos:
         exclude_types:
           - markdown
         exclude: ^pnpm-lock\.yaml$
+  - repo: local
+    hooks:
+      - id: deno-lint
+        name: deno lint
+        entry: deno lint
+        args: ["--fix"]
+        language: system
+        files: '\.[cm]?[jt]s$'
   - repo: https://github.com/kytta/mirrors-svgo
     rev: v4.0.0-rc.1
     hooks:
