@@ -31,16 +31,6 @@ repos:
         exclude_types:
           - markdown
         exclude: ^pnpm-lock\.yaml$
-  - repo: https://github.com/pre-commit/mirrors-eslint
-    rev: "v9.14.0"
-    hooks:
-      - id: eslint
-        files: \.([jt]s|astro)$ # *.js, *.ts and *.astro
-        types: [file]
-        additional_dependencies:
-          # TODO: update ESLint to v9
-          - eslint@8
-          - eslint-plugin-unicorn@49
   - repo: https://github.com/kytta/mirrors-svgo
     rev: v4.0.0-rc.1
     hooks:
