@@ -1,6 +1,6 @@
 import "./shareon.css";
 
-// prettier-ignore
+// deno-fmt-ignore
 /**
  * Map of social networks to their respective URL builders.
  *
@@ -41,7 +41,7 @@ const urlBuilderMap = {
 };
 
 const openUrl = (buttonUrl) => () => {
-  window.open(buttonUrl, "_blank", "noopener,noreferrer");
+  globalThis.open(buttonUrl, "_blank", "noopener,noreferrer");
 };
 
 const init = () => {
@@ -61,10 +61,9 @@ const init = () => {
           // if it's "Copy URL"
           if (cls === "copy-url") {
             child.addEventListener("click", () => {
-              const url =
-                child.dataset.url ||
+              const url = child.dataset.url ||
                 container.dataset.url ||
-                window.location.href;
+                globalThis.location.href;
               navigator.clipboard.writeText(url);
               child.classList.add("done");
               setTimeout(() => {
@@ -76,22 +75,20 @@ const init = () => {
           // if it's "Print"
           if (cls === "print") {
             child.addEventListener("click", () => {
-              window.print();
+              globalThis.print();
             });
           }
 
           // if it's "Web Share"
           if (cls === "web-share") {
             const data = {
-              title:
-                child.dataset.title ||
+              title: child.dataset.title ||
                 container.dataset.title ||
                 document.title,
               text: child.dataset.text || container.dataset.text || "",
-              url:
-                child.dataset.url ||
+              url: child.dataset.url ||
                 container.dataset.url ||
-                window.location.href,
+                globalThis.location.href,
             };
 
             if (navigator.canShare && navigator.canShare(data)) {
@@ -109,7 +106,7 @@ const init = () => {
               url: encodeURIComponent(
                 child.dataset.url ||
                   container.dataset.url ||
-                  window.location.href,
+                  globalThis.location.href,
               ),
               title: encodeURIComponent(
                 child.dataset.title ||

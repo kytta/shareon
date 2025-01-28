@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "checkJs": true,
+    "lib": ["dom", "dom.iterable", "dom.asynciterable"]
+  },
+  "fmt": {
+    "exclude": ["pnpm-lock.yaml", "**/*.md"]
+  },
+  "lint": {
+    "rules": {
+      "tags": ["recommended"]
+    }
+  }
+}

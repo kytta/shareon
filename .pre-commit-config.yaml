@@ -1,3 +1,8 @@
+ci:
+  skip:
+    - deno-fmt
+    - deno-lint
+
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v5.0.0
@@ -11,24 +16,30 @@ repos:
       - id: check-json
       - id: check-toml
       - id: check-yaml
-  - repo: https://github.com/pre-commit/mirrors-prettier
-    rev: "v4.0.0-alpha.8"
+  - repo: local
     hooks:
-      - id: prettier
-        additional_dependencies:
-          - prettier@3
-  - repo: https://github.com/pre-commit/mirrors-eslint
-    rev: "v9.14.0"
+      - id: deno-fmt
+        name: deno fmt
+        entry: deno fmt
+        language: system
+        types_or:
+          - html
+          - css
+          - javascript
+          - ts
+          - json
+          - yaml
+        exclude_types:
+          - markdown
+        exclude: ^pnpm-lock\.yaml$
+  - repo: local
     hooks:
-      - id: eslint
-        files: \.([jt]s|astro)$ # *.js, *.ts and *.astro
-        types: [file]
-        additional_dependencies:
-          # TODO: update ESLint to v9
-          - eslint@8
-          - eslint-config-prettier@9
-          - eslint-plugin-unicorn@49
-          - prettier@3
+      - id: deno-lint
+        name: deno lint
+        entry: deno lint
+        args: ["--fix"]
+        language: system
+        files: '\.[cm]?[jt]s$'
   - repo: https://github.com/kytta/mirrors-svgo
     rev: v4.0.0-rc.1
     hooks:
