@@ -2,20 +2,12 @@
 
 Shareon welcomes contributions and corrections. Before contributing, please make sure you have read the guidelines below. If you decide to contribute anything, please follow the steps below.
 
-0. Install [pnpm](https://pnpm.io/installation):
-1. Install [pre-commit](https://pre-commit.com/)
-2. Fork this repository
-3. Clone the fork
-4. Enable pre-commit in the repo:
-
-   ```sh
-   pre-commit install
-   ```
-
-5. Create a new branch from the latest commit on `main`
-6. Start hacking on the new branch
-7. Commit and push to the new branch
-8. Make a pull request to `main`
+0. Install Node.js and [pnpm](https://pnpm.io/installation)
+1. Fork this repository and clone the fork
+2. Create a new branch from the latest commit on `main`
+3. Start hacking on the new branch
+4. Commit and push to the new branch
+5. Make a pull request to `main`
 
 ## Table of contents
 
