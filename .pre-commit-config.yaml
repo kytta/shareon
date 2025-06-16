@@ -41,7 +41,7 @@ repos:
         language: system
         files: '\.[cm]?[jt]s$'
   - repo: https://github.com/kytta/mirrors-svgo
-    rev: v4.0.0-rc.2
+    rev: v4.0.0-rc.5
     hooks:
       - id: svgo
         files: "^src/icons/"
