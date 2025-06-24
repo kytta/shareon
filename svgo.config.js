@@ -86,7 +86,7 @@ export default {
     },
     "removeOffCanvasPaths",
     "removeStyleElement",
-    "removeScriptElement",
+    "removeScripts",
     "removeTitle",
   ],
 };
