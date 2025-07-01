@@ -4,6 +4,25 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.7.0] - 2025-07-01
+
+### Added
+
+- [#143](https://github.com/kytta/shareon/pull/143)
+  Lobsters button
+
+### Security
+
+- [#140](https://github.com/kytta/shareon/pull/140)
+  Bump `nanoid` to 3.3.8
+
+### Behind-the-scenes
+
+- [#146](https://github.com/kytta/shareon/pull/146)
+  Use Deno for formatting and linting
+- [#153](https://github.com/kytta/shareon/pull/153)
+  Update SVGO to v4
+
 ## [2.6.0] - 2024-11-23
 
 ### Added
@@ -376,7 +395,8 @@ Initial release of shareon
 - Add Telegram button
 - Add Twitter button
 
-[unreleased]: https://github.com/kytta/shareon/compare/v2.6.0...main
+[unreleased]: https://github.com/kytta/shareon/compare/v2.7.0...main
+[2.7.0]: https://github.com/kytta/shareon/compare/v2.6.0...v2.7.0
 [2.6.0]: https://github.com/kytta/shareon/compare/v2.5.0...v2.6.0
 [2.5.0]: https://github.com/kytta/shareon/compare/v2.4.0...v2.5.0
 [2.4.0]: https://github.com/kytta/shareon/compare/v2.3.0...v2.4.0
