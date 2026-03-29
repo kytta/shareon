@@ -32,4 +32,6 @@ jobs:
       - name: Build
         run: pnpm run build
       - name: Publish to NPM (with provenance)
-        run: pnpm publish --no-git-checks --access public --tag ${{ github.event.release.prerelease && 'next' || 'latest' }}
+        run: |
+          npm i -g npm
+          pnpm publish --no-git-checks --tag ${{ github.event.release.prerelease && 'next' || 'latest' }}
