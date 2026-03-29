@@ -33,6 +33,3 @@ jobs:
         run: pnpm run build
       - name: Publish to NPM (with provenance)
         run: pnpm publish --no-git-checks --access public --tag ${{ github.event.release.prerelease && 'next' || 'latest' }}
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-          NPM_CONFIG_PROVENANCE: "true"
