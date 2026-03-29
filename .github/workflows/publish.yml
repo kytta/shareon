@@ -5,13 +5,12 @@ on:
     types:
       - published
 
-permissions:
-  contents: read
-  id-token: write
-
 jobs:
   publish:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
 
     steps:
       - name: Checkout
@@ -35,4 +34,4 @@ jobs:
       - name: Publish to NPM (with provenance)
         run: |
           npm i -g npm
-          npm publish --tag ${{ github.event.release.prerelease && 'next' || 'latest' }}
+          pnpm publish --no-git-checks --tag ${{ github.event.release.prerelease && 'next' || 'latest' }}

@@ -42,11 +42,14 @@
     "size": "size-limit",
     "test": "pnpm run build && pnpm run size",
     "postversion": "pnpm run build",
+    "prepublishOnly": "rm -rf ./package && clean-publish",
+    "postpublish": "rm -rf ./package",
     "preinstall": "npx only-allow pnpm"
   },
   "devDependencies": {
     "@size-limit/preset-small-lib": "^12.0.1",
     "autoprefixer": "^10.4.27",
+    "clean-publish": "^6.0.4",
     "postcss": "^8.5.8",
     "postcss-calc": "^10.1.1",
     "postcss-css-variables": "^0.19.0",
@@ -76,5 +79,15 @@
       "limit": "1.1 KiB",
       "path": "./dist/shareon.es.js"
     }
-  ]
+  ],
+  "publishConfig": {
+    "directory": "package"
+  },
+  "clean-publish": {
+    "withoutPublish": true,
+    "tempDir": "package",
+    "fields": [
+      "postcss"
+    ]
+  }
 }
