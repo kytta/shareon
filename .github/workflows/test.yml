@@ -24,10 +24,10 @@ jobs:
       - uses: pnpm/action-setup@v5
         with:
           version: 10
+          cache: true
       - uses: actions/setup-node@v6
         with:
           node-version: 22
-          cache: pnpm
       - name: Install dependencies
         run: pnpm install --ignore-scripts
       - name: Build
