@@ -42,8 +42,7 @@
     "size": "size-limit",
     "test": "pnpm run build && pnpm run size",
     "postversion": "pnpm run build",
-    "prepublishOnly": "rm -rf ./package && clean-publish",
-    "postpublish": "rm -rf ./package",
+    "publish": "clean-publish",
     "preinstall": "npx only-allow pnpm"
   },
   "devDependencies": {
@@ -80,12 +79,7 @@
       "path": "./dist/shareon.es.js"
     }
   ],
-  "publishConfig": {
-    "directory": "package"
-  },
   "clean-publish": {
-    "withoutPublish": true,
-    "tempDir": "package",
     "fields": [
       "postcss"
     ]
