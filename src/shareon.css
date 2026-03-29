@@ -190,6 +190,13 @@
   background-image: url("icons/telegram.svg");
 }
 
+.shareon > .threads {
+  background-color: #000;
+}
+.shareon > .threads:before {
+  background-image: url("icons/threads.svg");
+}
+
 .shareon > .tumblr {
   background-color: #36465d;
 }
