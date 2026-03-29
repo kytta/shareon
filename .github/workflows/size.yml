@@ -16,6 +16,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
       - name: Fetch Git refs
         run: git fetch --no-tags --prune --depth=1 origin +refs/heads/*:refs/remotes/origin/*
       - uses: pnpm/action-setup@v4

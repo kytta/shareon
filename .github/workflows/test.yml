@@ -8,6 +8,8 @@ on:
     branches:
       - main
 
+permissions: {}
+
 env:
   FORCE_COLOR: 2
 
@@ -17,6 +19,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
       - uses: pnpm/action-setup@v4
         with:
           version: 10
