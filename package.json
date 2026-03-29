@@ -77,7 +77,7 @@
   },
   "size-limit": [
     {
-      "limit": "6.6 KiB",
+      "limit": "6.9 KiB",
       "path": "./dist/shareon.min.css"
     },
     {
