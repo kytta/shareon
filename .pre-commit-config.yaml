@@ -31,6 +31,7 @@ repos:
           - yaml
         exclude_types:
           - markdown
+          - svg
         exclude: ^pnpm-lock\.yaml$
   - repo: local
     hooks:
